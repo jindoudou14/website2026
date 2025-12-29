@@ -1,10 +1,16 @@
+import { Link } from "react-router-dom";
 import "../css/nav.css";
 
-const ThemedButtons = ({ text, link }: { text: string; link: string }) => {
+type Props = {
+  text: string;
+  link: string;
+};
+
+const ThemedButtons = ({ text, link }: Props) => {
   return (
-    <a href={link} className="navbar-link">
+    <Link to={link} className="navbar-link">
       {text}
-    </a>
+    </Link>
   );
 };
 
