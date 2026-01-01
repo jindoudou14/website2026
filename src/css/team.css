@@ -1,5 +1,11 @@
 .team-page {
   padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+body {
+  background-color: white;
 }
 
 .character-grid {
@@ -42,6 +48,10 @@
   width: 90%;
   max-height: 80vh;
   overflow-y: auto;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .modal-header {
@@ -55,6 +65,7 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
+  color: white;
 }
 
 .modal img {

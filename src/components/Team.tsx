@@ -14,11 +14,11 @@ type Member = {
 const team: Member[] = [
   {
     id: 1,
-    name: "",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
+    name: "Paradis",
+    subteam: "robot",
+    emotion: "evnwjvkn",
+    funFact: "efnjnew",
+    description: "wfnjewknfx",
     image: "src/Team_characters/Anger.webp",
   },
   {
@@ -28,7 +28,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/Embarrassment.webp"
+    image: "src/Team_characters/Envy.webp"
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: ""
+    image: "src/Team_characters/BingBong.png"
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: ""
+    image: "src/Team_characters/Forgetter_Bobby.png"
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: ""
+    image: "src/Team_characters/Fritz.png"
   },
   {
     id: 6,
@@ -64,7 +64,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: ""
+    image: "src/Team_characters/Janelle.webp"
   },
   {
     id: 7,
@@ -73,7 +73,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: ""
+    image: "src/Team_characters/Jean.webp"
   },
   {
     id: 8,
@@ -82,7 +82,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: ""
+    image: "src/Team_characters/Mel.webp"
   },
   {
     id: 9,
@@ -254,17 +254,29 @@ const Team = () => {
       {/* Modal */}
       {activeMember && (
         <div className="modal-overlay" onClick={() => setActiveMember(null)}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <h2>{activeMember.name}</h2>
-              <button onClick={() => setActiveMember(null)}>X</button>
-            </div>
-            <img src={activeMember.image} alt={activeMember.name} />
-            <p><strong>Subteam:</strong> {activeMember.subteam}</p>
-            <p><strong>Emotion:</strong> {activeMember.emotion}</p>
-            <p><strong>Fun Fact:</strong> {activeMember.funFact}</p>
-            <p>{activeMember.description}</p>
+          <div>
+              <img src={activeMember.image} alt={activeMember.name} />
           </div>
+
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            
+
+            <div>
+              <div className="modal-header">
+                <h2>{activeMember.name}</h2>
+                <button onClick={() => setActiveMember(null)}>X</button>
+              </div>
+              <div className="member-info">
+                <p><strong>Subteam:</strong> {activeMember.subteam}</p>
+                <p><strong>Emotion:</strong> {activeMember.emotion}</p>
+                <p><strong>Fun Fact:</strong> {activeMember.funFact}</p>
+                <p>{activeMember.description}</p>
+              </div>
+            </div>
+            
+            
+          </div>
+
         </div>
       )}
     </div>
