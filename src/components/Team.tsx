@@ -21,7 +21,213 @@ const team: Member[] = [
     description: "",
     image: "src/Team_characters/Anger.webp",
   },
-  // Add more members here
+  {
+    id: 2,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/Embarrassment.webp"
+  },
+  {
+    id: 3,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 4,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 5,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 6,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 7,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 8,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 9,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 10,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 11,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 12,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 13,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 14,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 15,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 16,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 17,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 18,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 19,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 20,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 21,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 22,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 23,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  },
+  {
+    id: 24,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: ""
+  }
 ];
 
 const Team = () => {
@@ -30,6 +236,7 @@ const Team = () => {
   return (
     <div className="team-page">
       <h1>Meet the Team</h1>
+      <h2>Welcome to Riley's mind! ADD MORE TEXT</h2>
       
       <div className="character-grid">
         {team.map((member) => (
