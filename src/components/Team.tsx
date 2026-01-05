@@ -19,7 +19,7 @@ const team: Member[] = [
     emotion: "evnwjvkn",
     funFact: "efnjnew",
     description: "wfnjewknfx",
-    image: "src/Team_characters/Anger.webp",
+    image: "src/Team_characters/anger.png",
   },
   {
     id: 2,
@@ -91,7 +91,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: ""
+    image: "src/Team_characters/Fear.webp"
   },
   {
     id: 10,
@@ -100,7 +100,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: ""
+    image: "src/Team_characters/anxiety.png"
   },
   {
     id: 11,
@@ -109,7 +109,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: ""
+    image: "src/Team_characters/bloofy.png"
   },
   {
     id: 12,
@@ -118,7 +118,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: ""
+    image: "src/Team_characters/embarassment.png"
   },
   {
     id: 13,
@@ -127,7 +127,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: ""
+    image: "src/Team_characters/ennui.png"
   },
   {
     id: 14,

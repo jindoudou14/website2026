@@ -25,6 +25,10 @@ body {
   height: 200px;
   border-radius: 20%;
   object-fit: cover;
+  
+  animation-name: character_animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
 .modal-overlay {
@@ -76,3 +80,11 @@ body {
   display: block;
   margin: 10px auto;
 }
+
+/*@keyframes character_animation {
+  0% {bottom:0px;}
+  25% {bottom:100px;}
+  50% {bottom:250px}
+  75% {bottom:100px;}
+  100% {bottom:250px;}
+} /*
