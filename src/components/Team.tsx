@@ -285,22 +285,18 @@ const Team = () => {
 
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             
-
-            <div>
               <div className="modal-header">
                 <h2>{activeMember.name}</h2>
-                <button onClick={() => setActiveMember(null)}>X</button>
               </div>
+              
               <div className="member-info">
                 <p><strong>Subteam:</strong> {activeMember.subteam}</p>
                 <p><strong>Emotion:</strong> {activeMember.emotion}</p>
                 <p><strong>Fun Fact:</strong> {activeMember.funFact}</p>
                 <p>{activeMember.description}</p>
               </div>
-            </div>
-            
-            
           </div>
+          <button className="modal-btn" onClick={() => setActiveMember(null)}>X</button>
 
         </div>
       )}

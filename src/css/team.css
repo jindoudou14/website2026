@@ -45,7 +45,7 @@ body {
 }
 
 .modal {
-  background: rgb(0, 0, 0);
+  background: #bcbbf2;
   padding: 20px;
   border-radius: 10px;
   max-width: 400px;
@@ -56,6 +56,9 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+
+  position: relative;
+
 }
 
 .modal-header {
@@ -64,12 +67,15 @@ body {
   align-items: center;
 }
 
-.modal-header button {
-  background: none;
+.modal-btn {
+  background: #bcbbf2;
   border: none;
   font-size: 24px;
   cursor: pointer;
   color: white;
+  position: absolute;
+  top: 225px;
+  right: 375px;
 }
 
 .modal img {
