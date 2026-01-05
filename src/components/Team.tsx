@@ -90,7 +90,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/Mel.webp",
+    image: "src/Team_characters/melatonin.png",
     photo: ""
   },
   {
@@ -100,7 +100,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/Fear.webp",
+    image: "src/Team_characters/fear.png",
     photo: ""
   },
   {
@@ -150,7 +150,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/joy.png",
     photo: ""
   },
   {
@@ -160,7 +160,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/disgust.png",
     photo: ""
   },
   {
@@ -170,7 +170,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/pouchy.png",
     photo: ""
   },
   {
@@ -180,7 +180,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/sadness.png",
     photo: ""
   },
   {
@@ -190,7 +190,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/lance.png",
     photo: ""
   },
   {
@@ -200,7 +200,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/nostalgia.png",
     photo: ""
   },
   {
@@ -210,7 +210,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/Forgetter_Paula.png",
     photo: ""
   },
   {
@@ -220,7 +220,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/wagon.png",
     photo: ""
   },
   {
@@ -230,7 +230,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/Paula.webp",
     photo: ""
   },
   {
@@ -240,7 +240,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/riley.png",
     photo: ""
   },
   {
@@ -250,7 +250,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/Xeni.webp",
     photo: ""
   }
 ];
