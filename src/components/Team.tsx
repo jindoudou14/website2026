@@ -280,7 +280,7 @@ const Team = () => {
       {activeMember && (
         <div className="modal-overlay" onClick={() => setActiveMember(null)}>
           <div>
-              <img src={activeMember.image} alt={activeMember.name} />
+              <img src={activeMember.photo} alt={activeMember.name} />
           </div>
 
           <div className="modal" onClick={(e) => e.stopPropagation()}>
