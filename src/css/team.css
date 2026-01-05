@@ -52,18 +52,11 @@ body {
   width: 90%;
   max-height: 80vh;
   overflow-y: auto;
-
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-
   position: relative;
 
 }
 
 .modal-header {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
