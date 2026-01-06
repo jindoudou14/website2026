@@ -20,7 +20,7 @@ const team: Member[] = [
     emotion: "evnwjvkn",
     funFact: "efnjnew",
     description: "wfnjewknfx",
-    image: "src/Team_characters/anger.png",
+    image: "src/Team_characters/BingBong.png",
     photo: ""
   },
   {
@@ -40,7 +40,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/BingBong.png",
+    image: "src/Team_characters/ennui.png",
     photo: ""
   },
   {
@@ -50,7 +50,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/Forgetter_Bobby.png",
+    image: "src/Team_characters/joy.png",
     photo: ""
   },
   {
@@ -60,7 +60,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/Fritz.png",
+    image: "src/Team_characters/sadness.png",
     photo: ""
   },
   {
@@ -70,7 +70,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/Janelle.webp",
+    image: "src/Team_characters/anger.png",
     photo: ""
   },
   {
@@ -140,7 +140,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/ennui.png",
+    image: "",
     photo: ""
   },
   {
@@ -150,7 +150,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/joy.png",
+    image: "src/Team_characters/Forgetter_Bobby.png",
     photo: ""
   },
   {

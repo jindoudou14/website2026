@@ -1,6 +1,6 @@
 .team-page {
   padding: 20px;
-  margin-top: 2750px;
+  margin-top: 3000px;
   margin-bottom: 30px;
 }
 
@@ -25,10 +25,11 @@ body {
   height: 250px;
   border-radius: 20%;
   object-fit: cover;
-  
+  /*
   animation-name: character_animation;
   animation-duration: 10s;
   animation-iteration-count: infinite;
+  */
 }
 
 .modal-overlay {
@@ -50,11 +51,11 @@ body {
   border-radius: 10px;
   max-width: 400px;
   width: 90%;
-  height: 200 px;
-  /*max-height: 80vh;*/
+  max-height: 80vh;
   overflow-y: auto;
   position: relative;
-
+  /* overflow-y: auto; */
+  
 }
 
 .modal-header {
@@ -92,13 +93,14 @@ body {
   /* position: relative; */
   background-color: rgb(86, 86, 86);
   color: #fff;
-  width: 130px; 
+  width: fit-content; 
+  height: 20px;
   text-align: center;
   padding: 5px;
   z-index: 1;
-  bottom: 100%;
+  /* bottom: 100%;
   left: 65%;
-  margin-left: -65px;
+  margin-left: -65px; */
 }
 
 /* .tooltip:after{
@@ -115,10 +117,7 @@ body {
 	margin-bottom: -20px;
 } */
 
-/*@keyframes character_animation {
-  0% {bottom:0px;}
-  25% {bottom:100px;}
-  50% {bottom:250px}
-  75% {bottom:100px;}
-  100% {bottom:250px;}
-} /*
+/* @keyframes character_animation {
+  0% {box-shadow: red;}
+  100% {box-shadow: blue;} 
+} */
