@@ -220,7 +220,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/wagon.png",
+    image: "src/Team_characters/Xeni.webp",
     photo: ""
   },
   {
@@ -245,12 +245,12 @@ const team: Member[] = [
   },
   {
     id: 24,
-    name: "",
+    name: "Sophie Tin",
     subteam: "",
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/Xeni.webp",
+    image: "src/Team_characters/wagon.png",
     photo: ""
   }
 ];
@@ -270,6 +270,7 @@ const Team = () => {
             className="character-item"
             onClick={() => setActiveMember(member)}
           >
+            <p className="tooltip">{member.name}</p>
             <img src={member.image} alt={member.name} />
             <p>{member.name}</p>
           </div>
@@ -296,10 +297,13 @@ const Team = () => {
                 <p>{activeMember.description}</p>
               </div>
           </div>
+          
           <button className="modal-btn" onClick={() => setActiveMember(null)}>X</button>
-
+        
         </div>
+        
       )}
+      
     </div>
   );
 };

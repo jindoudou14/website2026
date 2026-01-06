@@ -79,7 +79,41 @@ body {
   object-fit: cover;
   display: block;
   margin: 10px auto;
+  position: relative;
 }
+
+.character-item:hover .tooltip{
+  visibility: visible;
+}
+
+.tooltip {
+  visibility: hidden;
+  border-radius: 6px;
+  /* position: relative; */
+  background-color: rgb(86, 86, 86);
+  color: #fff;
+  width: 130px; 
+  text-align: center;
+  padding: 5px;
+  z-index: 1;
+  bottom: 100%;
+  left: 65%;
+  margin-left: -65px;
+}
+
+/* .tooltip:after{
+  content: '';
+	position: absolute;
+  left: 50%;
+  bottom: 0;
+	left: 50%;
+	width: fit-content;
+	height: 30px;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+} */
 
 /*@keyframes character_animation {
   0% {bottom:0px;}
