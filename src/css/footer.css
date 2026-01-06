@@ -1,7 +1,7 @@
 footer {
     text-align: center;
     border-top: 2px;
-    background: linear-gradient(to bottom, rgb(191, 0, 255) 0%, rgba(102, 0, 255, 0) 100%);
+    background: linear-gradient(to bottom, rgb(157, 0, 255) 0%, rgba(128, 0, 128) 100%);
     padding-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
     
@@ -33,12 +33,14 @@ footer .links a {
     gap: 1px;
 }
 p {
-    line-height: 0;
-    margin:5;
+    line-height: 0px;
+    margin: 15px;
+    
 }
 
 footer .links img {
     max-width: 20%;
     max-height: 20%;
     object-fit: contain;
+    padding-bottom: 5px;
 }
