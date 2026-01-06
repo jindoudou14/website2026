@@ -4,18 +4,14 @@ footer {
     background: linear-gradient(to bottom, rgb(157, 0, 255) 0%, rgba(128, 0, 128) 100%);
     padding-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
-    
+    min-height: 0px;
     display:flex;
     justify-content: center;
     flex-direction: column;
-    height: 130px;
+    
     margin-top: auto;
     
-    position: absolute;
-    bottom: 0;
-    left:0;
-    right:0;
-    top:0;
+   
 }
 
 footer .links {
@@ -39,8 +35,8 @@ p {
 }
 
 footer .links img {
-    max-width: 20%;
-    max-height: 20%;
+    max-width: 24px;
+    max-height: 24px;
     object-fit: contain;
     padding-bottom: 5px;
 }
