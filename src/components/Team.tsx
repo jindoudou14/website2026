@@ -9,19 +9,250 @@ type Member = {
   funFact: string;
   description: string;
   image: string;
+  photo: string;
 };
 
 const team: Member[] = [
   {
     id: 1,
+    name: "Paradis",
+    subteam: "robot",
+    emotion: "evnwjvkn",
+    funFact: "efnjnew",
+    description: "wfnjewknfx",
+    image: "src/Team_characters/anger.png",
+    photo: ""
+  },
+  {
+    id: 2,
+    name: "Livia Poliquin",
+    subteam: "Captain, Kiosk, tutorial/video",
+    emotion: "Anxiety",
+    funFact: "My goal in life is to have 8 cats",
+    description: "This year challenged me to think creatively to bring our theme to life. I learned how to plan ahead and adapt to new challenges, and I improved my communication skills with team members. Sadly, I had to sacrifice some beloved pieces of clothing due to paint stains!",
+    image: "src/Team_characters/Envy.webp",
+    photo: ""
+  },
+  {
+    id: 3,
     name: "",
     subteam: "",
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/Anger.webp",
+    image: "src/Team_characters/BingBong.png",
+    photo: ""
   },
-  // Add more members here
+  {
+    id: 4,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/Forgetter_Bobby.png",
+    photo: ""
+  },
+  {
+    id: 5,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/Fritz.png",
+    photo: ""
+  },
+  {
+    id: 6,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/Janelle.webp",
+    photo: ""
+  },
+  {
+    id: 7,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/Jean.webp",
+    photo: ""
+  },
+  {
+    id: 8,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/melatonin.png",
+    photo: ""
+  },
+  {
+    id: 9,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/fear.png",
+    photo: ""
+  },
+  {
+    id: 10,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/anxiety.png",
+    photo: ""
+  },
+  {
+    id: 11,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/bloofy.png",
+    photo: ""
+  },
+  {
+    id: 12,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/embarassment.png",
+    photo: ""
+  },
+  {
+    id: 13,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/ennui.png",
+    photo: ""
+  },
+  {
+    id: 14,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/joy.png",
+    photo: ""
+  },
+  {
+    id: 15,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/disgust.png",
+    photo: ""
+  },
+  {
+    id: 16,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/pouchy.png",
+    photo: ""
+  },
+  {
+    id: 17,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/sadness.png",
+    photo: ""
+  },
+  {
+    id: 18,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/lance.png",
+    photo: ""
+  },
+  {
+    id: 19,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/nostalgia.png",
+    photo: ""
+  },
+  {
+    id: 20,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/Forgetter_Paula.png",
+    photo: ""
+  },
+  {
+    id: 21,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/Xeni.webp",
+    photo: ""
+  },
+  {
+    id: 22,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/Paula.webp",
+    photo: ""
+  },
+  {
+    id: 23,
+    name: "",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/riley.png",
+    photo: ""
+  },
+  {
+    id: 24,
+    name: "Sophie Tin",
+    subteam: "",
+    emotion: "",
+    funFact: "",
+    description: "",
+    image: "src/Team_characters/wagon.png",
+    photo: ""
+  }
 ];
 
 const Team = () => {
@@ -30,6 +261,7 @@ const Team = () => {
   return (
     <div className="team-page">
       <h1>Meet the Team</h1>
+      <h2>Welcome to Riley's mind! ADD MORE TEXT</h2>
       
       <div className="character-grid">
         {team.map((member) => (
@@ -38,6 +270,7 @@ const Team = () => {
             className="character-item"
             onClick={() => setActiveMember(member)}
           >
+            <p className="tooltip">{member.name}</p>
             <img src={member.image} alt={member.name} />
             <p>{member.name}</p>
           </div>
@@ -47,19 +280,30 @@ const Team = () => {
       {/* Modal */}
       {activeMember && (
         <div className="modal-overlay" onClick={() => setActiveMember(null)}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <h2>{activeMember.name}</h2>
-              <button onClick={() => setActiveMember(null)}>X</button>
-            </div>
-            <img src={activeMember.image} alt={activeMember.name} />
-            <p><strong>Subteam:</strong> {activeMember.subteam}</p>
-            <p><strong>Emotion:</strong> {activeMember.emotion}</p>
-            <p><strong>Fun Fact:</strong> {activeMember.funFact}</p>
-            <p>{activeMember.description}</p>
+          <div>
+              <img src={activeMember.photo} alt={activeMember.name} />
           </div>
+
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            
+              <div className="modal-header">
+                <h2>{activeMember.name}</h2>
+              </div>
+              
+              <div className="member-info">
+                <p><strong>Subteam:</strong> {activeMember.subteam}</p>
+                <p><strong>Emotion:</strong> {activeMember.emotion}</p>
+                <p><strong>Fun Fact:</strong> {activeMember.funFact}</p>
+                <p>{activeMember.description}</p>
+              </div>
+          </div>
+          
+          <button className="modal-btn" onClick={() => setActiveMember(null)}>X</button>
+        
         </div>
+        
       )}
+      
     </div>
   );
 };
