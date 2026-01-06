@@ -11,7 +11,7 @@ body {
 .character-grid {
   display: flex;
   flex-wrap: wrap;
-  /*gap: 0px;*/
+  gap: 40px;
   justify-content: center;
 }
 
@@ -21,8 +21,8 @@ body {
 }
 
 .character-item img {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 20%;
   object-fit: cover;
   
