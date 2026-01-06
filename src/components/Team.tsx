@@ -25,11 +25,11 @@ const team: Member[] = [
   },
   {
     id: 2,
-    name: "",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
+    name: "Livia Poliquin",
+    subteam: "Captain, Kiosk, tutorial/video",
+    emotion: "Anxiety",
+    funFact: "My goal in life is to have 8 cats",
+    description: "This year challenged me to think creatively to bring our theme to life. I learned how to plan ahead and adapt to new challenges, and I improved my communication skills with team members. Sadly, I had to sacrifice some beloved pieces of clothing due to paint stains!",
     image: "src/Team_characters/Envy.webp",
     photo: ""
   },
