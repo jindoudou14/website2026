@@ -1,16 +1,16 @@
 footer {
     text-align: center;
     border-top: 2px;
-    background-color: blueviolet;
+    background: linear-gradient(to bottom, rgb(191, 0, 255) 0%, rgba(102, 0, 255, 0) 100%);
     padding-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
     
     display:flex;
     justify-content: center;
     flex-direction: column;
-    height: 180px;
+    height: 130px;
     margin-top: auto;
-    max-width: 100%;
+    
     position: absolute;
     bottom: 0;
     left:0;
@@ -18,12 +18,27 @@ footer {
     top:0;
 }
 
-p {
-    line-height: 1.2;
-    margin:0;
+footer .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: center;
 }
 
-img {
-    max-width: 50%;
-    max-height: 50%;
+footer .links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+}
+p {
+    line-height: 0;
+    margin:5;
+}
+
+footer .links img {
+    max-width: 20%;
+    max-height: 20%;
+    object-fit: contain;
 }
