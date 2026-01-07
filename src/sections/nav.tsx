@@ -1,7 +1,10 @@
 import "../css/nav.css";
 import ThemedButtons from "./themedButtons";
-
+import { useTranslation } from "react-i18next";
 const Nav = () => {
+  const {i18n, t} = useTranslation();
+  const isFr = i18n.language?.toLowerCase().startsWith("fr");
+  const after = isFr ? "en" : "fr";
   return (
     <nav id="navbar">
       <div className="navbar-container">
@@ -41,9 +44,9 @@ const Nav = () => {
             link="/replay"
             image="src/balls/yellowball.png"
           />
-          <ThemedButtons
-            text="Francais"
-            link="/francais"
+          <ThemedButtons 
+            text={isFr ? "English" : "Français"}
+            onClick={() => i18n.changeLanguage(after)}
             image="src/balls/pinkball.png"
           />
         </div>

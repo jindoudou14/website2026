@@ -1,6 +1,7 @@
 import "../css/footer.css"
-
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+    const {t} = useTranslation();
     return(
         <footer>
             <div className = "links">
@@ -9,11 +10,10 @@ const Footer = () => {
                 <a href = "https://robo-crc.ca/"><img src = "../logos/CRC_logo.png"/></a>
                 <a href = "https://github.com/jindoudou14/website2026"><img src = "../logos/GitHub_logo.png"/></a>
             </div>
-            <p>Based on the Inside Out Franchise by Pixar Animation Studios </p>
-            <p>© 2026 Marianopolis Robotics. All rights reserved.</p>
-        
+            <p>{t('credit')}</p>
+            <p>{t('copyright')}<p/>
         </footer>
-    )
-}
+    );
+};
 
 export default Footer;
