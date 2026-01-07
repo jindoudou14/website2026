@@ -284,7 +284,7 @@ const Team = () => {
               <img src={activeMember.photo} alt={activeMember.name} />
               
           </div>
-          <img className="frame" src={"logos and images/member-info-frame.png"} />
+          <img className="frame" src={"logos and images/frame.png"} />
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             
               <div className="modal-header">
