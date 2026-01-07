@@ -282,8 +282,9 @@ const Team = () => {
         <div className="modal-overlay" onClick={() => setActiveMember(null)}>
           <div>
               <img src={activeMember.photo} alt={activeMember.name} />
+              
           </div>
-
+          <img className="frame" src={"logos and images/member-info-frame.png"} />
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             
               <div className="modal-header">
