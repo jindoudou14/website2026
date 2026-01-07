@@ -45,12 +45,12 @@ const team: Member[] = [
   },
   {
     id: 4,
-    name: "",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
-    image: "src/Team_characters/joy.png",
+    name: "Clancy",
+    subteam: "Video/Kiosk",
+    emotion: "Fear",
+    funFact: "Once held the world record for the Wild Kratts: Monkey Mayhem any% speedrun.",
+    description: "You need to mix paint after opening a can.",
+    image: "src/Team_characters/riley.png",
     photo: ""
   },
   {
@@ -60,7 +60,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/sadness.png",
+    image: "src/Team_characters/joy.png",
     photo: ""
   },
   {
@@ -70,7 +70,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/anger.png",
+    image: "src/Team_characters/sadness.png",
     photo: ""
   },
   {
@@ -80,7 +80,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/Jean.webp",
+    image: "src/Team_characters/anger.png",
     photo: ""
   },
   {
@@ -90,7 +90,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/melatonin.png",
+    image: "src/Team_characters/anxiety.png",
     photo: ""
   },
   {
@@ -105,12 +105,12 @@ const team: Member[] = [
   },
   {
     id: 10,
-    name: "",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
-    image: "src/Team_characters/anxiety.png",
+    name: "Rowan Luckow",
+    subteam: "Kiosk and Tutorial",
+    emotion: "Joy",
+    funFact: "I like camping, hiking, and being in the woods.",
+    description: "I learned how to carve different types of foam, how to work with epoxy resins, and how to make a computer catch fire (with supervision). A sacrifice I had to make for the team was spending a lot of time outside the main meetings brainstorming and trying to coordinate with the fire department in order to safely film our tutorial.",
+    image: "src/Team_characters/embarassment.png",
     photo: ""
   },
   {
@@ -120,17 +120,17 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/bloofy.png",
+    image: "src/Team_characters/disgust.png",
     photo: ""
   },
   {
     id: 12,
-    name: "",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
-    image: "src/Team_characters/embarassment.png",
+    name: "David Du",
+    subteam: "Website, Programming",
+    emotion: "Fear",
+    funFact: "I like playing hockey",
+    description: "I learned that TypeScript makes larger projects way more organised for a team of webdevs. Even thought the time spent during all those meetings were worth it, there were some cool events I had to skip.",
+    image: "src/Team_characters/melatonin.png",
     photo: ""
   },
   {
@@ -140,7 +140,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/bloofy.png",
     photo: ""
   },
   {
@@ -160,7 +160,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/disgust.png",
+    image: "",
     photo: ""
   },
   {
@@ -180,7 +180,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/sadness.png",
+    image: "",
     photo: ""
   },
   {
@@ -240,7 +240,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/riley.png",
+    image: "",
     photo: ""
   },
   {

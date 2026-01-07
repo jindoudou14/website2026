@@ -28,7 +28,7 @@ body {
   object-fit: cover;
   
   animation-name: character_animation;
-  animation-duration: 10s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   
 }
@@ -82,8 +82,8 @@ frame {
   cursor: pointer;
   color: white;
   position: absolute;
-  top: 225px;
-  right: 375px;
+  top: 115px;
+  right: 250px;
 }
 
 .modal img {
