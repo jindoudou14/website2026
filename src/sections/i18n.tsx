@@ -39,7 +39,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 
             //Nav
             ball1: "Siège des émotions",
-            ball2: "Equipe",
+            ball2: "Équipe",
             ball3: "Moduel",
             ball4: "Croissance de Vice-Versa",
             ball5: "Ile de Robot",
