@@ -30,7 +30,7 @@ const team: Member[] = [
     emotion: "Anxiety",
     funFact: "My goal in life is to have 8 cats",
     description: "This year challenged me to think creatively to bring our theme to life. I learned how to plan ahead and adapt to new challenges, and I improved my communication skills with team members. Sadly, I had to sacrifice some beloved pieces of clothing due to paint stains!",
-    image: "src/Team_characters/Envy.webp",
+    image: "src/Team_characters/disgust.png",
     photo: ""
   },
   {
@@ -75,7 +75,7 @@ const team: Member[] = [
   },
   {
     id: 7,
-    name: "Zhuoyao",
+    name: "Zhuoyao Li",
     subteam: "Video and Tutorial",
     emotion: "Joy",
     funFact: "I have an extra bone in my body.",
@@ -95,7 +95,7 @@ const team: Member[] = [
   },
   {
     id: 9,
-    name: "",
+    name: "Tony",
     subteam: "",
     emotion: "",
     funFact: "",
@@ -120,7 +120,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/disgust.png",
+    image: "src/Team_characters/Envy.webp",
     photo: ""
   },
   {
@@ -170,7 +170,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/Forgetter_Paula.png",
     photo: ""
   },
   {
@@ -180,7 +180,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/Fritz.png",
     photo: ""
   },
   {
@@ -210,7 +210,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/Forgetter_Paula.png",
+    image: "src/Team_characters/Jean.webp",
     photo: ""
   },
   {
@@ -240,7 +240,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/Janelle.webp",
     photo: ""
   },
   {
