@@ -29,12 +29,16 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             ball7: "Memory Bank",
 
             //Team
+
+            //Archives
+
+            //Moduel
           },
         },
         fr: {
           translation: {
             //Footer
-            credit: 'Base sur la franchise Inside Out par Pixar Animation Studios',
+            credit: 'Basé sur la franchise Inside Out par Pixar Animation Studios',
             copyright: '© 2026 Marianopolis Robotique. Tous droits réservés.',
 
             //Nav
@@ -47,6 +51,10 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             ball7: "Banque de Memoire",
 
             //Team
+
+            //Archives
+
+            //Moduel
           },
         },
       },

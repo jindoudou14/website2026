@@ -14,7 +14,7 @@ footer {
     
     flex-wrap: nowrap;
     margin-top: auto;
-    min-height: 145px;
+    min-height: 245px;
    
 }
 
@@ -44,8 +44,10 @@ p {
 footer .links img {
     max-width: 55px;
     max-height: 55px;
+   
     object-fit: contain;
-    padding-bottom: 12px;
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-bottom: 22px;
+    padding-left: 37px;
+    padding-right: 37px;
+
 }
