@@ -35,22 +35,22 @@ const Nav = () => {
             image="src/balls/greenball.png"
           />
           <ThemedButtons
-            text="Growth of inside Out"
+            text={t('ball4')}
             link="/archives"
             image="src/balls/blueball.png"
           />
           <ThemedButtons
-            text="Robot island"
+            text={t('ball5')}
             link="/robot"
             image="src/balls/purpleball.png"
           />
           <ThemedButtons
-            text="Game"
+            text={t('ball6')}
             link="/game"
             image="src/balls/yellowball.png"
           />
           <ThemedButtons
-            text="Memory Bank"
+            text={t('ball7')}
             link="/replay"
             image="src/balls/tealball.png"
           />

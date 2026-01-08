@@ -1,11 +1,16 @@
 import React, { useMemo, useState } from "react";
 import "../css/archive.css";
-
+import { useTranslation } from "react-i18next";
 import kioskOrb from "../assets/images/orbs/kioskOrb.png";
 import robotOrb from "../assets/images/orbs/robotOrb.png";
 import videoOrb from "../assets/images/orbs/videoOrb.png";
 import programmingOrb from "../assets/images/orbs/programmingOrb.png";
 import websiteOrb from "../assets/images/orbs/websiteOrb.png";
+import orbeKiosque from "../assets/images/orbs/french/orbeKiosque.png";
+import orbeRobot from "../assets/images/orbs/french/orbeRobot.png";
+import orbeVideo from "../assets/images/orbs/french/orbeVideo.png";
+import orbeProgrammation from "../assets/images/orbs/french/orbeProgrammation.png";
+import orbeSiteweb from "../assets/images/orbs/french/orbeSiteweb.png";
 
 import arrowLeft from "../assets/images/arrowLeft.svg";
 import arrowRight from "../assets/images/arrowRight.svg";
@@ -38,6 +43,8 @@ function circularOffset(active: number, i: number, n: number) {
 }
 
 const Archive = () => {
+  const {i18n, t} = useTranslation();
+  const isFr = (i18n.resolvedLanguage ||i18n.language||"").toLowerCase().startsWith("fr");
   const [activeItem, setActiveItem] = useState<number | null>(null);
   const [activeTeam, setActiveTeam] = useState<number>(0);
 
@@ -55,14 +62,15 @@ const Archive = () => {
     { title: "Day 1: Video Design", text: "Sample Text. Bla bla bla.", date: "Jan. 6 2026", image: "https://www.midiaresearch.com/storage/uploads/blog/featured/2244/cover_image-1721122691.jpg" },
   ];
 
-  const sections: Section[] = [
-    { label: "Robot", start: 0, end: 2, orb: robotOrb },
-    { label: "Programming", start: 3, end: 5, orb: programmingOrb },
-    { label: "Website", start: 6, end: 6, orb: websiteOrb },
-    { label: "Kiosk", start: 7, end: 7, orb: kioskOrb },
-    { label: "Video", start: 8, end: 8, orb: videoOrb },
-  ];
-
+  const sections: Section[] = useMemo(()=>[
+    { label: "Robot", start: 0, end: 2, orb: isFr ? orbeRobot : robotOrb},
+    { label: "Programming", start: 3, end: 5, orb: isFr ? orbeProgrammation : programmingOrb },
+    { label: "Website", start: 6, end: 6, orb: isFr ? orbeSiteweb : websiteOrb },
+    { label: "Kiosk", start: 7, end: 7, orb: isFr ? orbeKiosque : kioskOrb },
+    { label: "Video", start: 8, end: 8, orb: isFr ? orbeVideo : videoOrb },
+  ],
+  [isFr]
+);
   const teamCount = sections.length;
 
   const openTeam = (teamIndex: number) => {
