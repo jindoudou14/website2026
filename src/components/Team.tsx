@@ -15,11 +15,11 @@ type Member = {
 const team: Member[] = [
   {
     id: 1,
-    name: "Paradis",
-    subteam: "robot",
-    emotion: "evnwjvkn",
-    funFact: "efnjnew",
-    description: "wfnjewknfx",
+    name: "Dominique Paradis",
+    subteam: "Supervisor",
+    emotion: "",
+    funFact: "",
+    description: "",
     image: "src/Team_characters/BingBong.png",
     photo: ""
   },
@@ -35,7 +35,7 @@ const team: Member[] = [
   },
   {
     id: 3,
-    name: "",
+    name: "Zhi Han Yan",
     subteam: "",
     emotion: "",
     funFact: "",
@@ -45,7 +45,7 @@ const team: Member[] = [
   },
   {
     id: 4,
-    name: "Clancy",
+    name: "Clancy Pryde",
     subteam: "Video/Kiosk",
     emotion: "Fear",
     funFact: "Once held the world record for the Wild Kratts: Monkey Mayhem any% speedrun.",
@@ -55,7 +55,7 @@ const team: Member[] = [
   },
   {
     id: 5,
-    name: "",
+    name: "Eveline Yue Zhang",
     subteam: "",
     emotion: "",
     funFact: "",
@@ -65,12 +65,12 @@ const team: Member[] = [
   },
   {
     id: 6,
-    name: "",
+    name: "Ji Jia Liu",
     subteam: "",
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/sadness.png",
+    image: "src/Team_characters/anger.png",
     photo: ""
   },
   {
@@ -80,12 +80,12 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/anger.png",
+    image: "src/Team_characters/sadness.png",
     photo: ""
   },
   {
     id: 8,
-    name: "",
+    name: "Carla Santavy",
     subteam: "",
     emotion: "",
     funFact: "",
@@ -149,8 +149,8 @@ const team: Member[] = [
     subteam: "",
     emotion: "",
     funFact: "",
-    description: "",
-    image: "src/Team_characters/Forgetter_Bobby.png",
+    description: "src/Team_characters/pouchy.png",
+    image: "",
     photo: ""
   },
   {
@@ -160,7 +160,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "",
+    image: "src/Team_characters/Forgetter_Bobby.png",
     photo: ""
   },
   {
@@ -170,7 +170,7 @@ const team: Member[] = [
     emotion: "",
     funFact: "",
     description: "",
-    image: "src/Team_characters/pouchy.png",
+    image: "",
     photo: ""
   },
   {

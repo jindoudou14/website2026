@@ -1,7 +1,7 @@
 .team-page {
   padding: 20px;
   margin-top: 100px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   
 }
 
@@ -26,11 +26,11 @@ body {
   height: 250px;
   border-radius: 20%;
   object-fit: cover;
-  
+
   animation-name: character_animation;
-  animation-duration: 5s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
-  
+
 }
 
 .modal-overlay {
@@ -63,8 +63,9 @@ body {
 }
 
 frame {
-  position:absolute;
+  position:relative;
   z-index: 200;
+  right: 10px;
 }
 
 .member-info {
@@ -131,7 +132,7 @@ frame {
 } */
 
 @keyframes character_animation {
-  0% {margin-bottom: 0px;}
-  50% {margin-bottom: 50px;}
-  100% {margin-bottom: 0px;} 
+  0% {margin-top: 0px;}
+  50% {margin-top: 50px;}
+  100% {margin-top: 0px;} 
 }
