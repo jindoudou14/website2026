@@ -86,10 +86,10 @@ const team: Member[] = [
   {
     id: 8,
     name: "Carla Santavy",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
+    subteam: "Kiosk!",
+    emotion: "Anger",
+    funFact: "I like drawing and playing hollow knight",
+    description: "I learned how to work with procreate as well as how art is transposed into video games, such as tilemaps and the layout animation sequences. I had to sacrifice my sanity to draw more animation frames for Jijia.",
     image: "src/Team_characters/anxiety.png",
     photo: ""
   },
