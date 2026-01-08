@@ -20,7 +20,7 @@ const Nav = () => {
             <h2 className="navbar-logo-text">Inside Out</h2>
           </a>
           <ThemedButtons
-            text="Emotion Headquarters"
+            text={t('ball1')}
             link="/"
             image="src/balls/redball.png"
           />
@@ -30,7 +30,7 @@ const Nav = () => {
             image="src/balls/orangeball.png"
           />
           <ThemedButtons
-            text="MoDuel"
+            text={t('ball3')}
             link="/moduel"
             image="src/balls/greenball.png"
           />
