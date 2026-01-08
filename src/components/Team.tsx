@@ -348,7 +348,7 @@ const team: Member[] = [
     photo: "",
     colour: [
       "rgba(255, 85, 128, 1)",
-      "rgba(252, 118, 152, 1)"
+      "rgba(252, 118, 152, 1)n"
     ]
   }
 ];
