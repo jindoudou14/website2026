@@ -9,13 +9,23 @@ const Nav = () => {
     <nav id="navbar">
       <div className="navbar-container">
         <div className="navbar-links">
+          <a href="/" target="_self">
+            <img
+              src="logos/insideoutlogo.png"
+              alt="MoDuel Marianopolis Logo"
+              className="navbar-logo"
+            />
+          </a>
+          <a href="/" target="_self">
+            <h2 className="navbar-logo-text">Inside Out</h2>
+          </a>
           <ThemedButtons
-            text="Home"
+            text="Emotion Headquarters"
             link="/"
             image="src/balls/redball.png"
           />
           <ThemedButtons
-            text="Team"
+            text={t('ball2')}
             link="/team"
             image="src/balls/orangeball.png"
           />
@@ -25,24 +35,24 @@ const Nav = () => {
             image="src/balls/greenball.png"
           />
           <ThemedButtons
-            text="Archives"
+            text="Growth of inside Out"
             link="/archives"
             image="src/balls/blueball.png"
           />
           <ThemedButtons
-            text="Robot"
+            text="Robot island"
             link="/robot"
             image="src/balls/purpleball.png"
           />
           <ThemedButtons
             text="Game"
             link="/game"
-            image="src/balls/tealball.png"
+            image="src/balls/yellowball.png"
           />
           <ThemedButtons
-            text="Replay Memories"
+            text="Memory Bank"
             link="/replay"
-            image="src/balls/yellowball.png"
+            image="src/balls/tealball.png"
           />
           <ThemedButtons 
             text={isFr ? "English" : "Français"}

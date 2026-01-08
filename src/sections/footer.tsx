@@ -11,7 +11,7 @@ const Footer = () => {
                 <a href = "https://github.com/jindoudou14/website2026"><img src = "../logos/GitHub_logo.png"/></a>
             </div>
             <p>{t('credit')}</p>
-            <p>{t('copyright')}<p/>
+            <p>{t('copyright')}</p>
         </footer>
     );
 };

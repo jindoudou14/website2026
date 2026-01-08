@@ -20,6 +20,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             copyright: '© 2026 Marianopolis Robotics. All rights reserved.',
 
             //Nav
+            
+            ball2: "team",
           },
         },
         fr: {
@@ -29,6 +31,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             copyright: '© 2026 Marianopolis Robotique. Tous droits réservés.',
 
             //Nav
+
+            ball2: "equipe",
           },
         },
       },
