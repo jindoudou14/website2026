@@ -57,7 +57,6 @@ body {
   max-height: 80vh;
   height: 500px; */
   overflow-y: auto; 
-  overflow-y: scroll;
   left: 0px;
   top: 0px;
   width: 400px;
@@ -69,8 +68,8 @@ body {
 .frame {
   position:absolute;
   z-index: 200;
-  right: 0px;
-  top: 0px;
+  justify-content: center;
+  right: 350px;
 }
 
 .member-info {

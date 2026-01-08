@@ -75,11 +75,11 @@ const team: Member[] = [
   },
   {
     id: 7,
-    name: "",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
+    name: "Zhuoyao",
+    subteam: "Video and Tutorial",
+    emotion: "Joy",
+    funFact: "I have an extra bone in my body.",
+    description: "I learned how to use DaVinci Resolve 20! I unfortunately did not participate in many clubs to better focus on robotics.",
     image: "src/Team_characters/sadness.png",
     photo: ""
   },
