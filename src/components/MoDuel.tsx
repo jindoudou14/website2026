@@ -9,8 +9,7 @@ const MoDuel: React.FC = () => {
 
       <div className="glass-card">
         <h2>
-          We're very excited to see that you're interested in Kryptik,
-          Angryneer!
+          We're very excited to see that you're interested in Kryptik!
         </h2>
         <div className="media">
           <img
@@ -19,8 +18,7 @@ const MoDuel: React.FC = () => {
           />
         </div>
         <h2>
-          The first angryneers formed the non-profit CRC organization in 2001,
-          then designed
+          The first emotions formed the non-profit CRC organization in 2001,then designed
         </h2>
         <div className="media">
           <img
