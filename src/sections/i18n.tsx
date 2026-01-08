@@ -20,13 +20,15 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             copyright: '© 2026 Marianopolis Robotics. All rights reserved.',
 
             //Nav
-            ball1: "emotions headquarter",
-            ball2: "team",
+            ball1: "Emotions Headquarter",
+            ball2: "Team",
             ball3: "Moduel",
-            ball4: "",
-            ball5: "",
-            ball6: "",
-            ball7: "",
+            ball4: "Growth of Inside Out",
+            ball5: "Robot Island",
+            ball6: "Game",
+            ball7: "Memory Bank",
+
+            //Team
           },
         },
         fr: {
@@ -36,9 +38,15 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             copyright: '© 2026 Marianopolis Robotique. Tous droits réservés.',
 
             //Nav
-            ball1: "siège des émotions",
-            ball2: "equipe",
+            ball1: "Siège des émotions",
+            ball2: "Équipe",
             ball3: "Moduel",
+            ball4: "Croissance de Vice-Versa",
+            ball5: "Ile de Robot",
+            ball6: "Jeu",
+            ball7: "Banque de Memoire",
+
+            //Team
           },
         },
       },

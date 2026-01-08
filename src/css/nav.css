@@ -72,6 +72,15 @@
   animation: float 2s ease-in-out infinite;
 }
 
+.navbar-image-button.no-bounce.active {
+  animation: none;
+  transform: none;
+}
+
+.navbar-image-button.no-bounce:hover {
+  filter: brightness(1.5);
+  animation: float 2s ease-in-out infinite;
+}
 
 .navbar-image-button:hover {
   filter: brightness(1.5);

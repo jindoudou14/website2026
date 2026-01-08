@@ -73,3 +73,6 @@ export default defineConfig([
   },
 ])
 ```
+you can install the translating package I18Next with the the following command:
+
+npm install i18next react-i18next i18next-browser-languagedetector

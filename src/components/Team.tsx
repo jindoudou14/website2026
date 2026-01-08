@@ -10,6 +10,7 @@ type Member = {
   description: string;
   image: string;
   photo: string;
+  colour: string;
 };
 
 const team: Member[] = [
@@ -21,7 +22,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/BingBong.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 2,
@@ -31,7 +33,8 @@ const team: Member[] = [
     funFact: "My goal in life is to have 8 cats",
     description: "This year challenged me to think creatively to bring our theme to life. I learned how to plan ahead and adapt to new challenges, and I improved my communication skills with team members. Sadly, I had to sacrifice some beloved pieces of clothing due to paint stains!",
     image: "src/Team_characters/disgust.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 3,
@@ -41,7 +44,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/ennui.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 4,
@@ -51,7 +55,8 @@ const team: Member[] = [
     funFact: "Once held the world record for the Wild Kratts: Monkey Mayhem any% speedrun.",
     description: "You need to mix paint after opening a can.",
     image: "src/Team_characters/riley.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 5,
@@ -61,7 +66,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/joy.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 6,
@@ -71,7 +77,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/anger.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 7,
@@ -81,7 +88,8 @@ const team: Member[] = [
     funFact: "I have an extra bone in my body.",
     description: "I learned how to use DaVinci Resolve 20! I unfortunately did not participate in many clubs to better focus on robotics.",
     image: "src/Team_characters/sadness.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 8,
@@ -91,7 +99,8 @@ const team: Member[] = [
     funFact: "I like drawing and playing hollow knight",
     description: "I learned how to work with procreate as well as how art is transposed into video games, such as tilemaps and the layout animation sequences. I had to sacrifice my sanity to draw more animation frames for Jijia.",
     image: "src/Team_characters/anxiety.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 9,
@@ -101,7 +110,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/fear.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 10,
@@ -111,7 +121,8 @@ const team: Member[] = [
     funFact: "I like camping, hiking, and being in the woods.",
     description: "I learned how to carve different types of foam, how to work with epoxy resins, and how to make a computer catch fire (with supervision). A sacrifice I had to make for the team was spending a lot of time outside the main meetings brainstorming and trying to coordinate with the fire department in order to safely film our tutorial.",
     image: "src/Team_characters/embarassment.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 11,
@@ -121,7 +132,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/Envy.webp",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 12,
@@ -131,7 +143,8 @@ const team: Member[] = [
     funFact: "I like playing hockey",
     description: "I learned that TypeScript makes larger projects way more organised for a team of webdevs. Even thought the time spent during all those meetings were worth it, there were some cool events I had to skip.",
     image: "src/Team_characters/melatonin.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 13,
@@ -141,7 +154,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/bloofy.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 14,
@@ -151,7 +165,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/pouchy.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 15,
@@ -161,7 +176,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/Forgetter_Bobby.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 16,
@@ -171,7 +187,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/Forgetter_Paula.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 17,
@@ -181,7 +198,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/Fritz.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 18,
@@ -191,7 +209,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/lance.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 19,
@@ -201,7 +220,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/nostalgia.png",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 20,
@@ -211,7 +231,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/Jean.webp",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 21,
@@ -221,7 +242,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/Xeni.webp",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 22,
@@ -231,7 +253,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/Paula.webp",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 23,
@@ -241,7 +264,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/Janelle.webp",
-    photo: ""
+    photo: "",
+    colour: ""
   },
   {
     id: 24,
@@ -251,7 +275,8 @@ const team: Member[] = [
     funFact: "",
     description: "",
     image: "src/Team_characters/wagon.png",
-    photo: ""
+    photo: "",
+    colour: ""
   }
 ];
 
