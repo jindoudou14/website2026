@@ -1,6 +1,7 @@
 import MoDuel from "./MoDuel";
 import Team from "./Team";
 import Home from "./home";
+import Archive from "./Archive";
 
 export const pages = [
     {
@@ -16,5 +17,10 @@ export const pages = [
         path: "/Team",
         element: <Team />,
         title: "Team"
+    },
+    {
+        path: "/Archives",
+        element: <Archive />,
+        title: "Archives"
     }
 ]
