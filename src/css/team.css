@@ -1,6 +1,6 @@
 .team-page {
   padding: 20px;
-  margin-top: 100px;
+  margin-top: 150px;
   margin-bottom: 0px;
   
 }
@@ -34,7 +34,9 @@ body {
 }
 
 .modal-overlay {
-  position: fixed;
+  /* position: fixed; */
+  position: relative;
+
   top: 0px;
   left: 0px;
   right: 0px;
@@ -55,21 +57,32 @@ body {
   max-height: 80vh;
   height: 500px; */
   overflow-y: auto; 
-  left: 560px;
+  overflow-y: scroll;
+  left: 0px;
+  top: 0px;
   width: 400px;
-  height: 300px;
+  height: 100px;
   position: absolute;
   z-index: -200;
 }
 
-frame {
-  position:relative;
+.frame {
+  position:absolute;
   z-index: 200;
-  right: 10px;
+  right: 0px;
+  top: 0px;
 }
 
 .member-info {
-  /* white-space: pre-line; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
+}
+
+.member-info p,
+.member-info h2 {
+  margin: 0;
+  line-height: 1.35;
 }
 
 .modal-header {

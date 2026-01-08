@@ -149,8 +149,8 @@ const team: Member[] = [
     subteam: "",
     emotion: "",
     funFact: "",
-    description: "src/Team_characters/pouchy.png",
-    image: "",
+    description: "",
+    image: "src/Team_characters/pouchy.png",
     photo: ""
   },
   {
@@ -287,11 +287,8 @@ const Team = () => {
           <img className="frame" src={"logos and images/frame.png"} />
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             
-              <div className="modal-header">
-                <h2>{activeMember.name}</h2>
-              </div>
-              
               <div className="member-info">
+                <h2 className="modal-header">{activeMember.name}</h2>
                 <p><strong>Subteam:</strong> {activeMember.subteam}</p>
                 <p><strong>Emotion:</strong> {activeMember.emotion}</p>
                 <p><strong>Fun Fact:</strong> {activeMember.funFact}</p>
