@@ -100,6 +100,7 @@ const Archive = () => {
           return (
             <div className="card-container" style={style} key={s.label}>
               <button className="card orb-card" onClick={() => openTeam(i)} type="button">
+                <p>Orb</p>
                 <img className="orb-img" src={s.orb} alt={`${s.label} orb`} />
               </button>
             </div>
