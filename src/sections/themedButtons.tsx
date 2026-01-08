@@ -6,9 +6,10 @@ type Props = {
   link?: string;
   image: string;
   onClick?: (e: React.MouseEvent) => void;
+  noBounce?: string;
 };
 
-const ThemedButtons = ({ text, link = "#", image, onClick }: Props) => {
+const ThemedButtons = ({ text, link = "#", image, onClick, noBounce }: Props) => {
   return (
     <NavLink
       to={link}
@@ -22,7 +23,7 @@ const ThemedButtons = ({ text, link = "#", image, onClick }: Props) => {
 
       }
       className={({ isActive }) =>
-        `navbar-image-button ${isActive ? "active" : ""}`
+        `navbar-image-button ${isActive ? "active" : ""} ${noBounce ?? ""}`
       }
       style={{ backgroundImage: `url(${image})` }}
     >

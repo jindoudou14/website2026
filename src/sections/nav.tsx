@@ -58,6 +58,7 @@ const Nav = () => {
             text={isFr ? "English" : "Français"}
             onClick={() => i18n.changeLanguage(after)}
             image="src/balls/pinkball.png"
+            noBounce="no-bounce"
           />
         </div>
       </div>
