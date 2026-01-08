@@ -81,7 +81,7 @@ const Archive = () => {
   );
 
   const memories: Memory[] = [
-    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video A", orb: memory1Orb, videoSrc: "/videos/memory1.mp4" },
+    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video A", orb: memory1Orb, videoSrc: "/src/assets/memories/robot_thing.mp4" },
     { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video B", orb: memory1Orb, videoSrc: "/videos/memory1.mp4" },
     { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video C", orb: memory1Orb, videoSrc: "/videos/memory1.mp4" }
   ];
@@ -115,7 +115,7 @@ const Archive = () => {
   return (
     <div className="archive-page">
       <div className="carousel">
-        <button className="nav left" onClick={() => setActiveTeam(wrapIndex(activeTeam - 1, teamCount))} type="button">
+        <button className="nav left" onClick={() => setActiveTeam(wrapIndex(activeTeam + 1, teamCount))} type="button">
           <img src={arrowLeft} alt="Previous" />
         </button>
 
@@ -142,13 +142,13 @@ const Archive = () => {
           );
         })}
 
-        <button className="nav right" onClick={() => setActiveTeam(wrapIndex(activeTeam + 1, teamCount))} type="button">
+        <button className="nav right" onClick={() => setActiveTeam(wrapIndex(activeTeam - 1, teamCount))} type="button">
           <img src={arrowRight} alt="Next" />
         </button>
       </div>
 
       <div className="carousel">
-        <button className="nav left" onClick={() => setActiveMemory(wrapIndex(activeMemory - 1, memoryCount))} type="button">
+        <button className="nav left" onClick={() => setActiveMemory(wrapIndex(activeMemory + 1, memoryCount))} type="button">
           <img src={arrowLeft} alt="Previous" />
         </button>
 
@@ -175,7 +175,7 @@ const Archive = () => {
           );
         })}
 
-        <button className="nav right" onClick={() => setActiveMemory(wrapIndex(activeMemory + 1, memoryCount))} type="button">
+        <button className="nav right" onClick={() => setActiveMemory(wrapIndex(activeMemory - 1, memoryCount))} type="button">
           <img src={arrowRight} alt="Next" />
         </button>
       </div>
