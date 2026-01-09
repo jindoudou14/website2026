@@ -1,7 +1,7 @@
 .team-page {
   padding: 20px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 150px;
+  margin-bottom: 0px;
   
 }
 
@@ -12,7 +12,7 @@ body {
 .character-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 100px;
   justify-content: center;
 }
 
@@ -22,22 +22,26 @@ body {
 }
 
 .character-item img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 20%;
   object-fit: cover;
-  
+/* 
   animation-name: character_animation;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; */
+
+  animation: glow 2s ease-in-out infinite;
 }
 
 .modal-overlay {
+  /* position: fixed; */
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -46,16 +50,47 @@ body {
 }
 
 .modal {
-  background: #bcbbf2;
   padding: 20px;
-  border-radius: 10px;
-  max-width: 400px;
+  border-radius: 0px;
+  /* max-width: 400px;
   width: 90%;
-  height: 200 px;
-  /*max-height: 80vh;*/
-  overflow-y: auto;
+  max-height: 80vh;
+  height: 500px; */
+  /* overflow-y: scroll; 
+  overflow-y: auto; */
+  /* left: 0px;
+  top: 0px; */
+  max-width: 480px;
+  height: 375px;
+  right: 55px;
   position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
 
+.frame {
+  position:absolute;
+  z-index: 200;
+  justify-content: center;
+  /* right: 175px; */
+  pointer-events: none;
+}
+
+.member-info {
+  background: beige;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.member-info p,
+.member-info h2 {
+  margin: 0;
+  line-height: 1.35;
 }
 
 .modal-header {
@@ -69,8 +104,8 @@ body {
   cursor: pointer;
   color: white;
   position: absolute;
-  top: 225px;
-  right: 375px;
+  top: 115px;
+  right: 250px;
 }
 
 .modal img {
@@ -93,13 +128,14 @@ body {
   /* position: relative; */
   background-color: rgb(86, 86, 86);
   color: #fff;
-  width: 130px; 
+  width: fit-content; 
+  height: 20px;
   text-align: center;
   padding: 5px;
   z-index: 1;
-  bottom: 100%;
+  /* bottom: 100%;
   left: 65%;
-  margin-left: -65px;
+  margin-left: -65px; */
 }
 
 /* .tooltip:after{
@@ -116,10 +152,19 @@ body {
 	margin-bottom: -20px;
 } */
 
-/*@keyframes character_animation {
-  0% {bottom:0px;}
-  25% {bottom:100px;}
-  50% {bottom:250px}
-  75% {bottom:100px;}
-  100% {bottom:250px;}
-} /*
+/* @keyframes character_animation {
+  0% {margin-top: 0px;}
+  50% {margin-top: 50px;}
+  100% {margin-top: 0px;} 
+} */
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 0px rgba(0,255,255,0));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 12px var(--glow-1))
+      drop-shadow(0 0 24px var(--glow-2))
+  }
+}
