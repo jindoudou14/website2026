@@ -1,23 +1,24 @@
 import React, { useMemo, useState } from "react";
 import "../css/archive.css";
 import { useTranslation } from "react-i18next";
-
+//english
 import kioskOrb from "../assets/images/orbs/kioskOrb.png";
 import robotOrb from "../assets/images/orbs/robotOrb.png";
 import videoOrb from "../assets/images/orbs/videoOrb.png";
 import programmingOrb from "../assets/images/orbs/programmingOrb.png";
 import websiteOrb from "../assets/images/orbs/websiteOrb.png";
-
+import memory1Orb from "../assets/images/orbs/memory1Orb.png";
+//french
 import orbeKiosque from "../assets/images/orbs/french/orbeKiosque.png";
 import orbeRobot from "../assets/images/orbs/french/orbeRobot.png";
 import orbeVideo from "../assets/images/orbs/french/orbeVideo.png";
 import orbeProgrammation from "../assets/images/orbs/french/orbeProgrammation.png";
 import orbeSiteweb from "../assets/images/orbs/french/orbeSiteweb.png";
-
+import orbeSouvenirNo1 from "../assets/images/orbs/french/orbeSouvenirNo1.png";
+//
 import arrowLeft from "../assets/images/arrowLeft.svg";
 import arrowRight from "../assets/images/arrowRight.svg";
-
-import memory1Orb from "../assets/images/orbs/memory1Orb.png";
+;
 
 const MAX_VISIBILITY = 3;
 
@@ -81,9 +82,9 @@ const Archive = () => {
   );
 
   const memories: Memory[] = [
-    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video A", orb: memory1Orb, videoSrc: "/src/assets/memories/robot_thing.mp4" },
-    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video B", orb: memory1Orb, videoSrc: "/videos/memory1.mp4" },
-    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video C", orb: memory1Orb, videoSrc: "/videos/memory1.mp4" }
+    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video A", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/memories/robot_thing.mp4" },
+    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video B", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/videos/memory1.mp4" },
+    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video C", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/videos/memory1.mp4" }
   ];
 
   const teamCount = sections.length;

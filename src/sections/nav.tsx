@@ -17,7 +17,7 @@ const Nav = () => {
             />
           </a>
           <a href="/" target="_self">
-            <h2 className="navbar-logo-text">Inside Out</h2>
+            <h2 className="navbar-logo-text">{t("title")}</h2>
           </a>
           <ThemedButtons
             text={t('ball1')}
