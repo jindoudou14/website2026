@@ -9,12 +9,12 @@ footer {
     
     font-family: 'InsideOut';
     
-    padding-top: 10px;
+    padding-top: 5px;
     width: 100%;
     
     flex-wrap: nowrap;
     margin-top: auto;
-    min-height: 245px;
+    min-height: 225px;
    
 }  
 
@@ -30,21 +30,26 @@ footer .links a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 p {
     line-height: 0.2;
     margin: 8px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
 }
 
+#cred {
+    letter-spacing: 1px;
+    color: chartreuse;
+}
 footer .links img {
-    max-width: 55px;
-    max-height: 55px;
+    max-width: 75px;
+    max-height: 75px;
    
     object-fit: contain;
-    padding-bottom: 22px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
 
 }

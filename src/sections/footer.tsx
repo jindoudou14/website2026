@@ -13,7 +13,7 @@ const Footer = () => {
                 <a href = "https://github.com/jindoudou14/website2026" target="_blank" rel="noopener norefferer"><img src = "../logos/GitHub_logo.png"/></a>
                 <a href = "https://www.instagram.com/marianopolis_robotics/" target="_blank" rel="noopener norefferer"><img src="../logos/Instagram_logo.png"/></a>
             </div>
-            <a href= "/Credits" onClick = {(e)=>{e.preventDefault();navigate("/Credits");}}>{t('credit')}</a>
+            <a id="cred" href= "/Credits" onClick = {(e)=>{e.preventDefault();navigate("/Credits");}}>{t('credit')}</a>
             <p>{t('copyright')}</p>
         </footer>
     );

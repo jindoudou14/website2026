@@ -34,6 +34,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             //Archives
 
             //Moduel
+
+            //credits
+            
           },
         },
         fr: {
@@ -57,6 +60,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             //Archives
 
             //Moduel
+
+            //credits
           },
         },
       },
