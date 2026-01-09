@@ -20,6 +20,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             copyright: '© 2026 Marianopolis Robotics. All rights reserved.',
 
             //Nav
+            title: "Inside Out",
             ball1: "Emotions Headquarter",
             ball2: "Team",
             ball3: "Moduel",
@@ -33,19 +34,23 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             //Archives
 
             //Moduel
+
+            //credits
+            
           },
         },
         fr: {
           translation: {
             //Footer
-            credit: 'Basé sur la franchise Inside Out par Pixar Animation Studios',
+            credit: 'Basé sur la franchise Sens Dessus Dessous par Pixar Animation Studios',
             copyright: '© 2026 Marianopolis Robotique. Tous droits réservés.',
 
             //Nav
+            title: "Sens Dessus Dessous",
             ball1: "Siège des émotions",
             ball2: "Équipe",
             ball3: "Moduel",
-            ball4: "Croissance de Vice-Versa",
+            ball4: "Croissance de Sens dessus dessous",
             ball5: "Ile de Robot",
             ball6: "Jeu",
             ball7: "Banque de Memoire",
@@ -55,6 +60,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             //Archives
 
             //Moduel
+
+            //credits
           },
         },
       },

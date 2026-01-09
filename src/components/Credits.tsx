@@ -7,7 +7,7 @@ const Credits = () => {
         <div className = "creds">
             <h1>credits</h1><br></br><br></br>
             <p>
-                
+                blab la
             </p>
         </div>
        
