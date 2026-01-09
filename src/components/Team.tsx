@@ -104,8 +104,8 @@ const team: Member[] = [
     image: "src/Team_characters/anger.png",
     photo: "",
     colour: [
-      "rgba(255, 0, 0, 0.89)",
-      "rgba(255, 98, 98, 0.89)"
+      "rgb(255, 0, 0)",
+      "rgb(255, 98, 98)"
     ]
   },
   {
@@ -119,8 +119,8 @@ const team: Member[] = [
     image: "src/Team_characters/sadness.png",
     photo: "",
     colour: [
-      "rgba(23, 12, 255, 0.89)",
-      "rgba(104, 97, 255, 0.89)"
+      "rgb(23, 12, 255)",
+      "rgb(104, 97, 255)"
     ]
   },
   {
@@ -134,8 +134,8 @@ const team: Member[] = [
     image: "src/Team_characters/anxiety.png",
     photo: "",
     colour: [
-      "rgba(255, 143, 0, 0.89)",
-      "rgba(255, 179, 82, 0.89)"
+      "rgb(255, 143, 0)",
+      "rgb(255, 179, 82)"
     ]
   },
   {
@@ -149,8 +149,8 @@ const team: Member[] = [
     image: "src/Team_characters/fear.png",
     photo: "",
     colour: [
-      "rgba(195, 50, 255, 0.89)",
-      "rgba(216, 122, 255, 0.89)"
+      "rgb(195, 50, 255)",
+      "rgb(216, 122, 255)"
     ]
   },
   {
@@ -164,8 +164,8 @@ const team: Member[] = [
     image: "src/Team_characters/embarassment.png",
     photo: "",
     colour: [
-      "rgba(255, 0, 207, 0.89)",
-      "rgba(255, 71, 220, 0.89)"
+      "rgb(255, 0, 207)",
+      "rgb(255, 71, 220)"
     ]
   },
   {
@@ -179,7 +179,7 @@ const team: Member[] = [
     image: "src/Team_characters/Envy.webp",
     photo: "",
     colour: [
-      "rgba(0, 128, 128, 1)",
+      "rgb(0, 128, 128)",
       "rgb(1, 185, 185)"
     ]
   },
@@ -189,13 +189,13 @@ const team: Member[] = [
     subteam: "Website, Programming",
     emotion: "Fear",
     funFact: "I like playing hockey",
-    quote: "",
+    quote: "There’s always light at the end of the tunnel",
     description: "I learned that TypeScript makes larger projects way more organised for a team of webdevs. Even thought the time spent during all those meetings were worth it, there were some cool events I had to skip.",
     image: "src/Team_characters/melatonin.png",
     photo: "",
     colour: [
-      "rgba(60, 154, 255, 0.89)",
-      "rgba(99, 174, 255, 0.89)"
+      "rgb(60, 154, 255)",
+      "rgb(99, 174, 255)"
     ]
   },
   {
@@ -209,8 +209,8 @@ const team: Member[] = [
     image: "src/Team_characters/bloofy.png",
     photo: "",
     colour: [
-      "rgba(218, 118, 255, 0.89)",
-      "rgba(226, 147, 255, 0.89)"
+      "rgb(218, 118, 255)",
+      "rgb(226, 147, 255)"
     ]
   },
   {
@@ -224,8 +224,8 @@ const team: Member[] = [
     image: "src/Team_characters/pouchy.png",
     photo: "",
     colour: [
-      "rgba(197, 215, 0, 0.89)",
-      "rgba(224, 245, 0, 0.89)"
+      "rgb(197, 215, 0)",
+      "rgb(224, 245, 0)"
     ]
   },
   {
@@ -239,8 +239,8 @@ const team: Member[] = [
     image: "src/Team_characters/Forgetter_Bobby.png",
     photo: "",
     colour: [
-      "rgba(47, 168, 255, 1)",
-      "rgba(91, 187, 255, 1)"
+      "rgb(47, 168, 255)",
+      "rgb(91, 187, 255)"
     ]
   },
   {
@@ -254,8 +254,8 @@ const team: Member[] = [
     image: "src/Team_characters/Forgetter_Paula.png",
     photo: "",
     colour: [
-      "rgba(47, 168, 255, 1)",
-      "rgba(91, 187, 255, 1)"
+      "rgb(47, 168, 255)",
+      "rgb(91, 187, 255)"
     ]
   },
   {
@@ -269,8 +269,8 @@ const team: Member[] = [
     image: "src/Team_characters/Fritz.png",
     photo: "",
     colour: [
-      "rgba(47, 168, 255, 1)",
-      "rgba(91, 187, 255, 1)"
+      "rgb(47, 168, 255)",
+      "rgb(91, 187, 255)"
     ]
   },
   {
@@ -284,8 +284,8 @@ const team: Member[] = [
     image: "src/Team_characters/lance.png",
     photo: "",
     colour: [
-      "rgba(198, 0, 206, 0.89)",
-      "rgba(206, 85, 211, 0.89)"
+      "rgb(198, 0, 206)",
+      "rgb(206, 85, 211)"
     ]
   },
   {
@@ -299,8 +299,8 @@ const team: Member[] = [
     image: "src/Team_characters/nostalgia.png",
     photo: "",
     colour: [
-      "rgba(183, 183, 183, 1)",
-      "rgba(190, 190, 190, 1)"
+      "rgb(183, 183, 183)",
+      "rgb(190, 190, 190)"
     ]
   },
   {
@@ -314,8 +314,8 @@ const team: Member[] = [
     image: "src/Team_characters/Jean.webp",
     photo: "",
     colour: [
-      "rgba(47, 168, 255, 1)",
-      "rgba(91, 187, 255, 1)"
+      "rgb(47, 168, 255)",
+      "rgb(91, 187, 255)"
     ]
   },
   {
@@ -329,8 +329,8 @@ const team: Member[] = [
     image: "src/Team_characters/Xeni.webp",
     photo: "",
     colour: [
-      "rgba(50, 255, 212, 1)",
-      "rgba(122, 255, 227, 1)"
+      "rgb(50, 255, 212)",
+      "rgb(122, 255, 227)"
     ]
   },
   {
@@ -344,8 +344,8 @@ const team: Member[] = [
     image: "src/Team_characters/Paula.webp",
     photo: "",
     colour: [
-      "rgba(169, 27, 241, 1)",
-      "rgba(188, 85, 240, 1)"
+      "rgb(169, 27, 241)",
+      "rgb(188, 85, 240)"
     ]
   },
   {
@@ -359,8 +359,8 @@ const team: Member[] = [
     image: "src/Team_characters/Janelle.webp",
     photo: "",
     colour: [
-      "rgba(47, 168, 255, 1)",
-      "rgba(91, 187, 255, 1)"
+      "rgb(47, 168, 255)",
+      "rgb(91, 187, 255)"
     ]
   },
   {
@@ -374,8 +374,8 @@ const team: Member[] = [
     image: "src/Team_characters/wagon.png",
     photo: "",
     colour: [
-      "rgba(255, 85, 128, 1)",
-      "rgba(252, 118, 152, 1)"
+      "rgb(255, 85, 128)",
+      "rgb(252, 118, 152)"
     ]
   }
 ];
@@ -408,26 +408,23 @@ const Team = () => {
 
       {/* Modal */}
       {activeMember && (
+        
         <div className="modal-overlay" onClick={() => setActiveMember(null)}>
           <div>
               <img src={activeMember.photo} alt={activeMember.name} />
-              
           </div>
-          <img className="frame" src={"logos and images/frame.png"} />
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            
-              <div className="member-info">
-                <h2 className="modal-header">{activeMember.name}</h2>
-                <p><strong>Subteam:</strong> {activeMember.subteam}</p>
-                <p><strong>Synergizing Emotion:</strong> {activeMember.emotion}</p>
-                <p><strong>Fun Fact:</strong> {activeMember.funFact}</p>
-                <p><strong>Favourite Quote:</strong> {activeMember.quote} </p>
-                <p>{activeMember.description}</p>
-              </div>
-          </div>
-          
+            <img className="frame" src={"logos and images/frame.png"} />
+              <div className="modal" onClick={(e) => e.stopPropagation()}>
+                  <div className="member-info">
+                    <h3 className="modal-header">{activeMember.name}</h3>
+                    <p><strong>Subteam:</strong> {activeMember.subteam}</p>
+                    <p><strong>Synergizing Emotion:</strong> {activeMember.emotion}</p>
+                    <p><strong>Fun Fact:</strong> {activeMember.funFact}</p>
+                    <p><strong>Favourite Quote:</strong> {activeMember.quote} </p>
+                    <p>{activeMember.description}</p>
+                  </div>
+              </div>          
           <button className="modal-btn" onClick={() => setActiveMember(null)}><FontAwesomeIcon icon={faX} /></button>
-        
         </div>
         
       )}
