@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "../css/team.css";
-import type { TFunctionReturnOptionalDetails } from "i18next";
+
+import { useTranslation } from "react-i18next";
+
 
 type Member = {
   id: number;
@@ -18,10 +20,10 @@ const team: Member[] = [
   {
     id: 1,
     name: "Dominique Paradis",
-    subteam: "Supervisor",
-    emotion: "",
-    funFact: "",
-    description: "",
+    subteam: "paradis_subteam",
+    emotion: "paradis_emotion",
+    funFact: "paradis_fun",
+    description: "paradis_des",
     image: "src/Team_characters/BingBong.png",
     photo: "",
     colour: [
@@ -32,10 +34,10 @@ const team: Member[] = [
   {
     id: 2,
     name: "Livia Poliquin",
-    subteam: "Captain, Kiosk, tutorial/video",
-    emotion: "Anxiety",
-    funFact: "My goal in life is to have 8 cats",
-    description: "This year challenged me to think creatively to bring our theme to life. I learned how to plan ahead and adapt to new challenges, and I improved my communication skills with team members. Sadly, I had to sacrifice some beloved pieces of clothing due to paint stains!",
+    subteam: "livia_subteam",
+    emotion: "livia_emotion",
+    funFact: "livia_fun",
+    description: "livia_des",
     image: "src/Team_characters/disgust.png",
     photo: "",
     colour: [
@@ -46,10 +48,10 @@ const team: Member[] = [
   {
     id: 3,
     name: "Zhi Han Yan",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
+    subteam: "han_subteam",
+    emotion: "han_emotion",
+    funFact: "han_fun",
+    description: "han_des",
     image: "src/Team_characters/ennui.png",
     photo: "",
     colour: [
@@ -60,10 +62,10 @@ const team: Member[] = [
   {
     id: 4,
     name: "Clancy Pryde",
-    subteam: "Video/Kiosk",
-    emotion: "Fear",
-    funFact: "Once held the world record for the Wild Kratts: Monkey Mayhem any% speedrun.",
-    description: "You need to mix paint after opening a can.",
+    subteam: "clancy_subteam",
+    emotion: "clancy_emotion",
+    funFact: "clancy_fun",
+    description: "clancy_des",
     image: "src/Team_characters/riley.png",
     photo: "",
     colour: [
@@ -74,10 +76,10 @@ const team: Member[] = [
   {
     id: 5,
     name: "Eveline Yue Zhang",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
+    subteam: "eveline_subteam",
+    emotion: "eveline_emotion",
+    funFact: "eveline_fun",
+    description: "eveline_des",
     image: "src/Team_characters/joy.png",
     photo: "",
     colour: [
@@ -88,10 +90,10 @@ const team: Member[] = [
   {
     id: 6,
     name: "Ji Jia Liu",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
+    subteam: "jijia_subteam",
+    emotion: "jijia_emotion",
+    funFact: "jijia_fun",
+    description: "jijia_des",
     image: "src/Team_characters/anger.png",
     photo: "",
     colour: [
@@ -102,10 +104,10 @@ const team: Member[] = [
   {
     id: 7,
     name: "Zhuoyao Li",
-    subteam: "Video and Tutorial",
-    emotion: "Joy",
-    funFact: "I have an extra bone in my body.",
-    description: "I learned how to use DaVinci Resolve 20! I unfortunately did not participate in many clubs to better focus on robotics.",
+    subteam: "zhuoyao_subteam",
+    emotion: "zhuoyao_emotion",
+    funFact: "zhuoyao_fun",
+    description: "Zhuoyao_des",
     image: "src/Team_characters/sadness.png",
     photo: "",
     colour: [
@@ -116,10 +118,10 @@ const team: Member[] = [
   {
     id: 8,
     name: "Carla Santavy",
-    subteam: "Kiosk!",
-    emotion: "Anger",
-    funFact: "I like drawing and playing hollow knight",
-    description: "I learned how to work with procreate as well as how art is transposed into video games, such as tilemaps and the layout animation sequences. I had to sacrifice my sanity to draw more animation frames for Jijia.",
+    subteam: "carla_subteam",
+    emotion: "carla_emotion",
+    funFact: "carla_fun",
+    description: "carla_des",
     image: "src/Team_characters/anxiety.png",
     photo: "",
     colour: [
@@ -130,10 +132,10 @@ const team: Member[] = [
   {
     id: 9,
     name: "Tony",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
+    subteam: "tony_subteam",
+    emotion: "tony_emotion",
+    funFact: "tony_fun",
+    description: "tony_des",
     image: "src/Team_characters/fear.png",
     photo: "",
     colour: [
@@ -144,10 +146,10 @@ const team: Member[] = [
   {
     id: 10,
     name: "Rowan Luckow",
-    subteam: "Kiosk and Tutorial",
-    emotion: "Joy",
-    funFact: "I like camping, hiking, and being in the woods.",
-    description: "I learned how to carve different types of foam, how to work with epoxy resins, and how to make a computer catch fire (with supervision). A sacrifice I had to make for the team was spending a lot of time outside the main meetings brainstorming and trying to coordinate with the fire department in order to safely film our tutorial.",
+    subteam: "rowan_subteam",
+    emotion: "rowan_emotion",
+    funFact: "rowan_fun",
+    description: "rowan_des",
     image: "src/Team_characters/embarassment.png",
     photo: "",
     colour: [
@@ -172,10 +174,10 @@ const team: Member[] = [
   {
     id: 12,
     name: "David Du",
-    subteam: "Website, Programming",
-    emotion: "Fear",
-    funFact: "I like playing hockey",
-    description: "I learned that TypeScript makes larger projects way more organised for a team of webdevs. Even thought the time spent during all those meetings were worth it, there were some cool events I had to skip.",
+    subteam: "david_subteam",
+    emotion: "david_emotion",
+    funFact: "david_fun",
+    description: "david_des",
     image: "src/Team_characters/melatonin.png",
     photo: "",
     colour: [
@@ -340,10 +342,10 @@ const team: Member[] = [
   {
     id: 24,
     name: "Sophie Tin",
-    subteam: "",
-    emotion: "",
-    funFact: "",
-    description: "",
+    subteam: "sophie_subteam",
+    emotion: "sophie_emotion",
+    funFact: "sophie_fun",
+    description: "sophie_des",
     image: "src/Team_characters/wagon.png",
     photo: "",
     colour: [
@@ -355,7 +357,7 @@ const team: Member[] = [
 
 const Team = () => {
   const [activeMember, setActiveMember] = useState<Member | null>(null);
-
+  const {t} = useTranslation()
   return (
     <div className="team-page">
       <h1>Meet the Team</h1>
@@ -391,10 +393,10 @@ const Team = () => {
             
               <div className="member-info">
                 <h2 className="modal-header">{activeMember.name}</h2>
-                <p><strong>Subteam:</strong> {activeMember.subteam}</p>
-                <p><strong>Emotion:</strong> {activeMember.emotion}</p>
-                <p><strong>Fun Fact:</strong> {activeMember.funFact}</p>
-                <p>{activeMember.description}</p>
+                <p><strong>Subteam:</strong> {activeMember.subteam ? t(activeMember.subteam): activeMember.subteam}</p>
+                <p><strong>Emotion:</strong> {activeMember.emotion ? t(activeMember.emotion):activeMember.emotion}</p>
+                <p><strong>Fun Fact:</strong> {activeMember.funFact ? t(activeMember.funFact):activeMember.funFact}</p>
+                <p>{activeMember.description ? t(activeMember.description):activeMember.description}</p>
               </div>
           </div>
           
