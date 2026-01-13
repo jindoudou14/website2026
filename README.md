@@ -81,4 +81,6 @@ To load 3d model, run:
 npm install -D @types/react @types/react-dom
 npm i @react-three/fiber @react-three/drei three
 
+Used this for the 3d code: https://gltf.pmnd.rs/
+
 
