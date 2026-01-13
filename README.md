@@ -76,3 +76,9 @@ export default defineConfig([
 you can install the translating package I18Next with the the following command:
 
 npm install i18next react-i18next i18next-browser-languagedetector
+
+To load 3d model, run:
+npm install -D @types/react @types/react-dom
+npm i @react-three/fiber @react-three/drei three
+
+
