@@ -12,6 +12,29 @@
   
 }
 
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  position: relative;
+  /* padding-top: 1vh; */
+}
+
+.home-canvas {
+  /* position: fixed; */
+  inset: 0;
+  z-index: -1;
+}
+
+.home-canvas canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

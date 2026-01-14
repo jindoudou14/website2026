@@ -5,8 +5,13 @@
   
 }
 
+.team-page h1,
+.team-page h2 {
+  color: white;
+}
+
 body {
-  background-color: white;
+  background-image: url("logos and images/team-roster-background.png");
 }
 
 .character-grid {
@@ -26,75 +31,69 @@ body {
   height: 250px;
   border-radius: 20%;
   object-fit: cover;
-/* 
-  animation-name: character_animation;
-  animation-duration: 2s;
-  animation-iteration-count: infinite; */
-
   animation: glow 2s ease-in-out infinite;
 }
 
 .modal-overlay {
-  /* position: fixed; */
   position: fixed;
-
   top: 0px;
   left: 0px;
-  right: 0px;
+  right: 10px;
   bottom: 0px;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
+  column-count: 2;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-.modal {
-  padding: 20px;
-  border-radius: 0px;
-  /* max-width: 400px;
-  width: 90%;
-  max-height: 80vh;
-  height: 500px; */
-  /* overflow-y: scroll; 
-  overflow-y: auto; */
-  /* left: 0px;
-  top: 0px; */
-  max-width: 480px;
-  height: 375px;
-  right: 55px;
-  position: relative;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-}
+/* .frame-modal {
+  justify-content: center;
+} */
 
 .frame {
   position:absolute;
   z-index: 200;
-  justify-content: center;
-  /* right: 175px; */
+  /* top: 0px;
+  right: 0px; */
+  /* justify-content: center; */
   pointer-events: none;
+  margin-left: 390px;
+}
+
+.modal {
+  width: 500px;
+  height: 375px;
+  position: absolute;
+  /* top: 0px;
+  right: 0px; */
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  margin-left:150px;
 }
 
 .member-info {
-  background: beige;
+  background: rgb(229, 190, 249);
   overflow-y: auto;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .member-info p,
 .member-info h2 {
   margin: 0;
-  line-height: 1.35;
+  line-height: 1.6;
 }
 
 .modal-header {
   align-items: center;
+  font-size: 24px;
 }
 
 .modal-btn {
@@ -103,7 +102,7 @@ body {
   font-size: 24px;
   cursor: pointer;
   color: white;
-  position: absolute;
+  /* position: absolute; */
   top: 115px;
   right: 250px;
 }
@@ -118,24 +117,25 @@ body {
   position: relative;
 }
 
+.character-item img:hover {
+  animation: character_animation 1s infinite;
+}
+
 .character-item:hover .tooltip{
   visibility: visible;
 }
 
 .tooltip {
   visibility: hidden;
-  border-radius: 6px;
-  /* position: relative; */
-  background-color: rgb(86, 86, 86);
+  border-radius: 15px;
+  background-color: rgb(135, 41, 157);
   color: #fff;
   width: fit-content; 
-  height: 20px;
   text-align: center;
-  padding: 5px;
-  z-index: 1;
-  /* bottom: 100%;
-  left: 65%;
-  margin-left: -65px; */
+  padding: 15px;
+  justify-content: center;
+  left: 50px;
+  position: relative;
 }
 
 /* .tooltip:after{
@@ -152,19 +152,23 @@ body {
 	margin-bottom: -20px;
 } */
 
-/* @keyframes character_animation {
-  0% {margin-top: 0px;}
-  50% {margin-top: 50px;}
-  100% {margin-top: 0px;} 
-} */
-
-@keyframes glow {
-  0%, 100% {
-    filter: drop-shadow(0 0 0px rgba(0,255,255,0));
+@keyframes character_animation {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
   }
   50% {
-    filter:
-      drop-shadow(0 0 12px var(--glow-1))
-      drop-shadow(0 0 24px var(--glow-2))
+    transform: translateY(-30px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  } 
+}
+
+@keyframes glow {
+  50% {
+    filter: drop-shadow(0 0 12px var(--glow-1)) drop-shadow(0 0 24px var(--glow-2))
   }
 }

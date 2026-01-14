@@ -57,7 +57,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             eveline_des: "I learned how to use DaVinci Resolve 20",
             //6
             jijia_subteam: "robot, code for robot, video game for kiosk",
-            jijia_emotion: "anger",
+            jijia_emotion: "anger 😡",
             jijia_fun: "I'm really good at soldering ",
             jijia_des: "I learned that differential mechanisms are really cool. I sacrificed my sanity coding the robot and the game.",
             //7
@@ -167,7 +167,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             eveline_des: "J’ai appris à utiliser DaVinci Resolve 20",
             //6,
             jijia_subteam: "robot, code pour le robot, jeu vidéo pour le kiosque",
-            jijia_emotion: "Colère",
+            jijia_emotion: "Colère 😡",
             jijia_fun: "Je suis vraiment bon en soudure",
             jijia_des: "J’ai appris que les mécanismes différentiels sont vraiment cool. J’ai sacrifié ma santé mentale à coder le robot et le jeu.",
             //7
