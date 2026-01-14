@@ -345,14 +345,14 @@ const team: Member[] = [
   },
   {
     id: 22,
-    name: "Paula",
+    name: "Jonathan Jin",
     subteam: "paula_subteam",
     emotion: "paula_emotion",
     funFact: "paula_fun",
     quote: "paula_quo",
     description: "paula_des",
     image: "src/Team_characters/Paula.webp",
-    photo: "",
+    photo: "src/member-photos/Jonathan.png",
     colour: [
       "rgb(169, 27, 241)",
       "rgb(188, 85, 240)"
@@ -360,14 +360,14 @@ const team: Member[] = [
   },
   {
     id: 23,
-    name: "Janelle",
+    name: "Jiacheng Liu",
     subteam: "janelle_subteam",
     emotion: "janelle_emotion",
     funFact: "janelle_fun",
     quote: "janelle_quo",
     description: "janelle_des",
     image: "src/Team_characters/Janelle.webp",
-    photo: "",
+    photo: "src/member-photos/Jiacheng.png",
     colour: [
       "rgb(47, 168, 255)",
       "rgb(91, 187, 255)"
@@ -397,7 +397,7 @@ const Team = () => {
     <div className="team-page">
       <h1>Meet the Team</h1>
       <h2>Welcome to Riley's mind! Get to know the team by clicking on the characters below. You'll learn about each member's subteam, their favourite emotion, their favourite quote, a fun fact about them, and what they learned from robotics.</h2>
-      
+
       <div className="character-grid">
         {team.map((member) => (
           <div 
@@ -429,7 +429,7 @@ const Team = () => {
                     <p><strong>Subteam:</strong> {activeMember.subteam}</p>
                     <p><strong>Synergizing Emotion:</strong> {activeMember.emotion}</p>
                     <p><strong>Fun Fact:</strong> {activeMember.funFact}</p>
-                    <p><strong>Favourite Quote:</strong> {activeMember.quote} </p>
+                    <p><strong>Best Quote:</strong> {activeMember.quote} </p>
                     <p>{activeMember.description}</p>
                   </div>
               </div>   
