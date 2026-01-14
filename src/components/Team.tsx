@@ -435,12 +435,12 @@ const Team = () => {
                 <p><strong>Favourite Quote:</strong> {activeMember.quote ? t(activeMember.quote):activeMember.quote} </p>
               </div>
 
+            </div>
+            <img className="frame" src={"logos and images/frame.png"} />      
+            <button className="modal-btn" onClick={() => setActiveMember(null)}><FontAwesomeIcon icon={faX} /></button>
+            </div>
           </div>
-          <img className="frame" src={"logos and images/frame.png"} />      
-          <button className="modal-btn" onClick={() => setActiveMember(null)}><FontAwesomeIcon icon={faX} /></button>
-        </div>
-        
-      )};
+      )}
       
     </div>
   );
