@@ -1,8 +1,14 @@
 import { useState } from "react";
 import "../css/team.css";
+
+
+import { useTranslation } from "react-i18next";
+
+
 import type { TFunctionReturnOptionalDetails } from "i18next";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faX } from '@fortawesome/free-solid-svg-icons';
+
 
 type Member = {
   id: number;
@@ -21,11 +27,12 @@ const team: Member[] = [
   {
     id: 1,
     name: "Dominique Paradis",
-    subteam: "Supervisor",
-    emotion: "Joy",
-    funFact: "I am a hyperspheroid-earther.",
+    subteam: "paradis_subteam",
+    emotion: "paradis_emotion",
+    funFact: "paradis_fun",
+    description: "paradis_des",
     quote: "Of all the things I've lost I missed my mind the most. - Mark Twain",
-    description: "My role as the robotics mentor at Marianopolis mostly involves dealing with the aspects of the team that diverge from the main goal. In order to ensure the students focus on the key aspects of the competition—namely the robot, the kiosk, website, video, and programming—I help manage scheduling, team membership, finances, and transportation of materials.",
+   
     image: "src/Team_characters/BingBong.png",
     photo: "src/member-photos/Paradis.png",
     colour: [
@@ -36,11 +43,12 @@ const team: Member[] = [
   {
     id: 2,
     name: "Livia Poliquin",
-    subteam: "Captain, Kiosk, tutorial/video",
-    emotion: "Anxiety",
-    funFact: "My goal in life is to have 8 cats",
+
+    subteam: "livia_subteam",
+    emotion: "livia_emotion",
+    funFact: "livia_fun",
+    description: "livia_des",
     quote: "live, laugh, crash out",
-    description: "This year challenged me to think creatively to bring our theme to life. I learned how to plan ahead and adapt to new challenges, and I improved my communication skills with team members. Sadly, I had to sacrifice some beloved pieces of clothing due to paint stains!",
     image: "src/Team_characters/disgust.png",
     photo: "src/member-photos/Livia.png",
     colour: [
@@ -51,11 +59,11 @@ const team: Member[] = [
   {
     id: 3,
     name: "Zhi Han Yan",
-    subteam: "Captain, Robot",
-    emotion: "hunger",
-    funFact: "Airplanes 👍",
+    subteam: "han_subteam",
+    emotion: "han_emotion",
+    funFact: "han_fun",
+    description: "han_des",
     quote: "Get to work Ismael",
-    description: "I gave up my sanity taking apart and rebuilding one singular component of the robot, but at least I learned how to find my way in very messy rooms, looking for tools and parts (I took part in creating this learning opportunity).",
     image: "src/Team_characters/ennui.png",
     photo: "src/member-photos/Zhi Han.png",
     colour: [
@@ -66,11 +74,11 @@ const team: Member[] = [
   {
     id: 4,
     name: "Clancy Pryde",
-    subteam: "Video/Kiosk",
-    emotion: "Fear",
-    funFact: "Once held the world record for the Wild Kratts: Monkey Mayhem any% speedrun.",
+    subteam: "clancy_subteam",
+    emotion: "clancy_emotion",
+    funFact: "clancy_fun",
+    description: "clancy_des",
     quote: "",
-    description: "You need to mix paint after opening a can.",
     image: "src/Team_characters/riley.png",
     photo: "src/member-photos/Clancy.png",
     colour: [
@@ -81,11 +89,11 @@ const team: Member[] = [
   {
     id: 5,
     name: "Eveline Yue Zhang",
-    subteam: "Video and kiosk",
-    emotion: "Joy",
-    funFact: "I like to eat 😋",
+    subteam: "eveline_subteam",
+    emotion: "eveline_emotion",
+    funFact: "eveline_fun",
+    description: "eveline_des",
     quote: "THE ONE PIECE IS REALLL 🗣️🗣️🔥🔥",
-    description: "I learned how to use DaVinci Resolve 20",
     image: "src/Team_characters/joy.png",
     photo: "src/member-photos/Eveline.png",
     colour: [
@@ -95,12 +103,13 @@ const team: Member[] = [
   },
   {
     id: 6,
-    name: "Jijia Liu",
-    subteam: "robot, code for robot, video game for kiosk",
-    emotion: "ANGER 😡",
-    funFact: "I'm really good at soldering",
+
+    name: "JiJia Liu",
+    subteam: "jijia_subteam",
+    emotion: "jijia_emotion",
+    funFact: "jijia_fun",
+    description: "jijia_des",
     quote: "mesure twice cut 5 times",
-    description: "I learned that differential mechanisms are really cool. I sacrificed my sanity coding the robot and the game.",
     image: "src/Team_characters/anger.png",
     photo: "src/member-photos/JiJia.png",
     colour: [
@@ -111,11 +120,12 @@ const team: Member[] = [
   {
     id: 7,
     name: "Zhuoyao Li",
-    subteam: "Video and Tutorial",
-    emotion: "Joy",
-    funFact: "I have an extra bone in my body.",
+
+    subteam: "zhuoyao_subteam",
+    emotion: "zhuoyao_emotion",
+    funFact: "zhuoyao_fun",
+    description: "Zhuoyao_des",
     quote: "“If you change the way you look at things, the things you look at change.” — Wayne Dyer",
-    description: "I learned how to use DaVinci Resolve 20! I unfortunately did not participate in many clubs to better focus on robotics.",
     image: "src/Team_characters/sadness.png",
     photo: "src/member-photos/Zhuoyao.png",
     colour: [
@@ -126,11 +136,11 @@ const team: Member[] = [
   {
     id: 8,
     name: "Carla Santavy",
-    subteam: "Kiosk!",
-    emotion: "Anger",
-    funFact: "I like drawing and playing hollow knight",
+    subteam: "carla_subteam",
+    emotion: "carla_emotion",
+    funFact: "carla_fun",
+    description: "carla_des",
     quote: "",
-    description: "I learned how to work with procreate as well as how art is transposed into video games, such as tilemaps and the layout animation sequences. I had to sacrifice my sanity to draw more animation frames for Jijia.",
     image: "src/Team_characters/anxiety.png",
     photo: "src/member-photos/Carla.png",
     colour: [
@@ -140,12 +150,12 @@ const team: Member[] = [
   },
   {
     id: 9,
-    name: "Tony Yang",
-    subteam: "Website, programming and video",
-    emotion: "Fear (I play him)",
-    funFact: "I love gaming",
+    name: "Tony",
+    subteam: "tony_subteam",
+    emotion: "tony_emotion",
+    funFact: "tony_fun",
+    description: "tony_des",
     quote: "In life, there’s road blocks",
-    description: "I learned how to set up a green screens",
     image: "src/Team_characters/fear.png",
     photo: "",
     colour: [
@@ -156,11 +166,11 @@ const team: Member[] = [
   {
     id: 10,
     name: "Rowan Luckow",
-    subteam: "Kiosk and Tutorial",
-    emotion: "Joy",
-    funFact: "I like camping, hiking, and being in the woods.",
+    subteam: "rowan_subteam",
+    emotion: "rowan_emotion",
+    funFact: "rowan_fun",
+    description: "rowan_des",
     quote: "",
-    description: "I learned how to carve different types of foam, how to work with epoxy resins, and how to make a computer catch fire (with supervision). A sacrifice I had to make for the team was spending a lot of time outside the main meetings brainstorming and trying to coordinate with the fire department in order to safely film our tutorial.",
     image: "src/Team_characters/embarassment.png",
     photo: "src/member-photos/Rowan.png",
     colour: [
@@ -186,11 +196,11 @@ const team: Member[] = [
   {
     id: 12,
     name: "David Du",
-    subteam: "Website, Programming",
-    emotion: "Fear",
-    funFact: "I like playing hockey",
+    subteam: "david_subteam",
+    emotion: "david_emotion",
+    funFact: "david_fun",
+    description: "david_des",
     quote: "There’s always light at the end of the tunnel",
-    description: "I learned that TypeScript makes larger projects way more organised for a team of webdevs. Even thought the time spent during all those meetings were worth it, there were some cool events I had to skip.",
     image: "src/Team_characters/melatonin.png",
     photo: "src/member-photos/David.png",
     colour: [
@@ -366,11 +376,11 @@ const team: Member[] = [
   {
     id: 24,
     name: "Sophie Tin",
-    subteam: "Website and Video",
-    emotion: "Envy",
-    funFact: "Spiders are cool",
+    subteam: "sophie_subteam",
+    emotion: "sophie_emotion",
+    funFact: "sophie_fun",
+    description: "sophie_des",
     quote: "Because singing killed my grandma - The Trolls Movie",
-    description: "I learned that there is a difference between HTML and typescript. I also learned how to work with the terminal, however I lost my sanity in the process. By far my biggest sacrifice was the amount of time I spent trying to get my laptop to install npm.",
     image: "src/Team_characters/wagon.png",
     photo: "src/member-photos/Sophie.png",
     colour: [
@@ -382,7 +392,7 @@ const team: Member[] = [
 
 const Team = () => {
   const [activeMember, setActiveMember] = useState<Member | null>(null);
-
+  const {t} = useTranslation()
   return (
     <div className="team-page">
       <h1>Meet the Team</h1>
