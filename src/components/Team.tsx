@@ -386,7 +386,7 @@ const Team = () => {
   return (
     <div className="team-page">
       <h1>Meet the Team</h1>
-      <h2>Welcome to Riley's mind! Get to know the team by clicking on the characters below. You'll learn about each member's subteam, their favourite emotion, a fun fact about them, and what they learned from robotics.</h2>
+      <h2>Welcome to Riley's mind! Get to know the team by clicking on the characters below. You'll learn about each member's subteam, their favourite emotion, their favourite quote, a fun fact about them, and what they learned from robotics.</h2>
       
       <div className="character-grid">
         {team.map((member) => (
@@ -426,12 +426,25 @@ const Team = () => {
           </div>
           <img className="frame" src={"logos and images/frame.png"} />      
           <button className="modal-btn" onClick={() => setActiveMember(null)}><FontAwesomeIcon icon={faX} /></button>
+
+          
+
         </div>
         
       )}
+
+      {/* <script>
+        let modalID = activeMember.id;
+        let right-modal = modalID + 1;
+        let left-modal = modalID - 1;
+
+      
+      </script> */}
       
     </div>
   );
 };
+
+
 
 export default Team;
