@@ -3,11 +3,15 @@ import { useGLTF } from '@react-three/drei'
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 import * as THREE from 'three'
+import { Select } from "@react-three/postprocessing"
+
+
 
 type RoomProps = JSX.IntrinsicElements['group']
 
 export function Room(props: RoomProps) {
   const { nodes, materials } = useGLTF('/inside.glb') as any
+  const outlineMaterial = new THREE.MeshStandardMaterial({ color: "white" })
   const navigate_game = useNavigate()
   const [hovered_game, setHovered_game] = useState(false)
   const navigate_memory = useNavigate()
@@ -222,34 +226,29 @@ export function Room(props: RoomProps) {
           material={materials['main purple']}
         />
       </group>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.left_structure.geometry}
-        material={
-          new THREE.MeshStandardMaterial({
-            
-            color: "white",
-            emissive: hovered_memory ? new THREE.Color("#a855f7") : new THREE.Color("black"),
-            emissiveIntensity: hovered_memory ? 1.5 : 0,
-          })
-        }
-        onPointerDown={(e) => {
-          e.stopPropagation()
-          navigate_memory("/archives")
-          document.body.style.cursor = "default"
-        }}
-        onPointerOver={() => {
-          setHovered_memory(true)
-          document.body.style.cursor = "pointer"
-        }}
-        onPointerOut={() => {
-          setHovered_memory(false)
-          document.body.style.cursor = "default"
-        }}
-        position={[9.504, 9.689, -12.149]}
-        scale={7.242}
-      />
+      <Select enabled>
+        <mesh
+          geometry={nodes.left_structure.geometry}
+          position={[9.504, 9.689, -12.149]}
+          scale={7.242}
+          castShadow
+          receiveShadow
+          onPointerDown={(e) => {
+            e.stopPropagation()
+            navigate_memory("/archives")
+          }}
+          onPointerOver={() => (document.body.style.cursor = "pointer")}
+          onPointerOut={() => (document.body.style.cursor = "default")}
+        >
+          <meshStandardMaterial 
+            color="#ffffffff" 
+            metalness={0.5}
+            roughness={0.5}
+          />
+        </mesh>
+      </Select>
+
+
       <mesh
         castShadow
         receiveShadow

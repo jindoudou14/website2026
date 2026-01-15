@@ -4,7 +4,6 @@
   z-index: -1;
 }
 
-/* Make sure the canvas fills */
 .home-canvas canvas {
   width: 100% !important;
   height: 100% !important;

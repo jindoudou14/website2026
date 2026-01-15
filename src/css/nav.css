@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 50;
-  padding: 1rem 1.5rem;
+  padding: clamp(0.75rem, 1.2vw, 1.5rem) clamp(1rem, 2vw, 2.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,28 +25,30 @@
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(0.75rem, 1.5vw, 1.75rem);
   flex-wrap: nowrap;
   
 }
 .navbar-logo {
-  width: 14vh;
-  height: 14vh;
-  object-fit: cover;
+  width: clamp(60px, 6vw, 110px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
 .navbar-logo-text {
   color: white;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 1.6vw, 1.8rem);
   text-shadow: 0 2px 4px rgba(0,0,0,0.75);
   font-family: "InsideOut";
 }
 
 .navbar-image-button {
-  width: 14vh;
-  height: 14vh;
-  margin-left: 1rem;
+  width: clamp(55px, 7vw, 10vw);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  margin-left: clamp(0.25rem, 1vw, 1.5rem);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -98,14 +100,14 @@
 .navbar-button-text {
   color: white;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: clamp(0.75rem, 1vw, 0.95rem);
   text-shadow: 0 2px 4px rgba(0,0,0,0.75);
   pointer-events: none;
   white-space: nowrap;
   font-family: "InsideOut";
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   #navbar {
     padding: 0.5rem 1rem;
   }
@@ -113,4 +115,4 @@
   .navbar-links {
     display: none;
   }
-}
+} */
