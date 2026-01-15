@@ -37,25 +37,25 @@ function PortalOrb() {
   )
 }
 
-// function LogCamera() {
-//   const { camera } = useThree()
+function LogCamera() {
+  const { camera } = useThree()
 
-//   useEffect(() => {
-//     const log = () => {
-//       console.log(
-//         'Camera position:',
-//         camera.position.toArray(),
-//         'Target:',
-//         camera.rotation.toArray()
-//       )
-//     }
+  useEffect(() => {
+    const log = () => {
+      console.log(
+        'Camera position:',
+        camera.position.toArray(),
+        'Target:',
+        camera.rotation.toArray()
+      )
+    }
 
-//     window.addEventListener('mouseup', log)
-//     return () => window.removeEventListener('mouseup', log)
-//   }, [camera])
+    window.addEventListener('mouseup', log)
+    return () => window.removeEventListener('mouseup', log)
+  }, [camera])
 
-//   return null
-// }
+  return null
+}
 
 
 const Home = () => {
@@ -64,12 +64,12 @@ const Home = () => {
       <Canvas camera={{ position: [-15.69513282686507, 6.8087595406283965, 7.84927815357562] }}>
         <Environment preset="sunset" />
         <OrbitControls 
-          enablePan={false}
-          minDistance={20}
-          maxDistance={20}
-          enableRotate={false}
+          // enablePan={false}
+          // minDistance={20}
+          // maxDistance={20}
+          // enableRotate={false}
         />
-        {/* <LogCamera /> */}
+        <LogCamera />
         <Room />
       </Canvas>
     </div>
