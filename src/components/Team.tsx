@@ -157,7 +157,7 @@ const team: Member[] = [
     description: "tony_des",
     quote: "tony_quo",
     image: "src/Team_characters/fear.png",
-    photo: "",
+    photo: "src/member-photos/Tony.png",
     colour: [
       "rgb(195, 50, 255)",
       "rgb(216, 122, 255)"
