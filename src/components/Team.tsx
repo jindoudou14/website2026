@@ -395,8 +395,8 @@ const Team = () => {
   const {t} = useTranslation()
   return (
     <div className="team-page">
-      <h1>Meet the Team</h1>
-      <h2>Welcome to Riley's mind! Get to know the team by clicking on the characters below. You'll learn about each member's subteam, their favourite emotion, their favourite quote, a fun fact about them, and what they learned from robotics.</h2>
+      <h1 className="team-title">Meet the Team</h1>
+      <h2>Welcome to Riley's mind! Get to know the team by clicking on the characters below. You'll learn about each member's subteam, their favourite emotion, their best quote, a fun fact about them, and what they learned from robotics.</h2>
 
       <div className="character-grid">
         {team.map((member) => (

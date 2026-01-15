@@ -5,6 +5,11 @@
   
 }
 
+.team-title{
+  z-index: 3000;
+  display: drop-shadow(0 0 12px aliceblue) drop-shadow(0 0 24px white);
+}
+
 .team-page h1,
 .team-page h2 {
   color: white;
@@ -96,8 +101,13 @@ body {
 
 .modal-btn {
   background: rgb(210, 177, 246);
+  text-align: center;
   border: none;
-  font-size: 18px;
+  font-size: 19px;
+  font-weight: bold;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
   cursor: pointer;
   color: rgb(255, 255, 255);
   box-shadow: purple;
@@ -110,7 +120,7 @@ body {
 }
 
 .modal-btn:hover {
-  background: black;
+  background: rgb(31, 0, 48);
 }
 
 .modal img {

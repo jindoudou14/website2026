@@ -2,7 +2,8 @@ import MoDuel from "./MoDuel";
 import Team from "./Team";
 import Home from "./home";
 import Archive from "./Archive";
-import Credits from "./Credits"
+import Credits from "./Credits";
+import Quiz from "./quiz";
 export const pages = [
     {
         path: "/MoDuel",
@@ -27,5 +28,10 @@ export const pages = [
         path: "/Credits",
         element: <Credits />,
         title: "Credits"
+    },
+    {
+        path: "/robot",
+        element: <Quiz />,
+        title: "Island"
     }
 ]

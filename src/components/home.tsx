@@ -12,30 +12,8 @@ import { useThree } from '@react-three/fiber'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import { Bloom, EffectComposer } from '@react-three/postprocessing'
-
-function PortalOrb() {
-  const navigate = useNavigate()
-  const [hovered, setHovered] = useState(false)
-
-  return (
-    <>
-      <mesh
-        position={[0, 1, 0]}
-        onClick={() => navigate('/team')}
-        onPointerOver={() => setHovered(true)}
-        onPointerOut={() => setHovered(false)}
-      >
-        <sphereGeometry args={[0.5, 32, 32]} />
-        <meshStandardMaterial
-          color={hovered ? 'hotpink' : 'orange'}
-          emissive={hovered ? 'hotpink' : 'orange'}
-          emissiveIntensity={hovered ? 2 : 0.5}
-        />
-      </mesh>
-    </>
-  )
-}
+import { EffectComposer, Outline } from '@react-three/postprocessing'
+import { Selection } from "@react-three/postprocessing"
 
 function LogCamera() {
   const { camera } = useThree()
@@ -69,8 +47,20 @@ const Home = () => {
           // maxDistance={20}
           // enableRotate={false}
         />
+        <Selection>
+           <EffectComposer multisampling={8} autoClear={false}>
+            <Outline
+              visibleEdgeColor={0xffffff}
+              hiddenEdgeColor={0xffffff}
+              edgeStrength={5}
+              width={1000}
+              blur={true}
+              pulseSpeed={0.5}
+            />
+          </EffectComposer>
+          <Room />
+        </Selection>
         <LogCamera />
-        <Room />
       </Canvas>
     </div>
   );

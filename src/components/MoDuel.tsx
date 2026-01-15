@@ -37,7 +37,7 @@ const MoDuel: React.FC = () => {
           />
         </div>
         <h2 className="moduel-text">
-          Are you ready to take on the challenge? We’ve prepared a 3D simulation to help you train for the competition.
+          Are you ready to take on the challenge? We’ve prepared a <a href="/game">3D simulation</a>  to help you train for the competition.
         </h2>
       </div>
     </div>
