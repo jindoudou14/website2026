@@ -134,7 +134,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             ball1: "Siège des émotions",
             ball2: "Équipe",
             ball3: "Moduel",
-            ball4: "Croissance de Sens dessus dessous",
+            ball4: "Progression de Sens dessus dessous",
             ball5: "Ile de Robot",
             ball6: "Jeu",
             ball7: "Banque de Memoire",
