@@ -1,13 +1,21 @@
 .team-page {
   padding: 20px;
-  margin-top: 150px;
+  margin-top: 130px;
   margin-bottom: 0px;
   
+}
+
+.team-title{
+  z-index: 3000;
+  display: drop-shadow(0 0 12px aliceblue) drop-shadow(0 0 24px white);
 }
 
 .team-page h1,
 .team-page h2 {
   color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+  line-height: 2.0;
 }
 
 body {
@@ -55,34 +63,29 @@ body {
 .frame {
   position:absolute;
   z-index: 200;
-  /* top: 0px;
-  right: 0px; */
-  /* justify-content: center; */
   pointer-events: none;
-  margin-left: 390px;
+  margin-left: 470px;
 }
 
 .modal {
-  width: 500px;
-  height: 375px;
+  width: 300px;
+  height: 380px;
   position: absolute;
-  /* top: 0px;
-  right: 0px; */
   z-index: 100;
   display: flex;
   flex-direction: column;
-  margin-left:150px;
+  margin-left:110px;
 }
 
 .member-info {
-  background: rgb(229, 190, 249);
+  background: rgb(210, 177, 246);
   overflow-y: auto;
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .member-info p,
@@ -97,14 +100,27 @@ body {
 }
 
 .modal-btn {
-  background: #bcbbf2;
+  background: rgb(210, 177, 246);
+  text-align: center;
   border: none;
-  font-size: 24px;
+  font-size: 19px;
+  font-weight: bold;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
   cursor: pointer;
-  color: white;
-  /* position: absolute; */
-  top: 115px;
-  right: 250px;
+  color: rgb(255, 255, 255);
+  box-shadow: purple;
+  position: absolute;
+  /* margin-bottom: 550px;
+  margin-left: 0px; */
+  top: 120px;
+  right: 80px;
+  z-index: 1000
+}
+
+.modal-btn:hover {
+  background: rgb(31, 0, 48);
 }
 
 .modal img {
@@ -137,20 +153,6 @@ body {
   left: 50px;
   position: relative;
 }
-
-/* .tooltip:after{
-  content: '';
-	position: absolute;
-  left: 50%;
-  bottom: 0;
-	left: 50%;
-	width: fit-content;
-	height: 30px;
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -10px;
-	margin-bottom: -20px;
-} */
 
 @keyframes character_animation {
   0% {

@@ -1,11 +1,25 @@
 import React, { useRef, type JSX } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 import * as THREE from 'three'
+import { Select } from "@react-three/postprocessing"
+
+
 
 type RoomProps = JSX.IntrinsicElements['group']
 
 export function Room(props: RoomProps) {
   const { nodes, materials } = useGLTF('/inside.glb') as any
+  const outlineMaterial = new THREE.MeshStandardMaterial({ color: "white" })
+  const navigate_game = useNavigate()
+  const [hovered_game, setHovered_game] = useState(false)
+  const navigate_memory = useNavigate()
+  const [hovered_memory, setHovered_memory] = useState(false)
+  const navigate_video = useNavigate()
+  const [hovered_video, setHovered_video] = useState(false)
+  const navigate_team = useNavigate()
+  const [hovered_team, setHovered_team] = useState(false)
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -85,7 +99,27 @@ export function Room(props: RoomProps) {
           castShadow
           receiveShadow
           geometry={nodes.control_panel_1.geometry}
-          material={materials['white purple']}
+          material={
+            new THREE.MeshStandardMaterial({
+              
+              color: "white",
+              emissive: hovered_game ? new THREE.Color("#a855f7") : new THREE.Color("black"),
+              emissiveIntensity: hovered_game ? 1.5 : 0,
+            })
+          }
+          onPointerDown={(e) => {
+            e.stopPropagation()
+            navigate_game("/game")
+            document.body.style.cursor = "default"
+          }}
+          onPointerOver={() => {
+            setHovered_game(true)
+            document.body.style.cursor = "pointer"
+          }}
+          onPointerOut={() => {
+            setHovered_game(false)
+            document.body.style.cursor = "default"
+          }}
         />
         <mesh
           castShadow
@@ -192,14 +226,29 @@ export function Room(props: RoomProps) {
           material={materials['main purple']}
         />
       </group>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.left_structure.geometry}
-        material={materials['main purple']}
-        position={[9.504, 9.689, -12.149]}
-        scale={7.242}
-      />
+      <Select enabled>
+        <mesh
+          geometry={nodes.left_structure.geometry}
+          position={[9.504, 9.689, -12.149]}
+          scale={7.242}
+          castShadow
+          receiveShadow
+          onPointerDown={(e) => {
+            e.stopPropagation()
+            navigate_memory("/archives")
+          }}
+          onPointerOver={() => (document.body.style.cursor = "pointer")}
+          onPointerOut={() => (document.body.style.cursor = "default")}
+        >
+          <meshStandardMaterial 
+            color="#ffffffff" 
+            metalness={0.5}
+            roughness={0.5}
+          />
+        </mesh>
+      </Select>
+
+
       <mesh
         castShadow
         receiveShadow
@@ -588,7 +637,7 @@ export function Room(props: RoomProps) {
           castShadow
           receiveShadow
           geometry={nodes.Cylinder007_1.geometry}
-          material={materials['dark pruple']}
+          material={materials['dark purple']}
         />
         <mesh
           castShadow
@@ -777,7 +826,27 @@ export function Room(props: RoomProps) {
         castShadow
         receiveShadow
         geometry={nodes['Assembly_2_(1)'].geometry}
-        material={nodes['Assembly_2_(1)'].material}
+        material={
+          new THREE.MeshStandardMaterial({
+            
+            color: "white",
+            emissive: hovered_video ? new THREE.Color("#a855f7") : new THREE.Color("black"),
+            emissiveIntensity: hovered_video ? 1.5 : 0,
+          })
+        }
+        onPointerDown={(e) => {
+          e.stopPropagation()
+          navigate_video("/replay")
+          document.body.style.cursor = "default"
+        }}
+        onPointerOver={() => {
+          setHovered_video(true)
+          document.body.style.cursor = "pointer"
+        }}
+        onPointerOut={() => {
+          setHovered_video(false)
+          document.body.style.cursor = "default"
+        }}
         position={[8.928, 4.042, -1.054]}
         scale={54.583}
       />

@@ -157,7 +157,7 @@ const team: Member[] = [
     description: "tony_des",
     quote: "tony_quo",
     image: "src/Team_characters/fear.png",
-    photo: "",
+    photo: "src/member-photos/Tony.png",
     colour: [
       "rgb(195, 50, 255)",
       "rgb(216, 122, 255)"
@@ -345,14 +345,14 @@ const team: Member[] = [
   },
   {
     id: 22,
-    name: "Paula",
+    name: "Jonathan Jin",
     subteam: "paula_subteam",
     emotion: "paula_emotion",
     funFact: "paula_fun",
     quote: "paula_quo",
     description: "paula_des",
     image: "src/Team_characters/Paula.webp",
-    photo: "",
+    photo: "src/member-photos/Jonathan.png",
     colour: [
       "rgb(169, 27, 241)",
       "rgb(188, 85, 240)"
@@ -360,14 +360,14 @@ const team: Member[] = [
   },
   {
     id: 23,
-    name: "Janelle",
+    name: "Jiacheng Liu",
     subteam: "janelle_subteam",
     emotion: "janelle_emotion",
     funFact: "janelle_fun",
     quote: "janelle_quo",
     description: "janelle_des",
     image: "src/Team_characters/Janelle.webp",
-    photo: "",
+    photo: "src/member-photos/Jiacheng.png",
     colour: [
       "rgb(47, 168, 255)",
       "rgb(91, 187, 255)"
@@ -395,9 +395,11 @@ const Team = () => {
   const {t} = useTranslation()
   return (
     <div className="team-page">
+
       <h1>{t('meet')}</h1>
       <h2>{t('welcome')}</h2>
-      
+    
+
       <div className="character-grid">
         {team.map((member) => (
           <div 
@@ -423,6 +425,7 @@ const Team = () => {
               <img src={activeMember.photo} alt={activeMember.name} />
           </div>
 
+
         <div className="frame-modal"> 
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             
@@ -431,19 +434,35 @@ const Team = () => {
                 <p><strong>{t('sub')}</strong> {activeMember.subteam ? t(activeMember.subteam): activeMember.subteam}</p>
                 <p><strong>{t('emo')}</strong> {activeMember.emotion ? t(activeMember.emotion):activeMember.emotion}</p>
                 <p><strong>{t('fun')}</strong> {activeMember.funFact ? t(activeMember.funFact):activeMember.funFact}</p>
-                <p>{activeMember.description ? t(activeMember.description):activeMember.description}</p>
                 <p><strong>{t('quo')}</strong> {activeMember.quote ? t(activeMember.quote):activeMember.quote} </p>
+                <p>{activeMember.description ? t(activeMember.description):activeMember.description}</p>
+                
               </div>
 
             </div>
             <img className="frame" src={"logos and images/frame.png"} />      
             <button className="modal-btn" onClick={() => setActiveMember(null)}><FontAwesomeIcon icon={faX} /></button>
             </div>
-          </div>
+
+
+          
+
+        </div>
+        
       )}
+
+      {/* <script>
+        let modalID = activeMember.id;
+        let right-modal = modalID + 1;
+        let left-modal = modalID - 1;
+
+      
+      </script> */}
       
     </div>
   );
 };
+
+
 
 export default Team;
