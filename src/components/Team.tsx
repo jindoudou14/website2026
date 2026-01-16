@@ -346,11 +346,11 @@ const team: Member[] = [
   {
     id: 22,
     name: "Jonathan Jin",
-    subteam: "paula_subteam",
-    emotion: "paula_emotion",
-    funFact: "paula_fun",
-    quote: "paula_quo",
-    description: "paula_des",
+    subteam: "jonathan_subteam",
+    emotion: "jonathan_emotion",
+    funFact: "jonathan_fun",
+    quote: "jonathan_quo",
+    description: "jonathan_des",
     image: "src/Team_characters/Paula.webp",
     photo: "src/member-photos/Jonathan.png",
     colour: [
@@ -361,11 +361,11 @@ const team: Member[] = [
   {
     id: 23,
     name: "Jiacheng Liu",
-    subteam: "janelle_subteam",
-    emotion: "janelle_emotion",
-    funFact: "janelle_fun",
-    quote: "janelle_quo",
-    description: "janelle_des",
+    subteam: "jiacheng_subteam",
+    emotion: "jiacheng_emotion",
+    funFact: "jiacheng_fun",
+    quote: "jiacheng_quo",
+    description: "jiacheng_des",
     image: "src/Team_characters/Janelle.webp",
     photo: "src/member-photos/Jiacheng.png",
     colour: [
@@ -440,8 +440,8 @@ const Team = () => {
               </div>
 
             </div>
-            <img className="frame" src={"logos and images/frame.png"} />      
-            <button className="modal-btn" onClick={() => setActiveMember(null)}><FontAwesomeIcon icon={faX} /></button>
+              <img className="frame" src={"logos and images/frame.png"} />      
+              <button className="modal-btn" onClick={() => setActiveMember(null)}><FontAwesomeIcon icon={faX} /></button>
             </div>
 
 
