@@ -395,8 +395,8 @@ const Team = () => {
   const {t} = useTranslation()
   return (
     <div className="team-page">
-      <h1>Meet the Team</h1>
-      <h2>Welcome to Riley's mind! Get to know the team by clicking on the characters below. You'll learn about each member's subteam, their favourite emotion, a fun fact about them, and what they learned from robotics.</h2>
+      <h1>{t('meet')}</h1>
+      <h2>{t('welcome')}</h2>
       
       <div className="character-grid">
         {team.map((member) => (
@@ -428,11 +428,11 @@ const Team = () => {
             
               <div className="member-info">
                 <h2 className="modal-header">{activeMember.name}</h2>
-                <p><strong>Subteam:</strong> {activeMember.subteam ? t(activeMember.subteam): activeMember.subteam}</p>
-                <p><strong>Emotion:</strong> {activeMember.emotion ? t(activeMember.emotion):activeMember.emotion}</p>
-                <p><strong>Fun Fact:</strong> {activeMember.funFact ? t(activeMember.funFact):activeMember.funFact}</p>
+                <p><strong>{t('sub')}</strong> {activeMember.subteam ? t(activeMember.subteam): activeMember.subteam}</p>
+                <p><strong>{t('emo')}</strong> {activeMember.emotion ? t(activeMember.emotion):activeMember.emotion}</p>
+                <p><strong>{t('fun')}</strong> {activeMember.funFact ? t(activeMember.funFact):activeMember.funFact}</p>
                 <p>{activeMember.description ? t(activeMember.description):activeMember.description}</p>
-                <p><strong>Favourite Quote:</strong> {activeMember.quote ? t(activeMember.quote):activeMember.quote} </p>
+                <p><strong>{t('quo')}</strong> {activeMember.quote ? t(activeMember.quote):activeMember.quote} </p>
               </div>
 
             </div>
