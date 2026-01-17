@@ -442,14 +442,6 @@ const Team = () => {
         </div>
         
       )}
-
-      {/* <script>
-        let modalID = activeMember.id;
-        let right-modal = modalID + 1;
-        let left-modal = modalID - 1;
-
-      
-      </script> */}
       
     </div>
   );
