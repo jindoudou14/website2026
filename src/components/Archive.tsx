@@ -59,32 +59,44 @@ const Archive = () => {
   const [activeMemoryModal, setActiveMemoryModal] = useState<Memory | null>(null);
 
   const archiveItems: ArchiveItem[] = [
-    { title: "Day 1: Robot Brainstorming", text: "Sample Text.", date: "Jan. 6 2026", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbR_3OmBgYhyO9uzZtA4NR6zeIom4vSUlTMQ&s" },
-    { title: "Day 2: Robot Design", text: "Sample Text.", date: "Jan. 6 2026", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbR_3OmBgYhyO9uzZtA4NR6zeIom4vSUlTMQ&s" },
-    { title: "Day 3: Robot Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbR_3OmBgYhyO9uzZtA4NR6zeIom4vSUlTMQ&s" },
-    { title: "Day 1: Programming Brainstorming", text: "Sample Text.", date: "Jan. 6 2026", image: "https://bairesdev.mo.cloudinary.net/blog/2023/08/How-to-Choose-the-Right-Programming-Language-for-a-New-Project.jpg" },
-    { title: "Day 2: Programming Design", text: "Sample Text.", date: "Jan. 6 2026", image: "https://bairesdev.mo.cloudinary.net/blog/2023/08/How-to-Choose-the-Right-Programming-Language-for-a-New-Project.jpg" },
-    { title: "Day 3: Programming Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "https://bairesdev.mo.cloudinary.net/blog/2023/08/How-to-Choose-the-Right-Programming-Language-for-a-New-Project.jpg" },
-    { title: "Day 1: Website Design", text: "Sample Text.", date: "Jan. 6 2026", image: "https://media.licdn.com/dms/image/v2/D5612AQGWyeFhLQomJA/article-cover_image-shrink_600_2000/0/1698353496292" },
-    { title: "Day 1: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9S6xsJs3sUUHHyb5-_ckCB3ynURO-1taxpQ&s" },
-    { title: "Day 1: Video Design", text: "Sample Text.", date: "Jan. 6 2026", image: "https://www.midiaresearch.com/storage/uploads/blog/featured/2244/cover_image-1721122691.jpg" },
+    { title: "Day 1: Robot Brainstorming", text: "The robot team is brainstorming ideas for the robot design.", date: "Oct. 30 2025", image: "src/assets/logs/robot/robot_1.jpg" },
+    { title: "Day 2: Robot Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_2.jpg" },
+    { title: "Day 3: Robot Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_3.jpg" },
+    { title: "Day 4: Robot Brainstorming", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_4.jpg" },
+    { title: "Day 5: Robot Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_5.jpg" },
+    { title: "Day 6: Robot Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_6.jpg" },
+    { title: "Day 7: Robot Brainstorming", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_7.jpg" },
+    { title: "Day 8: Robot Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_8.jpg" },
+    { title: "Day 9: Robot Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_9.jpg" },
+    { title: "Day 1: Programming Brainstorming", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/programming/programming_1.jpg" },
+    { title: "Day 2: Programming Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/programming/programming_2.jpg" },
+    { title: "Day 3: Programming Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/programming/programming_3.jpg" },
+    { title: "Day 1: Website Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/website/website_1.jpg" },
+    { title: "Day 1: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_1.jpg" },
+    { title: "Day 2: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_2.png" },
+    { title: "Day 3: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_3.png" },
+    { title: "Day 4: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_4.jpg" },
+    { title: "Day 5: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_5.jpg" },
+    { title: "Day 6: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_6.jpg" },
+    { title: "Day 7: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_7.jpg" },
+    { title: "Day 1: Video Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/video/video_1.jpg" },
   ];
 
   const sections: Section[] = useMemo(
     () => [
-      { label: "Robot", start: 0, end: 2, orb: isFr ? orbeRobot : robotOrb },
-      { label: "Programming", start: 3, end: 5, orb: isFr ? orbeProgrammation : programmingOrb },
-      { label: "Website", start: 6, end: 6, orb: isFr ? orbeSiteweb : websiteOrb },
-      { label: "Kiosk", start: 7, end: 7, orb: isFr ? orbeKiosque : kioskOrb },
-      { label: "Video", start: 8, end: 8, orb: isFr ? orbeVideo : videoOrb },
+      { label: "Robot", start: 0, end: 8, orb: isFr ? orbeRobot : robotOrb },
+      { label: "Programming", start: 9, end: 11, orb: isFr ? orbeProgrammation : programmingOrb },
+      { label: "Website", start: 12, end: 12, orb: isFr ? orbeSiteweb : websiteOrb },
+      { label: "Kiosk", start: 13, end: 19, orb: isFr ? orbeKiosque : kioskOrb },
+      { label: "Video", start: 20, end: 20, orb: isFr ? orbeVideo : videoOrb },
     ],
     [isFr]
   );
 
   const memories: Memory[] = [
     { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video A", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/memories/robot_thing.mp4" },
-    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video B", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/videos/memory1.mp4" },
-    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video C", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/videos/memory1.mp4" }
+    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video B", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/logs/Video/video_4.mp4" },
+    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video C", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/logs/Video/video_5.mp4" }
   ];
 
   const teamCount = sections.length;

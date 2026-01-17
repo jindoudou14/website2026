@@ -15,25 +15,25 @@ import { useState } from 'react'
 import { EffectComposer, Outline } from '@react-three/postprocessing'
 import { Selection } from "@react-three/postprocessing"
 
-function LogCamera() {
-  const { camera } = useThree()
+// function LogCamera() {
+//   const { camera } = useThree()
 
-  useEffect(() => {
-    const log = () => {
-      console.log(
-        'Camera position:',
-        camera.position.toArray(),
-        'Target:',
-        camera.rotation.toArray()
-      )
-    }
+//   useEffect(() => {
+//     const log = () => {
+//       console.log(
+//         'Camera position:',
+//         camera.position.toArray(),
+//         'Target:',
+//         camera.rotation.toArray()
+//       )
+//     }
 
-    window.addEventListener('mouseup', log)
-    return () => window.removeEventListener('mouseup', log)
-  }, [camera])
+//     window.addEventListener('mouseup', log)
+//     return () => window.removeEventListener('mouseup', log)
+//   }, [camera])
 
-  return null
-}
+//   return null
+// }
 
 
 const Home = () => {
@@ -60,7 +60,7 @@ const Home = () => {
           </EffectComposer>
           <Room />
         </Selection>
-        <LogCamera />
+        {/* <LogCamera /> */}
       </Canvas>
     </div>
   );
