@@ -98,7 +98,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             rowan_quo:"Woohoo, we finally burned it! It only took eight matches, a lighter, and a propylene torch! - Rowan",
             //11
             julia_subteam:"Kiosk, Video/Tutorial",
-            julia_emotion: "fear",
+            julia_emotion: "disgust",
             julia_fun:"i'm a big fan of collecting rocks and sticks",
             julia_des:"I learned how to use power tools (which is really cool) and all the fun quirks of woodworking. I also learned that I can't cut straight to save my life using a jig saw. I sacrificed 1 pair of jeans, 1 pair of shorts, and 2 t-shirts to purple paint and wood dust.",
             julia_quo:"U da real art - Julia 2026",
@@ -282,7 +282,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 
             //11
             julia_subteam:"Kiosque, Vidéo/Tutoriel",
-            julia_emotion: "peur",
+            julia_emotion: "dégoût",
             julia_fun:"je suis une grande fan de collectionner des roches et des bâtons",
             julia_des:"J’ai appris à utiliser des outils électriques (ce qui est vraiment cool) et toutes les petites particularités du travail du bois. J’ai aussi appris que je suis incapable de couper droit avec une scie sauteuse. J’ai sacrifié 1 paire de jeans, 1 paire de shorts et 2 t-shirts à la peinture mauve et à la poussière de bois.",
             julia_quo:"T’es du vrai art - Julia 2026",

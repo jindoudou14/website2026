@@ -426,9 +426,9 @@ const Team = () => {
           </div>
 
 
-        <div className="frame-modal"> 
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            
+          <div className="frame-modal"> 
+            <div className="modal" onClick={(e) => e.stopPropagation()}>
+              
               <div className="member-info">
                 <h2 className="modal-header">{activeMember.name}</h2>
                 <p><strong>{t('sub')}</strong> {activeMember.subteam ? t(activeMember.subteam): activeMember.subteam}</p>
@@ -436,16 +436,18 @@ const Team = () => {
                 <p><strong>{t('fun')}</strong> {activeMember.funFact ? t(activeMember.funFact):activeMember.funFact}</p>
                 <p><strong>{t('quo')}</strong> {activeMember.quote ? t(activeMember.quote):activeMember.quote} </p>
                 <p>{activeMember.description ? t(activeMember.description):activeMember.description}</p>
+
                 
+              
+                  
               </div>
 
+              
+              
             </div>
-              <img className="frame" src={"logos and images/frame.png"} />      
-              <button className="modal-btn" onClick={() => setActiveMember(null)}><FontAwesomeIcon icon={faX} /></button>
-            </div>
-
-
-          
+          </div>
+          <img className="frame" src={"logos and images/frame.png"} />      
+          <button className="modal-btn" onClick={() => setActiveMember(null)}><FontAwesomeIcon icon={faX} /></button>
 
         </div>
         
