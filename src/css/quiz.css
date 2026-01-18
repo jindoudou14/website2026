@@ -1,3 +1,26 @@
 .quiz-page {
   padding-top: 16vh;
 }
+.quiz-intro {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.quiz-intro-image {
+  width: 500px;
+  margin: 20px auto;
+  display: block;
+}
+.quiz-result-image {
+  width: 500px;
+  margin: 20px auto;
+  display: block;
+}
+
+.start-quiz {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}

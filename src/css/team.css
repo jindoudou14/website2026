@@ -20,6 +20,8 @@
 
 body {
   background-image: url("logos and images/team-roster-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .character-grid {
@@ -65,16 +67,18 @@ body {
   z-index: 200;
   pointer-events: none;
   margin-left: 470px;
+  
 }
 
 .modal {
-  width: 300px;
+  width: 320px;
   height: 380px;
   position: absolute;
   z-index: 100;
   display: flex;
   flex-direction: column;
   margin-left:110px;
+  box-sizing: border-box;
 }
 
 .member-info {

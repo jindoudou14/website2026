@@ -346,11 +346,11 @@ const team: Member[] = [
   {
     id: 22,
     name: "Jonathan Jin",
-    subteam: "paula_subteam",
-    emotion: "paula_emotion",
-    funFact: "paula_fun",
-    quote: "paula_quo",
-    description: "paula_des",
+    subteam: "jonathan_subteam",
+    emotion: "jonathan_emotion",
+    funFact: "jonathan_fun",
+    quote: "jonathan_quo",
+    description: "jonathan_des",
     image: "src/Team_characters/Paula.webp",
     photo: "src/member-photos/Jonathan.png",
     colour: [
@@ -361,11 +361,11 @@ const team: Member[] = [
   {
     id: 23,
     name: "Jiacheng Liu",
-    subteam: "janelle_subteam",
-    emotion: "janelle_emotion",
-    funFact: "janelle_fun",
-    quote: "janelle_quo",
-    description: "janelle_des",
+    subteam: "jiacheng_subteam",
+    emotion: "jiacheng_emotion",
+    funFact: "jiacheng_fun",
+    quote: "jiacheng_quo",
+    description: "jiacheng_des",
     image: "src/Team_characters/Janelle.webp",
     photo: "src/member-photos/Jiacheng.png",
     colour: [
@@ -395,8 +395,10 @@ const Team = () => {
   const {t} = useTranslation()
   return (
     <div className="team-page">
-      <h1 className="team-title">Meet the Team</h1>
-      <h2>Welcome to Riley's mind! Get to know the team by clicking on the characters below. You'll learn about each member's subteam, their favourite emotion, their best quote, a fun fact about them, and what they learned from robotics.</h2>
+
+      <h1>{t('meet')}</h1>
+      <h2>{t('welcome')}</h2>
+    
 
       <div className="character-grid">
         {team.map((member) => (
@@ -422,22 +424,30 @@ const Team = () => {
           <div>
               <img src={activeMember.photo} alt={activeMember.name} />
           </div>
-          <div className="frame-modal">
-              <div className="modal" onClick={(e) => e.stopPropagation()}>
-                  <div className="member-info">
-                    <h3 className="modal-header">{activeMember.name}</h3>
-                    <p><strong>Subteam:</strong> {activeMember.subteam}</p>
-                    <p><strong>Synergizing Emotion:</strong> {activeMember.emotion}</p>
-                    <p><strong>Fun Fact:</strong> {activeMember.funFact}</p>
-                    <p><strong>Best Quote:</strong> {activeMember.quote} </p>
-                    <p>{activeMember.description}</p>
-                  </div>
-              </div>   
+
+
+          <div className="frame-modal"> 
+            <div className="modal" onClick={(e) => e.stopPropagation()}>
+              
+              <div className="member-info">
+                <h2 className="modal-header">{activeMember.name}</h2>
+                <p><strong>{t('sub')}</strong> {activeMember.subteam ? t(activeMember.subteam): activeMember.subteam}</p>
+                <p><strong>{t('emo')}</strong> {activeMember.emotion ? t(activeMember.emotion):activeMember.emotion}</p>
+                <p><strong>{t('fun')}</strong> {activeMember.funFact ? t(activeMember.funFact):activeMember.funFact}</p>
+                <p><strong>{t('quo')}</strong> {activeMember.quote ? t(activeMember.quote):activeMember.quote} </p>
+                <p>{activeMember.description ? t(activeMember.description):activeMember.description}</p>
+
+                
+              
+                  
+              </div>
+
+              
+              
+            </div>
           </div>
           <img className="frame" src={"logos and images/frame.png"} />      
           <button className="modal-btn" onClick={() => setActiveMember(null)}><FontAwesomeIcon icon={faX} /></button>
-
-          
 
         </div>
         

@@ -241,7 +241,7 @@ export function Room(props: RoomProps) {
           onPointerOut={() => (document.body.style.cursor = "default")}
         >
           <meshStandardMaterial 
-            color="#ffffffff" 
+            color={0xffffff}
             metalness={0.5}
             roughness={0.5}
           />
