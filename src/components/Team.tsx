@@ -430,7 +430,7 @@ const Team = () => {
             <div className="modal" onClick={(e) => e.stopPropagation()}>
               
               <div className="member-info">
-                <h2 className="modal-header">{activeMember.name}</h2>
+                <h3 className="modal-header">{activeMember.name}</h3>
                 <p><strong>{t('sub')}</strong> {activeMember.subteam ? t(activeMember.subteam): activeMember.subteam}</p>
                 <p><strong>{t('emo')}</strong> {activeMember.emotion ? t(activeMember.emotion):activeMember.emotion}</p>
                 <p><strong>{t('fun')}</strong> {activeMember.funFact ? t(activeMember.funFact):activeMember.funFact}</p>
