@@ -6,14 +6,10 @@
 // pages/Home.tsx
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei"
-import React from "react";
 import { Room } from "../sections/room";
-import { useThree } from '@react-three/fiber'
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
-import { EffectComposer, Outline } from '@react-three/postprocessing'
-import { Selection } from "@react-three/postprocessing"
+import Loader from "../sections/loader"
+import { Suspense } from "react"
+
 
 // function LogCamera() {
 //   const { camera } = useThree()
@@ -35,36 +31,31 @@ import { Selection } from "@react-three/postprocessing"
 //   return null
 // }
 
-
 const Home = () => {
   return (
     <div className="home-canvas">
-      <Canvas camera={{ position: [-15.69513282686507, 6.8087595406283965, 7.84927815357562] }}>
-        <Environment preset="sunset" />
-        <OrbitControls 
-          // enablePan={false}
-          // minDistance={20}
-          // maxDistance={20}
-          // enableRotate={false}
-        />
-        <Selection>
-           <EffectComposer multisampling={8} autoClear={false}>
-            <Outline
-              visibleEdgeColor={0xffffff}
-              hiddenEdgeColor={0xffffff}
-              edgeStrength={5}
-              width={1000}
-              blur={true}
-              pulseSpeed={0.5}
-            />
-          </EffectComposer>
+      <Canvas
+        camera={{
+          position: [-15.69513282686507, 6.8087595406283965, 7.84927815357562],
+        }}
+      >
+        <Suspense fallback={<Loader />}>
+          <Environment preset="sunset" />
+          <OrbitControls
+            minPolarAngle={Math.PI / 3}
+            maxPolarAngle={Math.PI / 2.1}
+            minAzimuthAngle={-Math.PI / 1.5}
+            maxAzimuthAngle={-0.5}
+            enablePan={false}
+            minDistance={20}
+            maxDistance={20}
+          />
           <Room />
-        </Selection>
-        {/* <LogCamera /> */}
+        </Suspense>
       </Canvas>
     </div>
   );
 };
 
-export default Home;
 
+export default Home

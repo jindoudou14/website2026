@@ -33,5 +33,10 @@ export const pages = [
         path: "/robot",
         element: <Quiz />,
         title: "Island"
+    },
+    {
+        path: "/game",
+        // element: <Quiz />,
+        title: "Game"
     }
 ]
