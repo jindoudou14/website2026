@@ -38,10 +38,10 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             quo: "Best Quote:",
             //1
             paradis_subteam: "Supervisor",
-            paradis_emotion: "",
-            paradis_fun: "",
-            paradis_des: "",
-            paradis_quo:"",
+            paradis_emotion: "Joy",
+            paradis_fun: "I am a hyperspheroid-earther.",
+            paradis_des: "My role as the robotics mentor at Marianopolis mostly involves dealing with the aspects of the team that diverge from the main goal. In order to ensure the students focus on the key aspects of the competition—namely the robot, the kiosk, website, video, and programming—I help manage scheduling, team membership, finances, and transportation of materials.",
+            paradis_quo:"Out of all the things I have lost, I miss my mind the most - Mark Twain",
             //2
             livia_subteam: "Captain, Kiosk, tutorial/video",
             livia_emotion: "Anxiety",
@@ -175,11 +175,11 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             jiacheng_des:"I learned the differences between the many drive systems used for robots the methods used to build them. I also learned near field communication protocols and how to read them with an computer/Arduino. A sacrifice I made is my free time for robotics. ",
             jiacheng_quo:"Where are the Allen keys ",
             //24
-            sophie_subteam: "",
-            sophie_emotion: "",
-            sophie_fun: "",
-            sophie_des: "",
-            sophie_quo:"",
+            sophie_subteam: "Website",
+            sophie_emotion: "Envy",
+            sophie_fun: "Spiders are cool",
+            sophie_des: "I learned how to use typescript as well as how to work on a group project on github. My biggest sacrifice was the amount of time I spent trying to get my laptop to install npm.",
+            sophie_quo:"Because singing killed my grandma - the Trolls movie",
             //Archives
 
             //Moduel
@@ -213,10 +213,10 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             quo: "Proverbe Favoris:",
             //1
             paradis_subteam: "Superviseur",
-            paradis_emotion: "",
-            paradis_fun: "",
-            paradis_des: "",
-            paradis_quo:"",
+            paradis_emotion: "Joie",
+            paradis_fun: "Je crois fermement en la Terre hyper-sphéroïde.",
+            paradis_des: "Mon rôle en tant que mentor de robotique à Marianopolis consiste principalement à gérer les aspects de l'équipe qui divergent de l'objectif principal. Afin que les élèves se concentrent sur les aspects essentiels de la compétition, à savoir le robot, le kiosque, le site web, la vidéo et la programmation, j'aide à gérer les horaires, la composition de l'équipe, les finances et le transport du matériel.",
+            paradis_quo:"De toutes les choses que j'ai perdues, c'est mon esprit qui me manque le plus - Mark Twain",
             //2
             livia_subteam: "Capitaine, Kiosque, tutoriel/vidéo",
             livia_emotion: "Anxiété",
@@ -372,11 +372,11 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             jiacheng_quo:"Où sont les clés Allen",
 
             //24
-            sophie_subteam: "",
-            sophie_emotion: "",
-            sophie_fun: "",
-            sophie_des: "",
-            sophie_quo:"",
+            sophie_subteam: "Site web",
+            sophie_emotion: "envie",
+            sophie_fun: "Les araignées envies sont cool",
+            sophie_des: "J'ai appris à utiliser Typescript et à travailler sur un projet de groupe sur GitHub. Mon plus grand sacrifice a été le temps que j'ai passé à essayer d'installer npm sur mon ordinateur portable.",
+            sophie_quo:"Parce que chanter a tué ma grand-mère - le film Les Trolls",
 
             //Archives
 
