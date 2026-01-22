@@ -1,9 +1,12 @@
-import React, { useRef, type JSX } from 'react'
+import React, { useRef, type JSX, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 import * as THREE from 'three'
 import { Select } from "@react-three/postprocessing"
+import { useFrame } from "@react-three/fiber"
+// import "../css/room.css";
+
 
 
 
@@ -11,7 +14,6 @@ type RoomProps = JSX.IntrinsicElements['group']
 
 export function Room(props: RoomProps) {
   const { nodes, materials } = useGLTF('/inside.glb') as any
-  const outlineMaterial = new THREE.MeshStandardMaterial({ color: "white" })
   const navigate_game = useNavigate()
   const [hovered_game, setHovered_game] = useState(false)
   const navigate_memory = useNavigate()
@@ -20,6 +22,24 @@ export function Room(props: RoomProps) {
   const [hovered_video, setHovered_video] = useState(false)
   const navigate_team = useNavigate()
   const [hovered_team, setHovered_team] = useState(false)
+
+  const leftOutlineRef = useRef<THREE.Mesh>(null);
+  const panelOutlineRef = useRef<THREE.Mesh>(null);
+
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime();
+    const base = 0.01;
+    const amplitude = 0.4;
+    const value = base + Math.abs(Math.sin(t)) * amplitude;
+
+    if (leftOutlineRef.current) {
+      (leftOutlineRef.current.material as THREE.Material).opacity = value;
+    }
+    if (panelOutlineRef.current) {
+      (panelOutlineRef.current.material as THREE.Material).opacity = value;
+    }
+  });
+
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -99,28 +119,48 @@ export function Room(props: RoomProps) {
           castShadow
           receiveShadow
           geometry={nodes.control_panel_1.geometry}
-          material={
-            new THREE.MeshStandardMaterial({
-              
-              color: "white",
-              emissive: hovered_game ? new THREE.Color("#a855f7") : new THREE.Color("black"),
-              emissiveIntensity: hovered_game ? 1.5 : 0,
-            })
-          }
           onPointerDown={(e) => {
             e.stopPropagation()
             navigate_game("/game")
             document.body.style.cursor = "default"
           }}
-          onPointerOver={() => {
+          onPointerOver={(e) => {
+            e.stopPropagation()
             setHovered_game(true)
             document.body.style.cursor = "pointer"
           }}
-          onPointerOut={() => {
+          onPointerOut={(e) => {
+            e.stopPropagation()
             setHovered_game(false)
             document.body.style.cursor = "default"
           }}
-        />
+        >
+          <meshStandardMaterial
+            color={0xffffff}
+            metalness={0.5}
+            roughness={0.4}
+
+            emissive={hovered_game ? 0xc9a0ff : 0x000000}
+            emissiveIntensity={hovered_game ? 0.3 : 0}
+          />
+        </mesh>
+        <mesh
+          ref={panelOutlineRef}
+          geometry={nodes.control_panel_1.geometry}
+          position={[0, 0, 0]}
+          scale={1.03}
+          renderOrder={999}
+        >
+          <meshBasicMaterial
+            color={0xffffff}
+            transparent
+            opacity={0.5}
+            depthTest={false}
+            side={THREE.BackSide}
+          />
+        </mesh>
+
+        
         <mesh
           castShadow
           receiveShadow
@@ -226,28 +266,51 @@ export function Room(props: RoomProps) {
           material={materials['main purple']}
         />
       </group>
-      <Select enabled>
+      <group>
         <mesh
+          castShadow
+          receiveShadow
           geometry={nodes.left_structure.geometry}
           position={[9.504, 9.689, -12.149]}
           scale={7.242}
-          castShadow
-          receiveShadow
           onPointerDown={(e) => {
             e.stopPropagation()
+            document.body.style.cursor = "default"
             navigate_memory("/archives")
           }}
-          onPointerOver={() => (document.body.style.cursor = "pointer")}
-          onPointerOut={() => (document.body.style.cursor = "default")}
+          onPointerOver={() => {
+            document.body.style.cursor = "pointer"
+            setHovered_memory(true)
+          }}
+          onPointerOut={() => {
+            document.body.style.cursor = "default"
+            setHovered_memory(false)
+          }}
         >
-          <meshStandardMaterial 
+          <meshStandardMaterial
             color={0xffffff}
-            metalness={0.5}
-            roughness={0.5}
+            metalness={1}
+            roughness={1}
+            emissive={hovered_memory ? 0xc9a0ff : 0x000000}
+            emissiveIntensity={hovered_memory ? 0.3 : 0}
           />
         </mesh>
-      </Select>
-
+        <mesh
+          ref={leftOutlineRef}
+          geometry={nodes.left_structure.geometry}
+          position={[9.504, 9.689, -12.149]}
+          scale={7.27}
+          renderOrder={999}
+        >
+          <meshBasicMaterial
+            color={0xffffff}
+            transparent
+            opacity={0.5}
+            depthTest={false}
+            side={THREE.BackSide}
+          />
+        </mesh>
+      </group>
 
       <mesh
         castShadow

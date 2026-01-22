@@ -22,6 +22,8 @@ body {
   background-image: url("logos and images/team-roster-background.png");
   background-repeat: no-repeat;
   background-size: cover;
+  margin:0;
+  padding:0;
 }
 
 .character-grid {
@@ -44,6 +46,32 @@ body {
   animation: glow 2s ease-in-out infinite;
 }
 
+.right-btn {
+  z-index: 3000;
+  position: relative;
+  left: 100px;
+
+  background: rgb(99, 20, 130);
+  color:aliceblue;
+  border-color: rgb(36, 1, 41);
+}
+.right-btn:hover {
+  background: rgb(31, 0, 48);
+}
+
+.left-btn {
+  z-index: 3000;
+  position: relative;
+  right: 20px;
+
+  background: rgb(99, 20, 130);
+  color:aliceblue;
+  border-color: rgb(36, 1, 41);
+}
+.left-btn:hover {
+  background: rgb(31, 0, 48);
+}
+
 .modal-overlay {
   position: fixed;
   top: 0px;
@@ -52,7 +80,7 @@ body {
   bottom: 0px;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
-  column-count: 2;
+  /* column-count: 4; */
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -66,21 +94,26 @@ body {
   position:absolute;
   z-index: 200;
   pointer-events: none;
-  margin-left: 470px;
+  margin-left: 460px;
   
 }
 
 .modal {
-  min-width: 470px;
+  /* min-width: 470px;
   max-width: 470px;
   min-height: 380px;
   max-height: 380px;
-  position: absolute;
+  position: absolute; */
+
+  width: 500px;
+  height: 380px;
+  position: relative;
+
   z-index: 100;
   display: flex;
   flex-direction: column;
   margin-left:110px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .member-info {
@@ -92,8 +125,30 @@ body {
   /* padding: 20px; */
   padding-top: 20px;
   padding-bottom: 30px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.modal-btn {
+  background: rgb(99, 20, 130);
+  color: rgb(255, 255, 255);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  border-color: rgb(36, 1, 41);
+  border-radius: 50px;
+  border-width: 2px;
+
+  text-align: center;
+  align-self: center;
+
+  margin-top: 10px;
+  height: 50px;
+  width: 80px;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  /* position: absolute; */
+  /* z-index: 1000 */
 }
 
 .member-info p,
@@ -108,33 +163,15 @@ body {
   color: black;
 }
 
-.modal-btn {
-  background: rgb(210, 177, 246);
-  text-align: center;
-  border: none;
-  font-size: 19px;
-  font-weight: bold;
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-  box-shadow: purple;
-  position: absolute;
-  /* margin-bottom: 550px;
-  margin-left: 0px; */
-  top: 120px;
-  right: 80px;
-  z-index: 1000
-}
-
 .modal-btn:hover {
   background: rgb(31, 0, 48);
 }
 
+/* .member-photo {} */
+
 .modal img {
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
   border-radius: 50%;
   object-fit: cover;
   display: block;
@@ -146,19 +183,86 @@ body {
   animation: character_animation 1s infinite;
 }
 
+@media (max-width:1300px) {
+  .modal-overlay {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .modal {
+    width: 50%;
+    justify-self: center;
+    margin: 0;
+    bottom:35px;
+    height:325px;
+    /* position: fixed; */
+  }
+  .frame {
+    width: 60%;
+    /* height: 540px; */
+    position: relative;
+    margin: 0;
+    bottom: 500px;
+  }
+  .member-info {
+    /* width:80%; */
+  }
+  .member-photo {
+    max-width: 390px;
+    max-height: 30%;
+    margin-top: 650px;
+    margin-bottom: 0;
+    /* position: fixed;
+    top:-80px; */
+  }
+  .right-btn{
+    position: relative;
+    bottom:650px;
+    left: 180px;
+  }
+  .left-btn{
+    position: relative;
+    right: 180px;
+    top: 880px
+  }
+}
+/* 
+@media (max-width:400px) {
+  .modal {
+    width:300px;
+    height: 300px;
+  }
+  .frame{
+    width:370px;
+    height: 400px;
+    bottom: -130px;
+  }
+  .member-photo{
+    margin-top: 150px;
+    height: 400px;
+  }
+  .right-btn{
+    position: relative;
+  }
+  .left-btn{
+    position: relative;
+  }
+} */
+
 .character-item:hover .tooltip{
   visibility: visible;
 }
 
 .tooltip {
   visibility: hidden;
-  border-radius: 15px;
+  border-radius: 30px;
   background-color: rgb(135, 41, 157);
   color: #fff;
   width: fit-content; 
   text-align: center;
-  padding: 15px;
-  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top:10px;
+  /* justify-content: center; */
   left: 50px;
   position: relative;
 }

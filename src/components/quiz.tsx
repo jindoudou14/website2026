@@ -160,7 +160,7 @@ export default function Quiz() {
 
       {!started && !result && (
         <div className="quiz-intro">
-          <h1>Hello!</h1>
+          <h1>Welcome to the Personality Island Quiz!</h1>
           <p>
             This quiz will determine which emotion you are closest to
             and which personality island you will have.

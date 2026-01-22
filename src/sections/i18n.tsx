@@ -46,7 +46,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             livia_subteam: "Captain, Kiosk, tutorial/video",
             livia_emotion: "Anxiety",
             livia_fun: "My goal in life is to have 8 cats",
-            livia_des: "This year challenged me to think creatively to bring our theme to life. I learned how to plan ahead and adapt to nnew challenges, and I improved my communication skills with team members. Sadly, I had to sacrifice some beloved pieces of clothing due to paint stains",
+            livia_des: "This year challenged me to think creatively to bring our theme to life. I learned how to plan ahead and adapt to new challenges, and I improved my communication skills with team members. Sadly, I had to sacrifice some beloved pieces of clothing due to paint stains",
             livia_quo:"live, laugh, crash out",
             //3
             han_subteam: "Captain, Robot",

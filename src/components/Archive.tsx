@@ -59,27 +59,31 @@ const Archive = () => {
   const [activeMemoryModal, setActiveMemoryModal] = useState<Memory | null>(null);
 
   const archiveItems: ArchiveItem[] = [
-    { title: "Day 1: Robot Brainstorming", text: "The robot team is brainstorming ideas for the robot design.", date: "Oct. 30 2025", image: "src/assets/logs/robot/robot_1.jpg" },
-    { title: "Day 2: Robot Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_2.jpg" },
-    { title: "Day 3: Robot Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_3.jpg" },
-    { title: "Day 4: Robot Brainstorming", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_4.jpg" },
-    { title: "Day 5: Robot Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_5.jpg" },
-    { title: "Day 6: Robot Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_6.jpg" },
-    { title: "Day 7: Robot Brainstorming", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_7.jpg" },
-    { title: "Day 8: Robot Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_8.jpg" },
-    { title: "Day 9: Robot Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/robot/robot_9.jpg" },
-    { title: "Day 1: Programming Brainstorming", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/programming/programming_1.jpg" },
-    { title: "Day 2: Programming Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/programming/programming_2.jpg" },
-    { title: "Day 3: Programming Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/programming/programming_3.jpg" },
-    { title: "Day 1: Website Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/website/website_1.jpg" },
-    { title: "Day 1: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_1.jpg" },
-    { title: "Day 2: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_2.png" },
-    { title: "Day 3: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_3.png" },
-    { title: "Day 4: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_4.jpg" },
-    { title: "Day 5: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_5.jpg" },
-    { title: "Day 6: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_6.jpg" },
-    { title: "Day 7: Kiosk Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/kiosk/kiosk_7.jpg" },
-    { title: "Day 1: Video Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/logs/video/video_1.jpg" },
+    { title: "Day 1: Robot Brainstorming", text: "The robot team is brainstorming ideas for the robot design.", date: "Oct. 30 2025", image: "src/assets/images/robot/robot_1.jpg" },
+    { title: "Day 2: Robot Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/robot/robot_2.jpg" },
+    { title: "Day 3: Robot Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/robot/robot_3.jpg" },
+    { title: "Day 4: Robot Brainstorming", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/robot/robot_4.jpg" },
+    { title: "Day 5: Robot Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/robot/robot_5.jpg" },
+    { title: "Day 6: Robot Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/robot/robot_6.jpg" },
+    { title: "Day 7: Robot Brainstorming", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/robot/robot_7.jpg" },
+    { title: "Day 8: Robot Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/robot/robot_8.jpg" },
+    { title: "Day 9: Robot Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/robot/robot_9.jpg" },
+    { title: "Day 1: Programming Brainstorming", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/programming/programming_1.jpg" },
+    { title: "Day 2: Programming Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/programming/programming_2.jpg" },
+    { title: "Day 3: Programming Implementation", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/programming/programming_3.jpg" },
+    { title: "Day 1: Website Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/website/website_1.jpg" },
+    { title: "Birth of the Kiosk", text: "The kiosk subteam starts by painting the windows, which will give the kiosk a beautiful view into our team’s personality islands.", date: "Nov. 11 2025", image: "src/assets/images/kiosk/kiosk_1.png" },
+    { title: "Kiosk Planning", text: "The subteam finalizes the official kiosk plans for Mø-Duel 2026!", date: "Nov. 14 2025", image: "src/assets/images/kiosk/kiosk_2.jpeg" },
+    { title: "Where will we Stash our Memories?", text: "The subteam begins constructing the shelves for the memory balls. A depth effect is created with a covered top section. To make the wall more visually interesting, the bottom half of it will be a ramp that holds even more memories!", date: "Jan. 18 2025", image: "src/assets/images/kiosk/kiosk_3.png" },
+    { title: "Memory Container: Complete!", text: "The shelves are done, and the team finishes constructing the ramp.", date: "Jan. 5 2026", image: "src/assets/images/kiosk/kiosk_4.jpeg" },
+    { title: "Console Building and the First Memory Orbs", text: "While some subteam members paint the first memory balls, others work on building the console. ", date: "Jan. 7 2026", image: "src/assets/images/kiosk/kiosk_5.jpeg" },
+    { title: "Flowers are Pretty!", text: "The first flower decorations are painted.", date: "Jan. 8 2026", image: "src/assets/images/kiosk/kiosk_6.png" },
+    { title: "It's all Fun and Games", text: "The team starts accumulating many memories! Some team members are working on an interactive game that can be played using the console.", date: "Jan. 12 2026", image: "src/assets/images/kiosk/kiosk_7.jpeg" },
+    { title: "Does this mean Bing Bong's Returning...", text: "Bing Bong’s iconic cart is built. Made from material entirely reused from our TakTik 2025 arcade, it will serve as our robot table for this competition.", date: "Jan. 13 2026", image: "src/assets/images/kiosk/kiosk_8.jpeg" },
+    { title: "Why is the Console so Bland?", text: "The team installs buttons and decorations on the console. ", date: "Jan. 15 2026", image: "src/assets/images/kiosk/kiosk_9.png" },
+    { title: "Look How Far We've Come!", text: "The kiosk is almost complete! Team members make some flowers motorized to spin, while others work on painting details and finalizing the console.", date: "Jan. 16 2026", image: "src/assets/images/kiosk/kiosk_10.jpeg" },
+    { title: "Look Outside", text: "The team is almost done with the window frames. The windows now show the team’s three personality islands: teamwork, robotics and creativity!", date: "Jan. 19 2026", image: "src/assets/images/kiosk/kiosk_11.png" },
+    { title: "Day 1: Video Design", text: "Sample Text.", date: "Jan. 6 2026", image: "src/assets/images/video/video_1.jpg" },
   ];
 
   const sections: Section[] = useMemo(
@@ -87,16 +91,16 @@ const Archive = () => {
       { label: "Robot", start: 0, end: 8, orb: isFr ? orbeRobot : robotOrb },
       { label: "Programming", start: 9, end: 11, orb: isFr ? orbeProgrammation : programmingOrb },
       { label: "Website", start: 12, end: 12, orb: isFr ? orbeSiteweb : websiteOrb },
-      { label: "Kiosk", start: 13, end: 19, orb: isFr ? orbeKiosque : kioskOrb },
-      { label: "Video", start: 20, end: 20, orb: isFr ? orbeVideo : videoOrb },
+      { label: "Kiosk", start: 13, end: 23, orb: isFr ? orbeKiosque : kioskOrb },
+      { label: "Video", start: 24, end: 24, orb: isFr ? orbeVideo : videoOrb },
     ],
     [isFr]
   );
 
   const memories: Memory[] = [
     { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video A", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/memories/robot_thing.mp4" },
-    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video B", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/logs/Video/video_4.mp4" },
-    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video C", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/logs/Video/video_5.mp4" }
+    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video B", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/images/Video/video_4.mp4" },
+    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video C", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/images/Video/video_5.mp4" }
   ];
 
   const teamCount = sections.length;
@@ -195,7 +199,7 @@ const Archive = () => {
 
       {activeMemoryModal && (
         <div className="modal-overlay" onClick={() => setActiveMemoryModal(null)}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
+          <div className="modal2" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setActiveMemoryModal(null)} type="button">
               ×
             </button>
@@ -215,7 +219,7 @@ const Archive = () => {
 
       {activeArchiveItem && (
         <div className="modal-overlay" onClick={() => setActiveArchiveItem(null)}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
+          <div className="modal2" onClick={(e) => e.stopPropagation()}>
             <button className="modal-arrow left" onClick={prevItem} type="button">
               {"<"}
             </button>

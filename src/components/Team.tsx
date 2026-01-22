@@ -7,7 +7,8 @@ import { useTranslation } from "react-i18next";
 
 import type { TFunctionReturnOptionalDetails } from "i18next";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faX } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import {faAngleLeft} from '@fortawesome/free-solid-svg-icons';
 
 
 type Member = {
@@ -393,6 +394,29 @@ const team: Member[] = [
 const Team = () => {
   const [activeMember, setActiveMember] = useState<Member | null>(null);
   const {t} = useTranslation()
+
+  const rightModal = () => {
+    if (!activeMember) return;
+
+    const currentID = team.findIndex(
+      (member) => member.id === activeMember.id
+    );
+
+    const nextID = (currentID+1) % 24;
+    setActiveMember(team[nextID]);
+  };
+
+  const leftModal = () => {
+    if (!activeMember) return;
+
+    const currentID = team.findIndex(
+      (member) => member.id === activeMember.id
+    );
+
+    const prevID = (currentID + 23) % 24;
+    setActiveMember(team[prevID]);
+  };
+
   return (
     <div className="team-page">
 
@@ -421,8 +445,16 @@ const Team = () => {
       {activeMember && (
         
         <div className="modal-overlay" onClick={() => setActiveMember(null)}>
+
+          <button className="left-btn" onClick={(e) => {
+            e.stopPropagation();
+            leftModal();
+          }}>
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </button>
+          
           <div>
-              <img src={activeMember.photo} alt={activeMember.name} />
+              <img className="member-photo" src={activeMember.photo} alt={activeMember.name} />
           </div>
 
 
@@ -436,7 +468,7 @@ const Team = () => {
                 <p><strong>{t('fun')}</strong> {activeMember.funFact ? t(activeMember.funFact):activeMember.funFact}</p>
                 <p><strong>{t('quo')}</strong> {activeMember.quote ? t(activeMember.quote):activeMember.quote} </p>
                 <p>{activeMember.description ? t(activeMember.description):activeMember.description}</p>
-
+                <button className="modal-btn" onClick={() => setActiveMember(null)}>Close</button>
                 
               
                   
@@ -446,16 +478,29 @@ const Team = () => {
               
             </div>
           </div>
+
+
+
+          <button className="right-btn" onClick={(e) => {
+            e.stopPropagation();
+            rightModal();
+          }}>
+            <FontAwesomeIcon icon={faAngleRight} />
+            </button>
+
+
+
           <img className="frame" src={"logos and images/frame.png"} />      
-          <button className="modal-btn" onClick={() => setActiveMember(null)}><FontAwesomeIcon icon={faX} /></button>
 
         </div>
-        
+      
       )}
       
     </div>
   );
 };
+
+
 
 
 

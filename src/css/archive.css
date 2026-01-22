@@ -22,8 +22,8 @@ body {
 
 .carousel {
   position: relative;
-  width: 35rem;
-  height: 35rem;
+  width: clamp(18rem, 70vw, 35rem);
+  height: clamp(18rem, 70vw, 35rem);
   margin: 0 auto;
   perspective: 900px;
   transform-style: preserve-3d;
@@ -76,11 +76,54 @@ body {
 }
 
 .nav.left {
-  left: -3.5rem;
+  left: -6.5rem;
+  width: clamp(18px, 30px, 42px);
+  height: clamp(18px, 30px, 42px);
+  padding: 1.2em 0.9em 1.3em 1em !important;
+  transition:
+    filter 0.25s ease,
+    transform 0.15s ease;
+
+}
+
+.nav.left:hover {
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6))
+          drop-shadow(0 0 20px rgba(236, 72, 153, 0.45));
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav.left:active {
+  filter: brightness(0.7);
+  transform: translateY(-50%) scale(0.95);
 }
 
 .nav.right {
   right: -3.5rem;
+  width: clamp(18px, 30px, 42px);
+  height: clamp(18px, 30px, 42px);
+  padding: 1.2em 0.9em 1.3em 1em !important;
+  transition:
+    filter 0.25s ease,
+    transform 0.15s ease;
+
+}
+
+.nav.right:hover {
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6))
+          drop-shadow(0 0 20px rgba(236, 72, 153, 0.45));
+  transform: translateY(-50%) scale(1.1);
+}
+.nav.right:active {
+  filter: brightness(0.7);
+  transform: translateY(-50%) scale(0.95);
+}
+
+.nav:focus,
+.nav:active,
+.orb-card:focus,
+.orb-card:active {
+  outline: none;
+  box-shadow: none;
 }
 
 .orb-card {
@@ -88,6 +131,19 @@ body {
   height: 100%;
   display: grid;
   place-items: center;
+  transition:
+    filter 0.25s ease,
+    transform 0.15s ease;
+}
+.orb-card:hover {
+  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.45))
+          drop-shadow(0 0 28px rgba(168, 85, 247, 0.35));
+  transform: scale(1.04);
+}
+
+.orb-card:active {
+  filter: brightness(0.75);
+  transform: scale(0.96);
 }
 
 .orb-img {
@@ -110,15 +166,16 @@ body {
   padding: 24px;
 }
 
-.modal {
+.modal2 {
   position: relative;
   background: white;
-  width: 40vw;
-  height:80vh;
+  width: clamp(22rem, 70vw, 56rem);
+  height: clamp(20rem, 75vh, 85vh);
 
   border-radius: 14px;
   padding: 0;           
   overflow: hidden;      
+  margin-left: 0;
 }
 
 .modal-content {
@@ -128,10 +185,12 @@ body {
 }
 
 .modal-content img {
-  width: 100%;
+  width: auto;
   height: auto;
-  object-fit: cover;
-  display: block;
+  max-width: 100%;
+  max-height: 50vh;
+  object-fit: contain;
+  display: center;
   margin: 0;
   border-radius: 0;      
 }
@@ -159,7 +218,6 @@ body {
   position: absolute;
   top: 42%;
   transform: translateY(-50%);
-
   width: 42px;
   height: 42px;
   border: none;
