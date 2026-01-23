@@ -1,9 +1,9 @@
-import React, { useRef, type JSX, useEffect } from 'react'
+import { useRef, type JSX } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 import * as THREE from 'three'
-import { Select } from "@react-three/postprocessing"
+// import { Select } from "@react-three/postprocessing"
 import { useFrame } from "@react-three/fiber"
 // import "../css/room.css";
 
@@ -20,8 +20,8 @@ export function Room(props: RoomProps) {
   const [hovered_memory, setHovered_memory] = useState(false)
   const navigate_video = useNavigate()
   const [hovered_video, setHovered_video] = useState(false)
-  const navigate_team = useNavigate()
-  const [hovered_team, setHovered_team] = useState(false)
+  // const navigate_team = useNavigate()
+  // const [hovered_team, setHovered_team] = useState(false)
 
   const leftOutlineRef = useRef<THREE.Mesh>(null);
   const panelOutlineRef = useRef<THREE.Mesh>(null);

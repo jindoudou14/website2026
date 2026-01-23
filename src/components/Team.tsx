@@ -5,7 +5,7 @@ import "../css/team.css";
 import { useTranslation } from "react-i18next";
 
 
-import type { TFunctionReturnOptionalDetails } from "i18next";
+// import type { TFunctionReturnOptionalDetails } from "i18next";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import {faAngleLeft} from '@fortawesome/free-solid-svg-icons';
