@@ -39,6 +39,11 @@ const Home = () => {
 
   useEffect(() => {
     setShowHelp(false)
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth" if you prefer
+    })
   }, [location.pathname])
 
   return (
@@ -48,7 +53,7 @@ const Home = () => {
         onClick={() => setShowHelp(true)}
         aria-label="Help"
       >
-        ?
+        How to explore Emotionopolis!
       </button>
 
       {showHelp && (
@@ -60,14 +65,40 @@ const Home = () => {
             className="help-modal"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2>Welcome 👋</h2>
+            <h2>Hello There!</h2>
             <p>
-              This is your memory room.
+              Oh, a new emotion! Welcome to Emotionopolis, a world full of emotions!
               <br />
-              Glowing objects are interactive.
-              <br />
-              Click around to explore different islands.
             </p>
+            <h3>
+              The Emotion Headquarters, aka the Home Page
+            </h3>
+            <p>
+              You can look around the room by holding left click then dragging on computers, on just hold and drag on mobile devices.
+            </p>
+            <p>
+              By clicking on glowing objects, they will bring you to different parts of the control room.
+            </p>
+            {/* <p>
+              <b>Control Panel:</b> Come and Entertain yourself. The Emotionopolis Video, Tutorial and 3d Simulation Game for Moduel's robot competition are all here!
+            </p>
+            <p>
+              Left Structure: Brings you to our Core Memories! Come see our progress over the year!
+            </p>
+            <p>
+              Right Structure: Come meet your fellow emotions!
+            </p>
+            <p>
+              Window: When was the last time you heard of a buzzfeed quiz...
+            </p>
+            <p>
+              Library: CRC Description and Moduel's robot game description.
+            </p>
+            <p>
+              Robot: Come see the incredible work of the Robot Team!
+            </p> */}
+
+            
 
             <button
               className="help-close"

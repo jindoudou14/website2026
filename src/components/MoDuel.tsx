@@ -28,7 +28,7 @@ const MoDuel: React.FC = () => {
           />
         </div>
         <h2 className="moduel-text">
-          This year, from February 18th, 2026, to February 21st, the CRC Moduel competition will take place at Saint Pius X Career Center at 9955 Av. Papineau, Montreal. 
+          This year, from February 18th 2026, to February 21st 2026, the CRC Moduel competition will take place at Saint Pius X Career Center at 9955 Av. Papineau, Montreal. 
         </h2>
         <div className="media">
           <img

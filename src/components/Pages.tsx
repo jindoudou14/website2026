@@ -5,6 +5,7 @@ import Archive from "./Archive";
 import Credits from "./Credits";
 import Quiz from "./quiz";
 export const pages = [
+
     {
         path: "/MoDuel",
         element: <MoDuel/>,

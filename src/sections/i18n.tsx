@@ -25,8 +25,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             ball2: "Team",
             ball3: "Moduel",
             ball4: "Core Memories",
-            ball5: "Robot Island",
-            ball6: "Game",
+            ball5: "Your Island",
+            ball6: "Control Panel",
             ball7: "Memory Bank",
 
             //Team

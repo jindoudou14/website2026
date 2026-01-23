@@ -16,7 +16,6 @@ const ThemedButtons = ({ text, link = "#", image, onClick, noBounce }: Props) =>
       onClick={
         (e) => {
           if (onClick) {
-            e.preventDefault();
             onClick(e);
           }
         }

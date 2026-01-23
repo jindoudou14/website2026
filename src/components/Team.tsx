@@ -125,7 +125,7 @@ const team: Member[] = [
     subteam: "zhuoyao_subteam",
     emotion: "zhuoyao_emotion",
     funFact: "zhuoyao_fun",
-    description: "Zhuoyao_des",
+    description: "zhuoyao_des",
     quote: "zhuoyao_quo",
     image: "src/Team_characters/sadness.png",
     photo: "src/member-photos/Zhuoyao.png",
