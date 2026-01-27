@@ -21,17 +21,17 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 
             //Nav
             title: "Inside Out",
-            ball1: "Emotions Headquarter",
+            ball1: "Headquarters",
             ball2: "Team",
             ball3: "Moduel",
             ball4: "Core Memories",
             ball5: "Your Island",
             ball6: "Control Panel",
-            ball7: "Memory Bank",
+            ball7: "Robot",
 
             //Team
             meet:"Meet the team",
-            welcome:"Welcome to Riley's mind! Get to know the team by clicking on the characters below. You'll learn about each member's subteam, their favourite emotion, a fun fact about them, and what they learned from robotics.",
+            welcome:"Welcome to Riley's mind! Get to know the team by clicking on the characters below and scroll through their information. You'll learn about each member's subteam, their favourite emotion, a fun fact about them, and what they learned from robotics.",
             sub: "Subteam:",
             emo: "Synergising Emotion:",
             fun:"Fun Fact:",
@@ -83,7 +83,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             carla_emotion: "Anger",
             carla_fun: "I like drawing and playing hollow knight",
             carla_des: "I learned how to work with procreate as well as how art is transposed into video games, such as tilemaps and the layout animation sequences. I had to sacrifice my sanity to draw more animation frames for Jijia. ",
-            carla_quo:"",
+            carla_quo:"That looks yummy",
             //9
             tony_subteam: "Website, programming and video",
             tony_emotion: "Fear(I play him)",
@@ -200,9 +200,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             ball2: "Équipe",
             ball3: "Moduel",
             ball4: "Mémoires Centrales",
-            ball5: "Île de Robot",
-            ball6: "Jeu",
-            ball7: "Banque de Memoire",
+            ball5: "Votre Île",
+            ball6: "Panneau de Contrôle",
+            ball7: "Robot",
 
             //Team
             meet:"Rencontrez l'équipe",
@@ -264,7 +264,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             carla_emotion: "Colère",
             carla_fun: "J’aime dessiner et jouer à Hollow Knight",
             carla_des: "J’ai appris à travailler avec Procreate ainsi que comment l’art est transposé dans les jeux vidéo, comme les tilemaps et la disposition des séquences d’animation. J’ai dû sacrifier ma santé mentale pour dessiner plus de frames d’animation pour Jijia.",
-            carla_quo:"",
+            carla_quo:"Ça a l'air bon",
 
             //9
             tony_subteam: "Site web, programmation et vidéo",
