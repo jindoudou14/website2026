@@ -2,18 +2,22 @@ import "../css/credit.css"
 
 const Credits = () => {
     return (
-    <main>
+    <div className = "page">
         
         <div className = "creds">
-            <h1>credits</h1><br></br><br></br>
-            <p>
-                -Inside Out Franchise
-                -CRC
-                -
-            </p>
+            <h1>credits & disclaimer</h1><br></br><br></br>
+            <p>This website was created for the CRC Robotics Competition.</p>
+            <p>The design and theme are inspired by the film Inside Out 2 (2024).</p>
+            
+            <p>Inside Out 2 and all related characters, images, and trademarks are the property of Disney and Pixar.</p>
+            <p>This project is non-commercial and is not affiliated with or endorsed by Disney or Pixar.</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
         </div>
        
-    </main>
+    </div>
     );
 };
   

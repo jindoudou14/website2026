@@ -1,4 +1,9 @@
 .creds {
-    color: black;
+    color: white;
     font-family: "InsideOut";
+
+}
+
+.page{
+    padding-top:230px ;
 }
