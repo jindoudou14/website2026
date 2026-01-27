@@ -79,26 +79,21 @@ const Home = () => {
             <p>
               By clicking on glowing objects, they will bring you to different parts of the control room.
             </p>
-            {/* <p>
-              <b>Control Panel:</b> Come and Entertain yourself. The Emotionopolis Video, Tutorial and 3d Simulation Game for Moduel's robot competition are all here!
+            <p>
+              Control Panel: Entertainment
             </p>
             <p>
-              Left Structure: Brings you to our Core Memories! Come see our progress over the year!
-            </p>
-            <p>
-              Right Structure: Come meet your fellow emotions!
+              Right Structure: Team Roster
             </p>
             <p>
               Window: When was the last time you heard of a buzzfeed quiz...
             </p>
             <p>
-              Library: CRC Description and Moduel's robot game description.
+              Library: Come learn more about CRC and Moduel's robot competition!
             </p>
             <p>
-              Robot: Come see the incredible work of the Robot Team!
-            </p> */}
-
-            
+              Left Orb holder: The Memories we made along the way!
+            </p>
 
             <button
               className="help-close"
@@ -117,7 +112,7 @@ const Home = () => {
         }}
       >
         <Suspense fallback={<Loader />}>
-          <Environment preset="sunset" />
+          <Environment preset="dawn" />
           <OrbitControls
             minPolarAngle={Math.PI / 3}
             maxPolarAngle={Math.PI / 2.1}

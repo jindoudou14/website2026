@@ -41,17 +41,17 @@ const Nav = () => {
           />
           <ThemedButtons
             text={t('ball5')}
-            link="/robot"
+            link="/Island"
             image="src/balls/purpleball.png"
           />
           <ThemedButtons
             text={t('ball6')}
-            link="/game"
+            link="/panel"
             image="src/balls/yellowball.png"
           />
           <ThemedButtons
             text={t('ball7')}
-            link="/replay"
+            link="/robot"
             image="src/balls/tealball.png"
           />
           <ThemedButtons 

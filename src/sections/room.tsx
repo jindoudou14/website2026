@@ -13,18 +13,23 @@ import { useFrame } from "@react-three/fiber"
 type RoomProps = JSX.IntrinsicElements['group']
 
 export function Room(props: RoomProps) {
-  const { nodes, materials } = useGLTF('/inside.glb') as any
-  const navigate_game = useNavigate()
-  const [hovered_game, setHovered_game] = useState(false)
+  const { nodes, materials } = useGLTF('/inside3.glb') as any
+  const navigate_moduel = useNavigate()
+  const [hovered_moduel, setHovered_moduel] = useState(false)
   const navigate_memory = useNavigate()
   const [hovered_memory, setHovered_memory] = useState(false)
-  const navigate_video = useNavigate()
-  const [hovered_video, setHovered_video] = useState(false)
-  // const navigate_team = useNavigate()
-  // const [hovered_team, setHovered_team] = useState(false)
+  const navigate_entertainment = useNavigate()
+  const [hovered_entertainment, setHovered_entertainment] = useState(false)
+  const navigate_team = useNavigate()
+  const [hovered_team, setHovered_team] = useState(false)
+  const navigate_archive = useNavigate()
+  const [hovered_archive, setHovered_archive] = useState(false)
 
-  const leftOutlineRef = useRef<THREE.Mesh>(null);
-  const panelOutlineRef = useRef<THREE.Mesh>(null);
+  const WindowRef = useRef<THREE.Mesh>(null);
+  const LibRef = useRef<THREE.Mesh>(null);
+  const teamRef = useRef<THREE.Mesh>(null);
+  const entertainmentRef = useRef<THREE.Mesh>(null);
+  const archiveRef = useRef<THREE.Mesh>(null);
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
@@ -32,11 +37,20 @@ export function Room(props: RoomProps) {
     const amplitude = 0.4;
     const value = base + Math.abs(Math.sin(t)) * amplitude;
 
-    if (leftOutlineRef.current) {
-      (leftOutlineRef.current.material as THREE.Material).opacity = value;
+    if (WindowRef.current) {
+      (WindowRef.current.material as THREE.Material).opacity = value;
     }
-    if (panelOutlineRef.current) {
-      (panelOutlineRef.current.material as THREE.Material).opacity = value;
+    if (LibRef.current) {
+      (LibRef.current.material as THREE.Material).opacity = value;
+    }
+    if (teamRef.current) {
+      (teamRef.current.material as THREE.Material).opacity = value;
+    }
+    if (entertainmentRef.current) {
+      (entertainmentRef.current.material as THREE.Material).opacity = value;
+    }
+    if (archiveRef.current) {
+      (archiveRef.current.material as THREE.Material).opacity = value;
     }
   });
 
@@ -99,135 +113,72 @@ export function Room(props: RoomProps) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.BézierCurve004.geometry}
+        geometry={nodes.library.geometry}
         material={materials['main purple']}
-        position={[1.631, 9.261, 12.432]}
-        rotation={[1.651, -0.008, -1.669]}
-        scale={1.531}
+        position={[21.716, 6.637, -18.496]}
+        rotation={[0, -0.398, 0]}
+        scale={[5.901, 8.134, 5.057]}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cube010.geometry}
-        material={materials['main purple']}
-        position={[19.856, 6.374, -14.812]}
-        rotation={[0, 0.073, 0]}
-        scale={[5.22, 7.195, 4.473]}
-      />
-      <group position={[-15.343, 3.066, -0.994]} rotation={[0, Math.PI / 2, 0]} scale={0.069}>
+      <group>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.control_panel_1.geometry}
+          geometry={nodes.library.geometry}
+          material={materials['main purple']}
+          position={[21.716, 6.637, -18.496]}
+          rotation={[0, -0.398, 0]}
+          scale={[5.901, 8.134, 5.057]}
           onPointerDown={(e) => {
             e.stopPropagation()
-            navigate_game("/game")
             document.body.style.cursor = "default"
+            navigate_moduel("/moduel")
           }}
           onPointerOver={(e) => {
             e.stopPropagation()
-            setHovered_game(true)
             document.body.style.cursor = "pointer"
+            setHovered_moduel(true)
           }}
           onPointerOut={(e) => {
             e.stopPropagation()
-            setHovered_game(false)
             document.body.style.cursor = "default"
+            setHovered_moduel(false)
           }}
         >
           <meshStandardMaterial
-            color={0xffffff}
-            metalness={0.5}
-            roughness={0.4}
-
-            emissive={hovered_game ? 0xc9a0ff : 0x000000}
-            emissiveIntensity={hovered_game ? 0.3 : 0}
+            color={0xc9a0ff}
+            metalness={1}
+            roughness={1}
+            emissive={hovered_moduel ? 0xc9a0ff : 0x000000}
+            emissiveIntensity={hovered_moduel ? 0.3 : 0}
           />
         </mesh>
         <mesh
-          ref={panelOutlineRef}
-          geometry={nodes.control_panel_1.geometry}
-          position={[0, 0, 0]}
-          scale={1.03}
+          ref={LibRef}
+          castShadow
+          receiveShadow
+          geometry={nodes.library.geometry}
+          position={[21.716, 6.637, -18.496]}
+          rotation={[0, -0.398, 0]}
+          scale={[5.901, 8.134, 5.057]}
           renderOrder={999}
         >
           <meshBasicMaterial
-            color={0xffffff}
+            color={0x6b1baf}
             transparent
-            opacity={0.5}
-            depthTest={false}
-            side={THREE.BackSide}
+            opacity={1}
+            side={THREE.DoubleSide}
           />
         </mesh>
-
-        
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.control_panel_2.geometry}
-          material={materials['main purple']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.control_panel_3.geometry}
-          material={materials['grey purple']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.control_panel_4.geometry}
-          material={materials.black}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.control_panel_5.geometry}
-          material={materials.white}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.control_panel_6.geometry}
-          material={materials['light yellow']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.control_panel_7.geometry}
-          material={materials['grey blue']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.control_panel_8.geometry}
-          material={materials['dark yellow']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.control_panel_9.geometry}
-          material={materials.red}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.control_panel_10.geometry}
-          material={materials.green}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.control_panel_11.geometry}
-          material={materials['dark white pp']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.control_panel_12.geometry}
-          material={materials['detail purple']}
-        />
       </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes['flat,750x,075,f-pad,750x1000,f8f8f8'].geometry}
+        material={materials['flat,750x,075,f-pad,750x1000,f8f8f8']}
+        position={[58.938, 6.738, -2.668]}
+        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+        scale={[80.726, 25.449, 25.449]}
+      />
       <mesh
         castShadow
         receiveShadow
@@ -252,91 +203,112 @@ export function Room(props: RoomProps) {
         position={[0.206, 0.601, 0.025]}
         scale={[1.361, 0.34, 10.204]}
       />
-      <group position={[13.744, 10.415, 0]} scale={[21.149, 9.139, 19.16]}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.wall.geometry}
+        material={materials['detail purple']}
+        position={[13.744, 10.415, 0]}
+        scale={[21.149, 9.139, 19.16]}
+      />
+      <group position={[2.228, 1.12, -17.823]} rotation={[0, 0.315, -0.201]} scale={-9.543}>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Cylinder_1.geometry}
+          geometry={nodes.Circle002_1.geometry}
           material={materials['detail purple']}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Cylinder_2.geometry}
+          geometry={nodes.Circle002_2.geometry}
           material={materials['main purple']}
         />
-      </group>
-      <group>
+        <group>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Circle002_2.geometry}
+            material={materials['main purple']}
+            onPointerDown={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "default"
+              navigate_archive("/archives")
+            }}
+            onPointerOver={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "pointer"
+              setHovered_archive(true)
+            }}
+            onPointerOut={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "default"
+              setHovered_archive(false)
+            }}
+          >
+            <meshStandardMaterial
+              color={0x6b1baf}
+              metalness={1}
+              roughness={1}
+              emissive={hovered_archive ? 0xc9a0ff : 0x000000}
+              emissiveIntensity={hovered_archive ? 0.3 : 0}
+            />
+          </mesh>
+          <mesh
+            ref={archiveRef}
+            castShadow
+            receiveShadow
+            geometry={nodes.Circle002_2.geometry}
+            material={materials['main purple']}
+            renderOrder={999}
+          >
+            <meshBasicMaterial
+              color={0xc9a0ff}
+              transparent
+              opacity={0.5}
+              // depthTest={false}
+              side={THREE.BackSide}
+            />
+          </mesh>
+        </group>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.left_structure.geometry}
-          position={[9.504, 9.689, -12.149]}
-          scale={7.242}
-          onPointerDown={(e) => {
-            e.stopPropagation()
-            document.body.style.cursor = "default"
-            navigate_memory("/archives")
-          }}
-          onPointerOver={() => {
-            document.body.style.cursor = "pointer"
-            setHovered_memory(true)
-          }}
-          onPointerOut={() => {
-            document.body.style.cursor = "default"
-            setHovered_memory(false)
-          }}
-        >
-          <meshStandardMaterial
-            color={0xffffff}
-            metalness={1}
-            roughness={1}
-            emissive={hovered_memory ? 0xc9a0ff : 0x000000}
-            emissiveIntensity={hovered_memory ? 0.3 : 0}
-          />
-        </mesh>
+          geometry={nodes.Circle002_3.geometry}
+          material={materials['neon purple']}
+        />
         <mesh
-          ref={leftOutlineRef}
-          geometry={nodes.left_structure.geometry}
-          position={[9.504, 9.689, -12.149]}
-          scale={7.27}
-          renderOrder={999}
-        >
-          <meshBasicMaterial
-            color={0xffffff}
-            transparent
-            opacity={0.5}
-            depthTest={false}
-            side={THREE.BackSide}
-          />
-        </mesh>
+          castShadow
+          receiveShadow
+          geometry={nodes.Circle002_4.geometry}
+          material={materials['grey blue']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Circle002_5.geometry}
+          material={materials.red}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Circle002_6.geometry}
+          material={materials['dark pruple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Circle002_7.geometry}
+          material={materials['dark blue']}
+        />
       </group>
-
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Circle.geometry}
-        material={materials['main purple']}
-        position={[8.721, 1.36, -15.398]}
-        rotation={[0, 0, -0.201]}
-        scale={-9.543}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Circle001.geometry}
-        material={materials['detail purple']}
-        position={[8.721, 1.12, -15.398]}
-        rotation={[0, 0, -0.201]}
-        scale={-9.543}
-      />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Circle002.geometry}
         material={materials['main purple']}
-        position={[8.721, -0.048, -15.398]}
-        rotation={[0, 0, -0.201]}
+        position={[3.628, -0.048, -17.823]}
+        rotation={[0, 0.315, -0.201]}
         scale={-9.543}
       />
       <mesh
@@ -344,8 +316,8 @@ export function Room(props: RoomProps) {
         receiveShadow
         geometry={nodes.Circle003.geometry}
         material={materials['main purple']}
-        position={[8.721, -1.229, -15.398]}
-        rotation={[0, 0, -0.201]}
+        position={[3.628, -1.229, -17.823]}
+        rotation={[0, 0.315, -0.201]}
         scale={-9.543}
       />
       <mesh
@@ -353,26 +325,62 @@ export function Room(props: RoomProps) {
         receiveShadow
         geometry={nodes.BézierCurve.geometry}
         material={materials['detail purple']}
-        position={[-0.18, 4.174, -13.442]}
-        rotation={[1.651, -0.008, -1.669]}
+        position={[-5.631, 4.174, -13.208]}
+        rotation={[1.644, -0.032, -1.982]}
         scale={1.352}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.BézierCurve001.geometry}
-        material={materials['detail purple']}
-        position={[11.756, 10.205, -6.786]}
-        rotation={[-2.85, 0.574, 0.598]}
-        scale={0.902}
-      />
-      <group position={[25.365, 3.292, -4.017]}>
+      <group position={[14.391, 4.486, 10.099]}>
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Cube008_1.geometry}
           material={materials['main purple']}
         />
+        <group>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube008_1.geometry}
+            material={materials['main purple']}
+            onPointerDown={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "default"
+              navigate_team("/team")
+            }}
+            onPointerOver={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "pointer"
+              setHovered_team(true)
+            }}
+            onPointerOut={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "default"
+              setHovered_team(false)
+            }}
+          >
+            <meshStandardMaterial
+              color={0xc9a0ff}
+              metalness={1}
+              roughness={1}
+              emissive={hovered_team ? 0xc9a0ff : 0x000000}
+              emissiveIntensity={hovered_team ? 0.3 : 0}
+            />
+          </mesh>
+          <mesh
+            ref={teamRef}
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube008_1.geometry}
+            renderOrder={999}
+          >
+            <meshBasicMaterial
+              color={0x6b1baf}
+              transparent
+              opacity={1}
+              side={THREE.DoubleSide}
+            />
+          </mesh>
+        </group>
         <mesh
           castShadow
           receiveShadow
@@ -383,40 +391,118 @@ export function Room(props: RoomProps) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['Part_Studio_1_-_book'].geometry}
-        material={materials['white purple']}
-        position={[17.706, 4.12, -11.867]}
-        rotation={[0, 0.588, 0]}
-        scale={0.156}
+        geometry={nodes.windows.geometry}
+        material={materials['detail purple']}
+        position={[32.54, 6.743, -0.018]}
+        scale={[21.149, 9.139, 19.16]}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book001'].geometry}
-        material={materials['white purple']}
-        position={[17.526, 4.152, -11.729]}
-        rotation={[0, 0.588, 0]}
-        scale={0.156}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book002'].geometry}
-        material={materials['white purple']}
-        position={[17.919, 4.152, -11.95]}
-        rotation={[0, 0.588, 0]}
-        scale={0.156}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book003'].geometry}
-        material={materials['white purple']}
-        position={[18.099, 4.12, -12.088]}
-        rotation={[0, 0.588, 0]}
-        scale={0.156}
-      />
-      <group position={[17.344, 4.152, -11.427]} rotation={[0.018, 0.521, -0.125]} scale={0.156}>
+      <group>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.windows.geometry}
+          material={materials['detail purple']}
+          position={[32.54, 6.743, -0.018]}
+          scale={[21.149, 9.139, 19.16]}
+          onPointerDown={(e) => {
+            e.stopPropagation()
+            document.body.style.cursor = "default"
+            navigate_memory("/Island")
+          }}
+          onPointerOver={(e) => {
+            e.stopPropagation()
+            document.body.style.cursor = "pointer"
+            setHovered_memory(true)
+          }}
+          onPointerOut={(e) => {
+            e.stopPropagation()
+            document.body.style.cursor = "default"
+            setHovered_memory(false)
+          }}
+        >
+          <meshStandardMaterial
+            color={0xc9a0ff}
+            metalness={1}
+            roughness={1}
+            emissive={hovered_memory ? 0xc9a0ff : 0x000000}
+            emissiveIntensity={hovered_memory ? 0.3 : 0}
+          />
+        </mesh>
+        <mesh
+          ref={WindowRef}
+          castShadow
+          receiveShadow
+          geometry={nodes.windows.geometry}
+          position={[32.54, 6.743, -0.018]}
+          scale={[21.149, 9.139, 19.16]}
+          renderOrder={999}
+        >
+          <meshBasicMaterial
+            color={0x000000}
+            transparent
+            opacity={0.3}
+            // depthTest={false}
+            side={THREE.DoubleSide}
+          />
+        </mesh>
+      </group>
+      <group position={[18.038, 4.089, -16.634]} rotation={[0, 0.117, 0]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book_2'].geometry}
+          material={materials.sadness}
+        />
+      </group>
+      <group position={[17.786, 4.124, -16.588]} rotation={[0, 0.117, 0]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book001_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book001_2'].geometry}
+          material={materials['grey blue']}
+        />
+      </group>
+      <group position={[18.296, 4.124, -16.608]} rotation={[0, 0.117, 0]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book002_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book002_2'].geometry}
+          material={materials.Material}
+        />
+      </group>
+      <group position={[18.548, 4.089, -16.655]} rotation={[0, 0.117, 0]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book003_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book003_2'].geometry}
+          material={materials['main purple']}
+        />
+      </group>
+      <group position={[17.447, 4.124, -16.377]} rotation={[0.016, 0.049, -0.117]} scale={0.177}>
         <mesh
           castShadow
           receiveShadow
@@ -430,96 +516,146 @@ export function Room(props: RoomProps) {
           material={materials['grey blue']}
         />
       </group>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book005'].geometry}
-        material={materials['white purple']}
-        position={[20.499, 5.33, -13.419]}
-        rotation={[0, 0.274, -0.297]}
-        scale={0.156}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book006'].geometry}
-        material={materials['white purple']}
-        position={[18.89, 4.119, -12.872]}
-        rotation={[0, 0.222, 0]}
-        scale={0.156}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book007'].geometry}
-        material={materials['white purple']}
-        position={[18.679, 4.15, -12.738]}
-        rotation={[0, 0.239, 0]}
-        scale={0.156}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book008'].geometry}
-        material={materials['white purple']}
-        position={[19.318, 4.153, -13.172]}
-        rotation={[0, 0.222, 0.384]}
-        scale={0.156}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book009'].geometry}
-        material={materials['white purple']}
-        position={[20.149, 7.519, -12.896]}
-        rotation={[0, 0.082, 0]}
-        scale={0.156}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book010'].geometry}
-        material={materials['white purple']}
-        position={[20.663, 7.511, -12.991]}
-        rotation={[0, 0.082, Math.PI / 10]}
-        scale={0.156}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book011'].geometry}
-        material={materials['white purple']}
-        position={[22.767, 2.48, -12.997]}
-        rotation={[0, 0.03, 0]}
-        scale={0.156}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book012'].geometry}
-        material={materials['white purple']}
-        position={[22.497, 2.512, -12.87]}
-        rotation={[0, 0.03, 0]}
-        scale={0.156}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book013'].geometry}
-        material={materials['white purple']}
-        position={[21.878, 2.512, -13.074]}
-        rotation={[0, -0.04, -0.105]}
-        scale={0.156}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes['Part_Studio_1_-_book014'].geometry}
-        material={materials['white purple']}
-        position={[22.211, 2.48, -13.017]}
-        rotation={[0, -0.005, 0]}
-        scale={0.156}
-      />
+      <group position={[21.649, 5.456, -16.763]} rotation={[0, -0.198, -0.297]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book005_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book005_2'].geometry}
+          material={materials['detail purple']}
+        />
+      </group>
+      <group position={[19.747, 4.086, -17.039]} rotation={[0, -0.25, 0]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book006_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book006_2'].geometry}
+          material={materials.sadness}
+        />
+      </group>
+      <group position={[19.466, 4.122, -17.012]} rotation={[0, -0.232, 0]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book007_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book007_2'].geometry}
+          material={materials['grey blue']}
+        />
+      </group>
+      <group position={[20.332, 4.125, -17.121]} rotation={[0, -0.25, 0.384]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book008_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book008_2'].geometry}
+          material={materials.red}
+        />
+      </group>
+      <group position={[21.028, 7.931, -16.416]} rotation={[0, -0.39, 0]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book009_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book009_2'].geometry}
+          material={materials.Material}
+        />
+      </group>
+      <group position={[21.593, 7.922, -16.248]} rotation={[0, -0.39, Math.PI / 10]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book010_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book010_2'].geometry}
+          material={materials['grey blue']}
+        />
+      </group>
+      <group position={[23.715, 2.235, -15.173]} rotation={[0, -0.442, 0]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book011_1'].geometry}
+          material={materials.sadness}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book011_2'].geometry}
+          material={materials['white purple']}
+        />
+      </group>
+      <group position={[23.378, 2.27, -15.184]} rotation={[0, -0.442, 0]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book012_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book012_2'].geometry}
+          material={materials.sadness}
+        />
+      </group>
+      <group position={[22.86, 2.27, -15.707]} rotation={[0, -0.512, -0.105]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book013_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book013_2'].geometry}
+          material={materials.Joy}
+        />
+      </group>
+      <group position={[23.166, 2.235, -15.478]} rotation={[0, -0.477, 0]} scale={0.177}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book014_1'].geometry}
+          material={materials['white purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Part_Studio_1_-_book014_2'].geometry}
+          material={materials.disgust}
+        />
+      </group>
       <mesh
         castShadow
         receiveShadow
@@ -531,46 +667,42 @@ export function Room(props: RoomProps) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Cube013.geometry}
+        geometry={nodes.right_sofa.geometry}
         material={materials['main purple']}
         position={[-9.956, 1.099, 9.23]}
         rotation={[0.016, 0.298, 0.048]}
         scale={[0.578, 1, 0.64]}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cube011.geometry}
-        material={materials.Material}
-        position={[-7.988, 0.321, -13.293]}
+      <group
+        position={[-10.854, 0.321, -11.462]}
         rotation={[0, 1.306, 0]}
-        scale={[1, 0.693, 3.063]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cube012.geometry}
-        material={materials['dark pink']}
-        position={[-4.671, 0.321, -10.657]}
-        rotation={[0, 0.475, 0]}
-        scale={[1, 0.693, 3.063]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cube014.geometry}
-        material={materials['grey blue']}
-        position={[-4.798, 0.798, -13.959]}
-        rotation={[-0.052, 0.837, -0.389]}
-        scale={[0.68, 1, 2.267]}
-      />
+        scale={[1, 0.693, 3.063]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube031.geometry}
+          material={materials.Material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube031_1.geometry}
+          material={materials['dark pink']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube031_2.geometry}
+          material={materials['grey blue']}
+        />
+      </group>
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.BézierCurve002.geometry}
         material={materials['detail purple']}
-        position={[3.384, 9.545, -13.442]}
-        rotation={[1.65, -0.012, -1.715]}
+        position={[-2.222, 9.545, -14.312]}
+        rotation={[1.643, -0.035, -2.028]}
         scale={1.352}
       />
       <mesh
@@ -578,301 +710,53 @@ export function Room(props: RoomProps) {
         receiveShadow
         geometry={nodes.BézierCurve005.geometry}
         material={materials['main purple']}
-        position={[-0.18, 4.174, -13.442]}
-        rotation={[1.651, -0.008, -1.669]}
+        position={[-5.631, 4.174, -13.208]}
+        rotation={[1.644, -0.032, -1.982]}
         scale={1.352}
       />
-      <group position={[11.805, 10.186, -6.741]} rotation={[-1.764, -0.767, 2.397]} scale={0.171}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder003_1.geometry}
-          material={materials['neon purple']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder003_2.geometry}
-          material={materials['grey blue']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder003_3.geometry}
-          material={materials.red}
-        />
-      </group>
-      <group position={[10.227, 8.46, -7.768]} rotation={[-1.432, 0.186, 2.791]} scale={0.171}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder004_1.geometry}
-          material={materials.red}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder004_2.geometry}
-          material={materials['dark pruple']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder004_3.geometry}
-          material={materials['grey blue']}
-        />
-      </group>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.BézierCurve006.geometry}
-        material={materials['detail purple']}
-        position={[10.207, 8.523, -7.791]}
-        rotation={[3.118, 0.308, 1.701]}
-        scale={0.902}
-      />
-      <group position={[11.291, 6.451, -7.453]} rotation={[-1.615, -0.569, 2.976]} scale={0.131}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder005.geometry}
-          material={materials.red}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder005_1.geometry}
-          material={materials['neon purple']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder005_2.geometry}
-          material={materials['dark blue']}
-        />
-      </group>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.BézierCurve007.geometry}
-        material={materials['detail purple']}
-        position={[11.245, 6.47, -7.472]}
-        rotation={[3.097, 0.177, 0.912]}
-        scale={0.689}
-      />
-      <group position={[11.267, 8.192, -7.249]} rotation={[-1.766, -0.887, 2.766]} scale={0.239}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder006.geometry}
-          material={materials.red}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder006_1.geometry}
-          material={materials['dark pruple']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder006_2.geometry}
-          material={materials['dark blue']}
-        />
-      </group>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.BézierCurve008.geometry}
-        material={materials['detail purple']}
-        position={[11.182, 8.199, -7.295]}
-        rotation={[-3.113, 0.3, 0.571]}
-        scale={1.26}
-      />
-      <group position={[7.828, 3.203, -8.44]} rotation={[-1.67, -0.001, 2.733]} scale={0.179}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder007.geometry}
-          material={materials.red}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder007_1.geometry}
-          material={materials['dark purple']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder007_2.geometry}
-          material={materials['neon purple']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder007_3.geometry}
-          material={materials['grey blue']}
-        />
-      </group>
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.BézierCurve009.geometry}
         material={materials['detail purple']}
-        position={[7.798, 3.256, -8.479]}
-        rotation={[2.94, 0.391, 1.513]}
+        position={[3.492, 3.256, -10.958]}
+        rotation={[2.955, 0.082, 1.451]}
         scale={0.946}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere.geometry}
-        material={nodes.Icosphere.material}
-        position={[2.958, 7.305, -20.376]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere001.geometry}
-        material={nodes.Icosphere001.material}
-        position={[2.607, 7.305, -20.376]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere002.geometry}
-        material={nodes.Icosphere002.material}
-        position={[2.771, 7.305, -20.376]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere003.geometry}
-        material={nodes.Icosphere003.material}
-        position={[3.074, 7.305, -20.376]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere004.geometry}
-        material={nodes.Icosphere004.material}
-        position={[3.395, 7.305, -20.376]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere005.geometry}
-        material={nodes.Icosphere005.material}
-        position={[4.068, 7.225, -14.888]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere006.geometry}
-        material={nodes.Icosphere006.material}
-        position={[4.315, 7.209, -14.145]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere007.geometry}
-        material={nodes.Icosphere007.material}
-        position={[4.519, 7.193, -13.368]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere008.geometry}
-        material={nodes.Icosphere008.material}
-        position={[5.711, 7.177, -11.416]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere009.geometry}
-        material={nodes.Icosphere009.material}
-        position={[6.161, 7.161, -10.843]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere010.geometry}
-        material={nodes.Icosphere010.material}
-        position={[6.787, 7.145, -10.43]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere011.geometry}
-        material={nodes.Icosphere011.material}
-        position={[7.341, 7.129, -9.898]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere012.geometry}
-        material={nodes.Icosphere012.material}
-        position={[8.541, 7.113, -8.989]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere013.geometry}
-        material={nodes.Icosphere013.material}
-        position={[7.947, 7.097, -9.428]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere014.geometry}
-        material={nodes.Icosphere014.material}
-        position={[5.306, 7.193, -11.964]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Icosphere015.geometry}
-        material={nodes.Icosphere015.material}
-        position={[4.909, 7.193, -12.659]}
-        rotation={[1.72, -1.384, 1.7]}
-        scale={[0.408, 0.388, 0.388]}
-      />
+      <group
+        position={[-4.793, 7.305, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Icosphere.geometry}
+          material={materials.Joy}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Icosphere_1.geometry}
+          material={materials.disgust}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Icosphere_2.geometry}
+          material={materials.anger}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Icosphere_3.geometry}
+          material={materials.sadness}
+        />
+      </group>
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cube015.geometry}
-        material={materials['shiny main pruple']}
+        material={materials['dark pruple']}
         position={[2.593, 1.178, -0.131]}
         scale={[1.233, 0.34, 10.095]}
       />
@@ -880,7 +764,7 @@ export function Room(props: RoomProps) {
         castShadow
         receiveShadow
         geometry={nodes['Part_Studio_1_-_Part_5_(1)001'].geometry}
-        material={nodes['Part_Studio_1_-_Part_5_(1)001'].material}
+        material={materials['detail purple']}
         position={[5.974, 0.631, -1.046]}
         rotation={[0, Math.PI / 2, 0]}
         scale={[241.197, 317.487, 241.197]}
@@ -888,33 +772,392 @@ export function Room(props: RoomProps) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['Assembly_2_(1)'].geometry}
-        material={
-          new THREE.MeshStandardMaterial({
-            
-            color: "white",
-            emissive: hovered_video ? new THREE.Color("#a855f7") : new THREE.Color("black"),
-            emissiveIntensity: hovered_video ? 1.5 : 0,
-          })
-        }
-        onPointerDown={(e) => {
-          e.stopPropagation()
-          navigate_video("/replay")
-          document.body.style.cursor = "default"
-        }}
-        onPointerOver={() => {
-          setHovered_video(true)
-          document.body.style.cursor = "pointer"
-        }}
-        onPointerOut={() => {
-          setHovered_video(false)
-          document.body.style.cursor = "default"
-        }}
+        geometry={nodes.ball_holder.geometry}
+        material={materials['white purple']}
         position={[8.928, 4.042, -1.054]}
         scale={54.583}
+      />
+      <group position={[-15.342, 3.066, -0.994]} rotation={[0, Math.PI / 2, 0]} scale={0.694}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_1'].geometry}
+          material={materials['white purple']}
+        />
+        <group>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Assembly_1_(2)_1'].geometry}
+            material={materials['white purple']}
+            onPointerDown={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "default"
+              navigate_entertainment("/panel")
+            }}
+            onPointerOver={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "pointer"
+              setHovered_entertainment(true)
+            }}
+            onPointerOut={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "default"
+              setHovered_entertainment(false)
+            }}
+          >
+            <meshStandardMaterial
+              color={0xffffff}
+              metalness={1}
+              roughness={1}
+              emissive={hovered_entertainment ? 0xfff2b0 : 0x000000}
+              emissiveIntensity={hovered_entertainment ? 0.3 : 0}
+            />
+          </mesh>
+          <mesh
+            ref={entertainmentRef}
+            castShadow
+            receiveShadow
+            geometry={nodes['Assembly_1_(2)_1'].geometry}
+            material={materials['white purple']}
+            renderOrder={999}
+          >
+            <meshBasicMaterial
+              color={0xff4da6}
+              transparent
+              opacity={0.3}
+              // depthTest={false}
+              side={THREE.DoubleSide}
+            />
+          </mesh>
+        </group>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_2'].geometry}
+          material={materials.anger}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_3'].geometry}
+          material={materials['dark pruple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_4'].geometry}
+          material={materials.white}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_5'].geometry}
+          material={materials['detail purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_6'].geometry}
+          material={materials.yellow}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_7'].geometry}
+          material={materials.anger}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_8'].geometry}
+          material={materials.Material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_9'].geometry}
+          material={materials.yellow}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_10'].geometry}
+          material={materials['grey blue']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_11'].geometry}
+          material={materials['grey purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_12'].geometry}
+          material={materials['dark pruple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_13'].geometry}
+          material={materials.disgust}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_14'].geometry}
+          material={materials['grey wp']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_15'].geometry}
+          material={materials.black}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_16'].geometry}
+          material={materials['mid purple']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes['Assembly_1_(2)_17'].geometry}
+          material={materials.sadness}
+        />
+      </group>
+      <group
+        position={[-4.793, 8.402, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Icosphere031.geometry}
+          material={materials.Joy}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Icosphere031_1.geometry}
+          material={materials.disgust}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Icosphere031_2.geometry}
+          material={materials.anger}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Icosphere031_3.geometry}
+          material={materials.sadness}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls001.geometry}
+        material={materials.sadness}
+        position={[-4.887, 6.235, -19.954]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls002.geometry}
+        material={materials.anger}
+        position={[-4.485, 6.235, -20.144]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls003.geometry}
+        material={materials.Joy}
+        position={[-4.426, 6.235, -20.221]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls004.geometry}
+        material={materials.Joy}
+        position={[-4.468, 6.235, -20.125]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls005.geometry}
+        material={materials.anger}
+        position={[-4.42, 6.235, -20.155]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls006.geometry}
+        material={materials.disgust}
+        position={[-4.793, 6.235, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls007.geometry}
+        material={materials.Joy}
+        position={[-4.793, 6.235, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls008.geometry}
+        material={materials.sadness}
+        position={[-4.793, 6.235, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls009.geometry}
+        material={materials.anger}
+        position={[-4.793, 6.235, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls010.geometry}
+        material={materials.Joy}
+        position={[-4.793, 6.235, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls011.geometry}
+        material={materials.disgust}
+        position={[-4.793, 6.235, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls012.geometry}
+        material={materials.anger}
+        position={[-4.793, 6.235, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls013.geometry}
+        material={materials.Joy}
+        position={[-4.793, 6.235, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls014.geometry}
+        material={materials.sadness}
+        position={[-4.793, 6.235, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls015.geometry}
+        material={materials.Joy}
+        position={[-4.793, 6.235, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls016.geometry}
+        material={materials.anger}
+        position={[-4.793, 6.235, -20.772]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls017.geometry}
+        material={materials.disgust}
+        position={[8.969, 5.137, -2.25]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls018.geometry}
+        material={materials['disgust.004']}
+        position={[8.969, 5.137, -2.25]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls019.geometry}
+        material={materials.Joy}
+        position={[8.969, 5.137, 0.1]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls020.geometry}
+        material={materials.Joy}
+        position={[7.709, 5.137, -1.045]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls021.geometry}
+        material={materials.anger}
+        position={[10.165, 5.137, -1.045]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.row_2_balls022.geometry}
+        material={materials.sadness}
+        position={[8.186, 5.137, -2.042]}
+        rotation={[0.583, -1.231, 0.534]}
+        scale={[0.408, 0.388, 0.388]}
       />
     </group>
   )
 }
 
-useGLTF.preload('/inside.glb')
+useGLTF.preload('/inside3.glb')
+

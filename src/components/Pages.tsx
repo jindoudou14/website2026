@@ -31,13 +31,13 @@ export const pages = [
         title: "Credits"
     },
     {
-        path: "/robot",
+        path: "/Island",
         element: <Quiz />,
         title: "Island"
     },
     {
-        path: "/game",
+        path: "/panel",
         // element: <Quiz />,
-        title: "Game"
+        title: "Control Panel"
     }
 ]
