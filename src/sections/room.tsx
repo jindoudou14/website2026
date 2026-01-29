@@ -3,16 +3,18 @@ import { useGLTF } from '@react-three/drei'
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 import * as THREE from 'three'
-// import { Select } from "@react-three/postprocessing"
 import { useFrame } from "@react-three/fiber"
-// import "../css/room.css";
 
 
-
-
-type RoomProps = JSX.IntrinsicElements['group']
+type RoomProps = JSX.IntrinsicElements['group'] & {
+  onControlPanelClick?: () => void;
+  onVideoButton1Click?: () => void;
+  onVideoButton2Click?: () => void;
+  showVideoButtons?: boolean;
+}
 
 export function Room(props: RoomProps) {
+  const { onControlPanelClick, onVideoButton1Click, onVideoButton2Click, showVideoButtons, ...restProps } = props;
   const { nodes, materials } = useGLTF('/inside3.glb') as any
   const navigate_moduel = useNavigate()
   const [hovered_moduel, setHovered_moduel] = useState(false)
@@ -24,6 +26,8 @@ export function Room(props: RoomProps) {
   const [hovered_team, setHovered_team] = useState(false)
   const navigate_archive = useNavigate()
   const [hovered_archive, setHovered_archive] = useState(false)
+  const [hovered_video, setHovered_video] = useState(false)
+  const [hovered_tutorial, setHovered_tutorial] = useState(false)
 
   const WindowRef = useRef<THREE.Mesh>(null);
   const LibRef = useRef<THREE.Mesh>(null);
@@ -53,6 +57,14 @@ export function Room(props: RoomProps) {
       (archiveRef.current.material as THREE.Material).opacity = value;
     }
   });
+  
+  const handleControlPanelClick = (e: any) => {
+    e.stopPropagation()
+    document.body.style.cursor = "default"
+    if (onControlPanelClick) {
+      onControlPanelClick();
+    }
+  };
 
   return (
     <group {...props} dispose={null}>
@@ -790,11 +802,7 @@ export function Room(props: RoomProps) {
             receiveShadow
             geometry={nodes['Assembly_1_(2)_1'].geometry}
             material={materials['white purple']}
-            onPointerDown={(e) => {
-              e.stopPropagation()
-              document.body.style.cursor = "default"
-              navigate_entertainment("/panel")
-            }}
+            onPointerDown={handleControlPanelClick}  // Use the new handler
             onPointerOver={(e) => {
               e.stopPropagation()
               document.body.style.cursor = "pointer"
@@ -861,18 +869,70 @@ export function Room(props: RoomProps) {
           geometry={nodes['Assembly_1_(2)_6'].geometry}
           material={materials.yellow}
         />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes['Assembly_1_(2)_7'].geometry}
-          material={materials.anger}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes['Assembly_1_(2)_8'].geometry}
-          material={materials.Material}
-        />
+        {showVideoButtons && (
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Assembly_1_(2)_7'].geometry}
+            material={materials.anger}
+            onPointerDown={(e) => {
+              e.stopPropagation()
+              if (onVideoButton1Click) {
+                onVideoButton1Click()
+              }
+            }}
+            onPointerOver={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "pointer"
+              setHovered_video(true)
+            }}
+            onPointerOut={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "default"
+              setHovered_video(false)
+            }}
+          >
+            <meshStandardMaterial
+              color={hovered_video ? 0xff6b6b : 0xff0000}
+              metalness={1}
+              roughness={1}
+              emissive={hovered_video ? 0xff6b6b : 0x000000}
+              emissiveIntensity={hovered_video ? 0.5 : 0}
+            />
+          </mesh>
+        )}
+        {showVideoButtons && (
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Assembly_1_(2)_8'].geometry}
+            material={materials.Material}
+            onPointerDown={(e) => {
+              e.stopPropagation()
+              if (onVideoButton2Click) {
+                onVideoButton2Click()
+              }
+            }}
+            onPointerOver={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "pointer"
+              setHovered_tutorial(true)
+            }}
+            onPointerOut={(e) => {
+              e.stopPropagation()
+              document.body.style.cursor = "default"
+              setHovered_tutorial(false)
+            }}
+          >
+            <meshStandardMaterial
+              color={hovered_tutorial ? 0x6bff6b : 0x00ff00}
+              metalness={1}
+              roughness={1}
+              emissive={hovered_tutorial ? 0x6bff6b : 0x000000}
+              emissiveIntensity={hovered_tutorial ? 0.5 : 0}
+            />
+          </mesh>
+        )}
         <mesh
           castShadow
           receiveShadow
