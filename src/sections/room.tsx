@@ -15,7 +15,7 @@ type RoomProps = JSX.IntrinsicElements['group'] & {
 
 export function Room(props: RoomProps) {
   const { onControlPanelClick, onVideoButton1Click, onVideoButton2Click, showVideoButtons } = props;
-  const { nodes, materials } = useGLTF('/inside3.glb') as any
+  const { nodes, materials } = useGLTF('/inside3-optimized.glb') as any
   const navigate_moduel = useNavigate()
   const [hovered_moduel, setHovered_moduel] = useState(false)
   const navigate_memory = useNavigate()
@@ -1219,5 +1219,5 @@ export function Room(props: RoomProps) {
   )
 }
 
-useGLTF.preload('/inside3.glb')
+useGLTF.preload('/inside3-optimized.glb')
 
