@@ -14,13 +14,13 @@ type RoomProps = JSX.IntrinsicElements['group'] & {
 }
 
 export function Room(props: RoomProps) {
-  const { onControlPanelClick, onVideoButton1Click, onVideoButton2Click, showVideoButtons, ...restProps } = props;
+  const { onControlPanelClick, onVideoButton1Click, onVideoButton2Click, showVideoButtons } = props;
   const { nodes, materials } = useGLTF('/inside3.glb') as any
   const navigate_moduel = useNavigate()
   const [hovered_moduel, setHovered_moduel] = useState(false)
   const navigate_memory = useNavigate()
   const [hovered_memory, setHovered_memory] = useState(false)
-  const navigate_entertainment = useNavigate()
+  // const navigate_entertainment = useNavigate()
   const [hovered_entertainment, setHovered_entertainment] = useState(false)
   const navigate_team = useNavigate()
   const [hovered_team, setHovered_team] = useState(false)
