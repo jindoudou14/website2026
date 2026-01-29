@@ -1,9 +1,12 @@
 .creds {
     color: white;
     font-family: "InsideOut";
-
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: center;
 }
 
 .page{
-    padding-top:230px ;
+    padding-top:20vh ;
 }
