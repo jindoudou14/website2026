@@ -37,7 +37,7 @@ export const pages = [
     },
     {
         path: "/panel",
-        // element: <Quiz />,
+        // element: <Home />,
         title: "Control Panel"
     }
 ]

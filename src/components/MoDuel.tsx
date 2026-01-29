@@ -45,4 +45,3 @@ const MoDuel: React.FC = () => {
 };
 
 export default MoDuel;
-  
