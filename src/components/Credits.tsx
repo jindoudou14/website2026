@@ -11,7 +11,7 @@ const Credits = () => {
             
             <p><em>Inside Out 2 </em> and all related characters, images, and trademarks are the property of Disney and Pixar.</p>
             <p>This project is non-commercial and is not affiliated with or endorsed by Disney or Pixar.</p>
-            <p></p>
+            <p>The CRC logo is the property of CRC Robotics </p>
             <p></p>
             <p></p>
             <p></p>
