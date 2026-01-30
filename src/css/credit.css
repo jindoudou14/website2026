@@ -3,10 +3,74 @@
     font-family: "InsideOut";
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.5;
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+}
+
+.creds h1 {
+    text-shadow: 5px 10px black;
+}
+
+.credit-card{
+    width: 90%;
+    min-width: 0;
+    max-width:900px;
+
+    margin-bottom: 50px;
+    margin-top: 10px;
+    padding: 20px;
+    height: auto;
+
+    background: rgba(215, 235, 235, 0.387);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+
+    box-shadow:
+    0 8px 0 rgba(0, 0, 0, 0.15),
+    0 18px 35px rgba(0, 0, 0, 0.25);
+
+    filter: drop-shadow(0 0 12px rgba(180, 230, 255, 0.6));
+
+    display: block;
+    color:aliceblue;
 }
 
 .page{
-    padding-top:20vh ;
+    /* padding-top:20vh ; */
+    background-color: #2C0440;
+}
+
+.top-background {
+    display: block;
+    width: 100%;
+    height:auto;
+    box-shadow: 0 0 100px 100px white inset;
+    /* background-image: "logos and images/credit_background.jpeg";
+    background-size: cover; */
+}
+
+.cast{
+    width: 100vw;
+    max-width: 600px;
+    margin-top:-200px;
+}
+
+.creds h1 {
+    text-shadow: 5px 10px black;
+}
+
+@media (max-width: 400px){
+    .creds h1{
+        font-size: 60px;
+    }
+    .creds{
+        font-size: 18px;
+    }
 }
