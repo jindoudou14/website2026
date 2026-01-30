@@ -8,6 +8,11 @@ import videoOrb from "../assets/images/orbs/videoOrb.png";
 import programmingOrb from "../assets/images/orbs/programmingOrb.png";
 import websiteOrb from "../assets/images/orbs/websiteOrb.png";
 import memory1Orb from "../assets/images/orbs/memory1Orb.png";
+import memory2Orb from "../assets/images/orbs/memory2Orb.png";
+import memory3Orb from "../assets/images/orbs/memory3Orb.png";
+import memory4Orb from "../assets/images/orbs/memory4Orb.png";
+import memory5Orb from "../assets/images/orbs/memory5Orb.png";
+
 //french
 import orbeKiosque from "../assets/images/orbs/french/orbeKiosque.png";
 import orbeRobot from "../assets/images/orbs/french/orbeRobot.png";
@@ -83,7 +88,7 @@ const Archive = () => {
     { title: "Where's the rest of the website?", text: "During the break, although some sections began seeing progress such as the game description and the team roster, it was mostly empty and that's when we realized we need to actually work on the website.", date: "Jan. 5 2026", image: "src/assets/images/programming/programming_1.jpg" },
     { title: "How hard can it be?", text: "As we progressed, we started to get comfortable with typescript and decided to try some harder design ideas for the website. These ideas were very hard to implement and we couldn't keep up with the pace.", date: "Jan. 7 2026", image: "src/assets/images/programming/programming_1.jpg" },
     { title: "Our brains are growing", text: "With enough practice, time and caffeine, we gradually started to pick up the pace again. The team roster page and description pages were practically finished. Translation was also finished.", date: "Jan. 12 2026", image: "src/assets/images/programming/programming_1.jpg" },
-    { title: "We need to do something to show how thankful I am to the 3d modelers", text: "The beautiful 3d model was sent in and we immediately began slaving away to finish the home page, where the model would be.", date: "Jan. 15 2026", image: "src/assets/images/programming/programming_1.jpg" },
+    { title: "We need to do something to show how thankful I am to the 3d modelers", text: "The beautiful 3d model was sent in and we immediately began slaving away to finish the home page, where the model would be.", date: "Jan. 15 2026", image: "src/assets/images/website/website_7.png" },
     { title: "Remember those inaccurate quizzes on BuzzFeed...", text: "To appeal to our memories, we decided to make a quiz that determines what emotion you synergize with, using buzzfeed formatted questions.", date: "Jan. 18 2026", image: "src/assets/images/programming/programming_1.jpg" },
     { title: "This is bad", text: "A deadline has been set for the other team members to try and break the website, and it is no where near complete. We have never focused so hard on a task before.", date: "Jan. 21 2026", image: "src/assets/images/programming/programming_1.jpg" },
     { title: "Hard work pays off!", text: "After everyone tried breaking the website, the results were better than we expected. All that's left are some final adjustments and fixing bugs!", date: "Jan. 30 2026", image: "src/assets/images/programming/programming_1.jpg" },
@@ -122,9 +127,11 @@ const Archive = () => {
   );
 
   const memories: Memory[] = [
-    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video A", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/memories/robot_thing.mp4" },
-    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video B", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/images/Video/video_4.mp4" },
-    { title: "Memory 1", date: "Jan. 6 2026", text: "Random Video C", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/images/Video/video_5.mp4" }
+    { title: "Memory 1", date: "Jan. 9 2026", text: "A sneak peek into our robot's guts...", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/memories/robot_thing.mp4" },
+    { title: "Memory 5", date: "Jan. 6 2026", text: "Random Video C", orb: isFr ? orbeSouvenirNo1 : memory5Orb, videoSrc: "/src/assets/images/Video/video_5.mp4" },
+    { title: "Memory 4", date: "Jan. 6 2026", text: "Random Video C", orb: isFr ? orbeSouvenirNo1 : memory4Orb, videoSrc: "/src/assets/images/Video/video_5.mp4" },
+    { title: "Memory 3", date: "Jan. 16 2026", text: "Some of the first footagte of our wonderful robot driving around!", orb: isFr ? orbeSouvenirNo1 : memory3Orb, videoSrc: "/src/assets/images/Video/video_5.mp4" },
+    { title: "Memory 2", date: "Jan. 6 2026", text: "Random Video C", orb: isFr ? orbeSouvenirNo1 : memory2Orb, videoSrc: "/src/assets/images/Video/video_5.mp4" }
   ];
 
   const teamCount = sections.length;
