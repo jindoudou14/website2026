@@ -1,28 +1,13 @@
-// panel.tsx
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls, Html } from "@react-three/drei"
 import { Room } from "../sections/room";
 import Loader from "../sections/loader"
-import { Suspense, useEffect, useRef, useState } from "react"
+import { Suspense, useState } from "react"
 import "../css/homeHelp.css"
 
 const Panel = () => {
   const [currentVideo, setCurrentVideo] = useState<string | null>(null)
-  const controlsRef = useRef<any>(null)
-  const controlPanelPos = [-15.5, 9.5, 7.2]
 
-  // Initialize camera to control panel view
-  useEffect(() => {
-    if (controlsRef.current) {
-      controlsRef.current.object.position.set(
-        controlPanelPos[0],
-        controlPanelPos[1],
-        controlPanelPos[2]
-      )
-      controlsRef.current.target.set(15.5, 24.2, -0.8)
-      controlsRef.current.update()
-    }
-  }, [])
 
   const handleVideo1Click = () => {
     setCurrentVideo("video1")
@@ -43,16 +28,15 @@ const Panel = () => {
 
   return (
     <div className="home-canvas">
-      {/* Back button to return to home */}
       <button
         onClick={() => window.location.href = "/"}
         style={{
           position: 'absolute',
-          top: '20px',
+          top: '200px',
           left: '20px',
           zIndex: 1000,
           padding: '10px 20px',
-          background: '#6b1baf',
+          background: '#ac58f5',
           color: 'white',
           border: 'none',
           borderRadius: '5px',
@@ -67,32 +51,32 @@ const Panel = () => {
         resize={{ scroll: false }}
         style={{ width: "100vw", height: "100vh" }}
         camera={{
-          position: [-22.5, 12.5, -17.7],
+          position: [-10.88386298564633, 8.082407746515925, -0.49056157546326473],
         }}
       >
         <Suspense fallback={<Loader />}>
           <Environment preset="dawn" />
           <OrbitControls
-            ref={controlsRef}
+            target={[-10.886761371790557, 8.080930123862112, -0.49062576898134]}
             enablePan={false}
-            // enableZoom={false}
-            // enableRotate={false}
+            enableZoom={false}
+            enableRotate={false}
           />
           
           <Room 
-            onControlPanelClick={undefined} // No click needed here
+            onControlPanelClick={undefined}
             onVideoButton1Click={handleVideo1Click}
             onVideoButton2Click={handleVideo2Click}
-            showVideoButtons={true} // Always show buttons in panel view
+            showVideoButtons={true}
           />
           
           {currentVideo && youtubeVideoIds[currentVideo as keyof typeof youtubeVideoIds] && (
             <Html
-              position={[-15, 4, -0.7]}
+              position={[-15, 5.5, -0.7]}
               center
               style={{
                 width: '70vw',
-                height: '480px',
+                height: '70vh',
                 background: 'black',
                 borderRadius: '10px',
                 overflow: 'hidden',
@@ -117,7 +101,7 @@ const Panel = () => {
                   style={{
                     position: 'absolute',
                     top: '0px',
-                    right: '0px',
+                    left: '0px',
                     background: 'rgba(0,0,0,0.7)',
                     color: 'white',
                     border: 'none',
@@ -125,7 +109,7 @@ const Panel = () => {
                     width: '70px',
                     height: '70px',
                     cursor: 'pointer',
-                    fontSize: '20px',
+                    fontSize: '30px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',

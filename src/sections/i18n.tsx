@@ -20,7 +20,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             copyright: '© 2026 Marianopolis Robotics. All rights reserved.',
 
             //Nav
-            title: "Inside Out",
+            title: "Emotionopolis",
             ball1: "Headquarters",
             ball2: "Team",
             ball3: "Moduel",
