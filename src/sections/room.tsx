@@ -14,6 +14,7 @@ type RoomProps = JSX.IntrinsicElements['group'] & {
 }
 
 export function Room(props: RoomProps) {
+  const navigate = useNavigate()
   const { onControlPanelClick, onVideoButton1Click, onVideoButton2Click, showVideoButtons } = props;
   const { nodes, materials } = useGLTF('/inside3.glb') as any
   const navigate_moduel = useNavigate()
@@ -61,9 +62,7 @@ export function Room(props: RoomProps) {
   const handleControlPanelClick = (e: any) => {
     e.stopPropagation()
     document.body.style.cursor = "default"
-    if (onControlPanelClick) {
-      onControlPanelClick();
-    }
+    navigate("/panel")
   };
 
   return (

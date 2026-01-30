@@ -169,8 +169,8 @@ const handleControlPanelClick = () => {
             minPolarAngle={showControlPanelView ? Math.PI / 3.5 : Math.PI / 3}
             maxPolarAngle={showControlPanelView ? Math.PI / 2.5 : Math.PI / 2.1}
 
-            // minAzimuthAngle={showControlPanelView ? -0.001 : -Math.PI / 1.5}
-            // maxAzimuthAngle={showControlPanelView ? 0.001 : -0.5}
+            minAzimuthAngle={showControlPanelView ? -0.001 : -Math.PI / 1.5}
+            maxAzimuthAngle={showControlPanelView ? 0.001 : -0.5}
           />
           <Room 
             onControlPanelClick={showControlPanelView ? undefined : handleControlPanelClick}
