@@ -172,7 +172,6 @@ body {
 
 .modal2 {
   position: relative;
-  /* background: rgb(127, 99, 180); */
   background:white;
   width: clamp(22rem, 70vw, 56rem);
   height: clamp(20rem, 75vh, 85vh);

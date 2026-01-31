@@ -47,11 +47,11 @@
     background-color: #2C0440;
 }
 
-.top-background {
+.top-background body{
     display: block;
     width: 100%;
     height:auto;
-    box-shadow: 0 0 100px 100px white inset;
+    top:0;
     /* background-image: "logos and images/credit_background.jpeg";
     background-size: cover; */
 }
@@ -66,11 +66,17 @@
     text-shadow: 5px 10px black;
 }
 
-@media (max-width: 400px){
+@media (max-width: 768px){
     .creds h1{
         font-size: 60px;
     }
     .creds{
         font-size: 18px;
+    }
+    .top-background{
+        margin-top: 0;
+    }
+    .cast{
+        margin-top: -50px
     }
 }
