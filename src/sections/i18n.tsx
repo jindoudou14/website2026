@@ -181,7 +181,84 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             sophie_des: "I learned how to use typescript as well as how to work on a group project on github. My biggest sacrifice was the amount of time I spent trying to get my laptop to install npm.",
             sophie_quo:"Because singing killed my grandma - the Trolls movie",
             //Archives
-
+            archives: {
+              sections: {
+                robot: "Robot",
+                programming: "Programming",
+                website: "Website",
+                kiosk: "Kiosk",
+                video: "Video",
+              },
+            
+              robot: {
+                1: { title: "Robot Brainstorming", text: "The robot team is brainstorming ideas for three different sections of the robot: the base/drive mechanism, the lift and the claw.", date: "Oct. 30 2025" },
+                2: { title: "Mix and Match!", text: "The robot team finally decides which design they will implement for each section.", date: "Nov. 6 2025" },
+                3: { title: "Let's get to Work!", text: "After splitting the team up in three, each subteam begins working on their assigned part of the robot.", date: "Nov. 11 2025" },
+                4: { title: "Virtual Robot", text: "Team members have begun cadding the robot. The website team is thankful because we would like to use it in our website.", date: "Nov. 25 2025" },
+                5: { title: "Shopping Spree! And printed parts", text: "Wow, so many pieces bought for the robot! Oh, some of it was 3d printed by our lovely robot team members, how kind!", date: "Dec. 3 2025" },
+                6: { title: "How big is this thing?", text: "The base subteam is measuring the base of the robot and deciding what pieces to get next.", date: "Jan. 5 2026" },
+                7: { title: "The fact that this code does not work is blasphemy!", text: "The person responsible for coding the robot has begun. He doesn't seem very excited, I hope he figures it out.", date: "Jan. 7 2026" },
+                8: { title: "Incredible progress!", text: "The base and the lift seem ready for testing, they are currently being put together.", date: "Jan. 9 2026" },
+                9: { title: "Will the Claw Work?", text: "Probably? I'm not sure... Oh never mind, I was told it worked as expected just now! Hooray!", date: "Jan. 12 2026" },
+                10:{ title: "Taking the robot for a test drive", text: "It doesn't look too bad! They wanted to improve the lift a little and fix some of the coding for the driving", date: "Jan. 16 2026" },
+                11:{ title: "Season almost ended!?", text: "That would have been a tragedy, thankfully everyone put their hands out in a valiant attempt to catch a robot that almost fell off the table.", date: "Jan. 21 2026" },
+              },
+            
+              programming: {
+                1: { title: "Warming Up", text: "Before the first prelims came out, we practiced a little with Leetcode, questions from previous CRC competitions and other external sources.", date: "Oct. 30 2025" },
+                2: { title: "Wow, we actually submitted something early!", text: "This is a new era where we don't submit our solutions last minute. Each question was answered by different team members working seamlessly.", date: "Nov. 14 2025" },
+                3: { title: "I take that back", text: "Forget what I said before, we read and completed all the problems on the submission day for prelim two. This is no longer a new era, we are still submitting solutions last minute.", date: "Dec. 5 2025" },
+                4: { title: "We are so back", text: "Once again, all questions were finished in advance, with multiple days before submission. I won't jinx our team anymore.", date: "Jan. 22 2026" },
+                5: { title: "This is very long", text: "We have started thinking about how to tackle the long coding problem with sliding penguins. We are thinking of using bfs, as it is a 16x16 grid, it is not too big and it can run pretty quickly too if we structure the bfs correctly.", date: "Jan. 26 2026" },
+              },
+            
+              website: {
+                1: { title: "Website Design", text: "We started brainstorming how we should structure the website. We ended up choosing a 3d approach this year because it looks cool and gives us plenty of options for design choices.", date: "Oct. 30 2026" },
+                2: { title: "Dividing tasks", text: "We found each part of the website we need to incorporate this year and divided it among the website members.", date: "Nov. 6 2025" },
+                3: { title: "Humble beginnings", text: "We began with the navigation bar and the routing to the different pages. Many team members were still getting familiar with typescript and github.", date: "Nov. 13 2025" },
+                4: { title: "Where's the rest of the website?", text: "During the break, although some sections began seeing progress such as the game description and the team roster, it was mostly empty and that's when we realized we need to actually work on the website.", date: "Jan. 5 2026" },
+                5: { title: "How hard can it be?", text: "As we progressed, we started to get comfortable with typescript and decided to try some harder design ideas for the website. These ideas were very hard to implement and we couldn't keep up with the pace.", date: "Jan. 7 2026" },
+                6: { title: "Our brains are growing", text: "With enough practice, time and caffeine, we gradually started to pick up the pace again. The team roster page and description pages were practically finished. Translation was also finished.", date: "Jan. 12 2026" },
+                7: { title: "We need to do something to show how thankful I am to the 3d modelers", text: "The beautiful 3d model was sent in and we immediately began slaving away to finish the home page, where the model would be.", date: "Jan. 15 2026" },
+                8: { title: "Remember those inaccurate quizzes on BuzzFeed...", text: "To appeal to our memories, we decided to make a quiz that determines what emotion you synergize with, using buzzfeed formatted questions.", date: "Jan. 18 2026" },
+                9: { title: "This is bad", text: "A deadline has been set for the other team members to try and break the website, and it is no where near complete. We have never focused so hard on a task before.", date: "Jan. 21 2026" },
+                10:{ title: "Hard work pays off!", text: "After everyone tried breaking the website, the results were better than we expected. All that's left are some final adjustments and fixing bugs!", date: "Jan. 30 2026" },
+              },
+            
+              kiosk: {
+                1: { title: "Birth of the Kiosk", text: "The kiosk subteam starts by painting the windows, which will give the kiosk a beautiful view into our team’s personality islands.", date: "Nov. 11 2025" },
+                2: { title: "Kiosk Planning", text: "The subteam finalizes the official kiosk plans for Mø-Duel 2026!", date: "Nov. 14 2025" },
+                3: { title: "Where will we Stash our Memories?", text: "The subteam begins constructing the shelves for the memory balls. A depth effect is created with a covered top section. To make the wall more visually interesting, the bottom half of it will be a ramp that holds even more memories!", date: "Jan. 18 2025" },
+                4: { title: "Memory Container: Complete!", text: "The shelves are done, and the team finishes constructing the ramp.", date: "Jan. 5 2026" },
+                5: { title: "Console Building and the First Memory Orbs", text: "While some subteam members paint the first memory balls, others work on building the console.", date: "Jan. 7 2026" },
+                6: { title: "Flowers are Pretty!", text: "The first flower decorations are painted.", date: "Jan. 8 2026" },
+                7: { title: "It's all Fun and Games", text: "The team starts accumulating many memories! Some team members are working on an interactive game that can be played using the console.", date: "Jan. 12 2026" },
+                8: { title: "Does this mean Bing Bong's Returning...", text: "Bing Bong’s iconic cart is built. Made from material entirely reused from our TakTik 2025 arcade, it will serve as our robot table for this competition.", date: "Jan. 13 2026" },
+                9: { title: "Why is the Console so Bland?", text: "The team installs buttons and decorations on the console.", date: "Jan. 15 2026" },
+                10:{ title: "Look How Far We've Come!", text: "The kiosk is almost complete! Team members make some flowers motorized to spin, while others work on painting details and finalizing the console.", date: "Jan. 16 2026" },
+                11:{ title: "Look Outside", text: "The team is almost done with the window frames. The windows now show the team’s three personality islands: teamwork, robotics and creativity!", date: "Jan. 19 2026" },
+              },
+            
+              video: {
+                1: { title: "What should the video be about?", text: "We first thought about what themes we can pull out of the premise of Inside Out and how we can connect it to CRC robotics.", date: "Oct. 30 2025" },
+                2: { title: "Film expansion", text: "After deciding the moral of the video, we developed our story around that, which is similar to the second movie in a sense.", date: "Nov. 6 2025" },
+                3: { title: "A Masterpiece in development", text: "We brainstormed the main scenes like the setting, inciting incident, rising action, climax, falling action and resolution, then began writing the script!", date: "Nov. 18 2025" },
+                4: { title: "Victims...I mean the cast", text: "When we finished writing the script, we thought of different shots we would take for each scene, determined (or coerced) team members to fill in all the roles, bought costumes and found places to film.", date: "Jan. 6 2026" },
+                5: { title: "Movie stars with the best filmmakers", text: "We filmed all the scenes. Some took very long to film and we had to do many retakes, but we were satisfied with all the scenes we got.", date: "Jan. 12 2026" },
+                6: { title: "Putting the pieces together", text: "After filming the main scenes, we thought of what we needed for smooth transition shots between each scene and then we started editing. The first version was extremely laggy and choppy.", date: "Jan. 14 2026" },
+                7: { title: "Movie stars turned voice actors?", text: "We added some voice recordings over the video to enhance the quality of the dialogue and storytelling. We had to adjust the microphone a couple of times before we got the quality we wanted and recorded everything we needed.", date: "Jan. 16 2026" },
+                8: { title: "100% rotten tomatoes", text: "We got feedback from team members, friends and family. There are some final editing changes we decided to make before we submit the final product.", date: "Jan. 31 2026" },
+              },
+            
+              memories: {
+                1: { title: "Memory 1", date: "Jan. 9 2026", text: "A sneak peek into our robot's guts..." },
+                2: { title: "Memory 2", date: "Jan. 6 2026", text: "Behind the scenes of the beautiful music production for our video" },
+                3: { title: "Memory 3", date: "Jan. 16 2026", text: "Some of the first footage of our wonderful robot driving around!" },
+                4: { title: "Memory 4", date: "Jan. 6 2026", text: "BingBong spreading happiness to the students of Marianopolis" },
+                5: { title: "Memory 5", date: "Jan. 6 2026", text: "BingBong being an absolute diva as usual" },
+              }
+            },
+            
             //Moduel
             cap1:"In the Module games of 2026, Two robots from two teams fight over 4 engines.",
             cap2:"Each engine requires 3 different components: the fan, the core and the turbine.",
@@ -395,7 +472,85 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             sophie_quo:"Parce que chanter a tué ma grand-mère - le film Les Trolls",
 
             //Archives
-
+            archives: {
+              sections: {
+                robot: "Robot",
+                programming: "Programmation",
+                website: "Site web",
+                kiosk: "Kiosque",
+                video: "Vidéo",
+              },
+            
+              robot: {
+                1: { title: "Remue-méninges du robot", text: "L’équipe robot fait un remue-méninges pour trois sections du robot : la base/le mécanisme de déplacement, l’élévateur et le grappin.", date: "30 oct. 2025" },
+                2: { title: "Mix and match !", text: "L’équipe robot décide enfin quel design elle va utiliser pour chaque section.", date: "6 nov. 2025" },
+                3: { title: "Au travail !", text: "Après avoir divisé l’équipe en trois, chaque sous-équipe commence à travailler sur la partie du robot qui lui a été assignée.", date: "11 nov. 2025" },
+                4: { title: "Robot virtuel", text: "Des membres ont commencé à modéliser le robot en CAO. L’équipe site web est très contente, parce qu’on aimerait l’utiliser sur notre site.", date: "25 nov. 2025" },
+                5: { title: "Virée magasinage ! Et des pièces imprimées", text: "Wow, tellement de pièces achetées pour le robot ! Oh, et certaines ont été imprimées en 3D par nos merveilleux membres de l’équipe robot — trop gentils !", date: "3 déc. 2025" },
+                6: { title: "C’est gros comment, ce truc-là ?", text: "La sous-équipe de la base mesure la base du robot et décide quelles pièces acheter ensuite.", date: "5 janv. 2026" },
+                7: { title: "Le fait que ce code ne marche pas, c’est du blasphème !", text: "La personne responsable du code du robot a commencé. Il n’a pas l’air très enthousiaste… espérons qu’il finisse par trouver la solution.", date: "7 janv. 2026" },
+                8: { title: "Des progrès incroyables !", text: "La base et l’élévateur semblent prêts pour des tests : on est en train de les assembler.", date: "9 janv. 2026" },
+                9: { title: "Le grappin va-tu marcher ?", text: "Probablement ? Je ne suis pas certain… Oh, finalement on vient de me dire que ça marche comme prévu ! Hourra !", date: "12 janv. 2026" },
+                10:{ title: "Essai routier du robot", text: "Ça ne paraît pas si mal ! Ils voulaient améliorer un peu l’élévateur et corriger une partie du code de conduite.", date: "16 janv. 2026" },
+                11:{ title: "La saison est presque finie !?", text: "Ç’aurait été une tragédie… heureusement, tout le monde a tendu les mains dans une vaillante tentative d’attraper un robot qui a failli tomber de la table.", date: "21 janv. 2026" },
+              },
+            
+              programming: {
+                1: { title: "Échauffement", text: "Avant la sortie du premier préliminaire, on s’est pratiqués un peu avec LeetCode, des questions d’anciennes compétitions CRC et d’autres sources externes.", date: "30 oct. 2025" },
+                2: { title: "Wow, on a vraiment remis quelque chose d’avance !", text: "Une nouvelle ère : on ne remet plus nos solutions à la dernière minute. Chaque question a été faite par différents membres, en équipe, sans accroc.", date: "14 nov. 2025" },
+                3: { title: "Je retire ce que j’ai dit", text: "Oubliez ce que j’ai dit : on a lu et complété tous les problèmes le jour même de la remise du préliminaire 2. Ce n’est pas une nouvelle ère — on remet encore à la dernière minute.", date: "5 déc. 2025" },
+                4: { title: "On est tellement de retour", text: "Encore une fois, tout était terminé d’avance, plusieurs jours avant la remise. Je ne porterai plus malheur à l’équipe.", date: "22 janv. 2026" },
+                5: { title: "C’est très long", text: "On a commencé à réfléchir à la façon d’aborder le long problème de programmation avec des pingouins qui glissent. On pense utiliser BFS : c’est une grille de 16×16, pas trop grosse, et ça peut rouler assez vite si on structure bien le BFS.", date: "26 janv. 2026" },
+              },
+            
+              website: {
+                1: { title: "Design du site web", text: "On a commencé à réfléchir à la structure du site. On a choisi une approche 3D cette année parce que ça a l’air vraiment cool et ça nous donne plein d’options de design.", date: "30 oct. 2026" },
+                2: { title: "Répartition des tâches", text: "On a repéré chaque section à intégrer cette année et on les a réparties entre les membres de l’équipe site web.", date: "6 nov. 2025" },
+                3: { title: "Débuts modestes", text: "On a commencé avec la barre de navigation et le routage vers les différentes pages. Plusieurs membres se familiarisaient encore avec TypeScript et GitHub.", date: "13 nov. 2025" },
+                4: { title: "Où est le reste du site ?", text: "Pendant la pause, quelques sections avançaient (comme la description du jeu et la page de l’équipe), mais c’était surtout vide… et c’est là qu’on a réalisé qu’il fallait vraiment travailler sur le site.", date: "5 janv. 2026" },
+                5: { title: "À quel point ça peut être compliqué ?", text: "En avançant, on s’est mis à être plus à l’aise avec TypeScript et on a essayé des idées de design plus difficiles. Elles étaient vraiment dures à implémenter, et on n’arrivait plus à suivre le rythme.", date: "7 janv. 2026" },
+                6: { title: "Nos cerveaux grandissent", text: "Avec assez de pratique, de temps et de caféine, on a progressivement repris le rythme. La page de l’équipe et les pages de description étaient pratiquement finies. La traduction aussi.", date: "12 janv. 2026" },
+                7: { title: "Il faut que je montre à quel point je suis reconnaissant envers les modeleurs 3D", text: "Le magnifique modèle 3D est arrivé, et on s’est immédiatement mis à travailler sans relâche pour finir la page d’accueil, là où le modèle allait se trouver.", date: "15 janv. 2026" },
+                8: { title: "Vous vous souvenez des quiz BuzzFeed pas fiables…", text: "Pour jouer sur la nostalgie, on a décidé de faire un quiz qui détermine avec quelle émotion vous êtes en synergie, avec des questions au format BuzzFeed.", date: "18 janv. 2026" },
+                9: { title: "C’est mauvais", text: "Une date limite a été fixée pour que les autres membres tentent de « casser » le site, et il est loin d’être terminé. On n’a jamais été aussi concentrés sur une tâche.", date: "21 janv. 2026" },
+                10:{ title: "Le travail acharné paie !", text: "Après que tout le monde ait tenté de « casser » le site, les résultats étaient meilleurs que prévu. Il ne reste que quelques ajustements finaux et des bogues à corriger !", date: "30 janv. 2026" },
+              },
+            
+              kiosk: {
+                1: { title: "Naissance du kiosque", text: "La sous-équipe kiosque commence par peindre les fenêtres, ce qui donnera une superbe vue sur les îles de personnalité de notre équipe.", date: "11 nov. 2025" },
+                2: { title: "Planification du kiosque", text: "La sous-équipe finalise les plans officiels du kiosque pour Mø-Duel 2026 !", date: "14 nov. 2025" },
+                3: { title: "Où va-t-on ranger nos souvenirs ?", text: "La sous-équipe commence la construction des étagères pour les boules de mémoire. Un effet de profondeur est créé avec une section supérieure couverte. Pour rendre le mur plus intéressant visuellement, la moitié inférieure sera une rampe qui contiendra encore plus de souvenirs !", date: "18 janv. 2025" },
+                4: { title: "Conteneur de souvenirs : terminé !", text: "Les étagères sont finies, et l’équipe termine la construction de la rampe.", date: "5 janv. 2026" },
+                5: { title: "Construction de la console et premières boules de mémoire", text: "Pendant que certains membres peignent les premières boules de mémoire, d’autres construisent la console.", date: "7 janv. 2026" },
+                6: { title: "Les fleurs, c’est joli !", text: "Les premières décorations de fleurs sont peintes.", date: "8 janv. 2026" },
+                7: { title: "C’est le fun et des jeux", text: "L’équipe accumule plein de souvenirs ! Certains membres travaillent sur un jeu interactif qui peut être joué à l’aide de la console.", date: "12 janv. 2026" },
+                8: { title: "Est-ce que ça veut dire que Bing Bong revient…", text: "Le célèbre chariot de Bing Bong est construit. Fabriqué entièrement à partir de matériel réutilisé de notre arcade TakTik 2025, il servira de table pour notre robot pendant cette compétition.", date: "13 janv. 2026" },
+                9: { title: "Pourquoi la console est si plate ?", text: "L’équipe installe des boutons et des décorations sur la console.", date: "15 janv. 2026" },
+                10:{ title: "Regardez jusqu’où on est rendus !", text: "Le kiosque est presque terminé ! Certains membres motorisent des fleurs pour qu’elles tournent, pendant que d’autres peignent des détails et finalisent la console.", date: "16 janv. 2026" },
+                11:{ title: "Regardez dehors", text: "L’équipe est presque prête avec les cadres de fenêtres. Les fenêtres montrent maintenant les trois îles de personnalité de l’équipe : le travail d’équipe, la robotique et la créativité !", date: "19 janv. 2026" },
+              },
+            
+              video: {
+                1: { title: "De quoi devrait parler la vidéo ?", text: "On a d’abord réfléchi aux thèmes qu’on pouvait tirer de la prémisse de Sens dessus dessous et à comment les relier à la robotique CRC.", date: "30 oct. 2025" },
+                2: { title: "Développement de l’histoire", text: "Après avoir choisi la morale de la vidéo, on a développé notre histoire autour de ça, ce qui ressemble un peu au deuxième film.", date: "6 nov. 2025" },
+                3: { title: "Un chef-d’œuvre en développement", text: "On a brainstormé les scènes principales — le décor, l’élément déclencheur, la montée de l’action, le climax, la retombée et la résolution — puis on a commencé à écrire le script !", date: "18 nov. 2025" },
+                4: { title: "Des victimes… euh, la distribution", text: "Quand on a fini le script, on a pensé aux plans à filmer pour chaque scène, assigné (ou « convaincu ») des membres pour remplir les rôles, acheté des costumes et trouvé des endroits où filmer.", date: "6 janv. 2026" },
+                5: { title: "Des vedettes avec les meilleurs cinéastes", text: "On a filmé toutes les scènes. Certaines ont pris très longtemps et on a dû refaire plusieurs prises, mais on était contents du résultat.", date: "12 janv. 2026" },
+                6: { title: "Assembler le tout", text: "Après avoir filmé les scènes principales, on a réfléchi à ce qu’il nous manquait pour des transitions fluides entre les scènes, puis on a commencé le montage. La première version était extrêmement lente et saccadée.", date: "14 janv. 2026" },
+                7: { title: "Des vedettes devenues acteurs de voix ?", text: "On a ajouté des enregistrements de voix par-dessus la vidéo pour améliorer la qualité des dialogues et de la narration. On a dû ajuster le micro quelques fois avant d’obtenir la qualité voulue et d’enregistrer tout ce qu’il fallait.", date: "16 janv. 2026" },
+                8: { title: "100 % Rotten Tomatoes", text: "On a reçu des commentaires de membres de l’équipe, d’amis et de la famille. Il reste quelques changements de montage à faire avant de soumettre le produit final.", date: "31 janv. 2026" },
+              },
+            
+              memories: {
+                1: { title: "Souvenir 1", date: "9 janv. 2026", text: "Un petit aperçu de l’intérieur de notre robot…" },
+                2: { title: "Souvenir 2", date: "6 janv. 2026", text: "Les coulisses de la superbe production musicale pour notre vidéo" },
+                3: { title: "Souvenir 3", date: "16 janv. 2026", text: "Parmi les premières images de notre merveilleux robot en action !" },
+                4: { title: "Souvenir 4", date: "6 janv. 2026", text: "Bing Bong qui répand du bonheur aux élèves de Marianopolis" },
+                5: { title: "Souvenir 5", date: "6 janv. 2026", text: "Bing Bong, une diva absolue comme d’habitude" },
+              }
+            },
+            
+            
             //Moduel
             cap1:"Lors des jeux MoDuel 2026, deux robots de deux équipes s’affrontent pour le contrôle de quatre moteurs.",
             cap2: "Chaque moteur nécessite trois composants différents : le ventilateur, le noyau et la turbine.",

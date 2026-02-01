@@ -52,7 +52,7 @@ function circularOffset(active: number, i: number, n: number) {
 }
 
 const Archive = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const isFr = (i18n.resolvedLanguage || i18n.language || "").toLowerCase().startsWith("fr");
 
   const [activeTeam, setActiveTeam] = useState(0);
@@ -64,74 +64,75 @@ const Archive = () => {
   const [activeMemoryModal, setActiveMemoryModal] = useState<Memory | null>(null);
 
   const archiveItems: ArchiveItem[] = [
-    { title: "Robot Brainstorming", text: "The robot team is brainstorming ideas for three different sections of the robot: the base/drive mechanism, the lift and the claw.", date: "Oct. 30 2025", image: "src/assets/images/robot/robot_1.jpg" },
-    { title: "Mix and Match!", text: "The robot team finally decides which design they will implement for each section.", date: "Nov. 6 2025", image: "src/assets/images/robot/robot_2.jpg" },
-    { title: "Let's get to Work!", text: "After splitting the team up in three, each subteam begins working on their assigned part of the robot.", date: "Nov. 11 2025", image: "src/assets/images/robot/robot_3.jpg" },
-    { title: "Virtual Robot", text: "Team members have begun cadding the robot. The website team is thankful because we would like to use it in our website.", date: "Nov. 25 2025", image: "src/assets/images/robot/robot_4.png" },
-    { title: "Shopping Spree! And printed parts", text: "Wow, so many pieces bought for the robot! Oh, some of it was 3d printed by our lovely robot team members, how kind!", date: "Dec. 3 2025", image: "src/assets/images/robot/robot_5.jpg" },
-    { title: "How big is this thing?", text: "The base subteam is measuring the base of the robot and deciding what pieces to get next.", date: "Jan. 5 2026", image: "src/assets/images/robot/robot_6.jpg" },
-    { title: "The fact that this code does not work is blasphemy!", text: "The person responsible for coding the robot has begun. He doesn't seem very excited, I hope he figures it out.", date: "Jan. 7 2026", image: "src/assets/images/robot/robot_7.png" },
-    { title: "Incredible progress!", text: "The base and the lift seem ready for testing, they are currently being put together.", date: "Jan. 9 2026", image: "src/assets/images/robot/robot_8.jpg" },
-    { title: "Will the Claw Work?", text: "Probably? I'm not sure... Oh never mind, I was told it worked as expected just now! Hooray!", date: "Jan. 12 2026", image: "src/assets/images/robot/robot_9.png" },
-    { title: "Taking the robot for a test drive", text: "It doesn't look too bad! They wanted to improve the lift a little and fix some of the coding for the driving", date: "Jan. 16 2026", image: "src/assets/images/robot/robot_10.png" },
-    { title: "Season almost ended!?", text: "That would have been a tragedy, thankfully everyone put their hands out in a valiant attempt to catch a robot that almost fell off the table.", date: "Jan. 21 2026", image: "src/assets/images/robot/robot_11.png" },
+    { title: "archives.robot.1.title", text: "archives.robot.1.text", date: "archives.robot.1.date", image: "src/assets/images/robot/robot_1.jpg" },
+    { title: "archives.robot.2.title", text: "archives.robot.2.text", date: "archives.robot.2.date", image: "src/assets/images/robot/robot_2.jpg" },
+    { title: "archives.robot.3.title", text: "archives.robot.3.text", date: "archives.robot.3.date", image: "src/assets/images/robot/robot_3.jpg" },
+    { title: "archives.robot.4.title", text: "archives.robot.4.text", date: "archives.robot.4.date", image: "src/assets/images/robot/robot_4.png" },
+    { title: "archives.robot.5.title", text: "archives.robot.5.text", date: "archives.robot.5.date", image: "src/assets/images/robot/robot_5.jpg" },
+    { title: "archives.robot.6.title", text: "archives.robot.6.text", date: "archives.robot.6.date", image: "src/assets/images/robot/robot_6.jpg" },
+    { title: "archives.robot.7.title", text: "archives.robot.7.text", date: "archives.robot.7.date", image: "src/assets/images/robot/robot_7.png" },
+    { title: "archives.robot.8.title", text: "archives.robot.8.text", date: "archives.robot.8.date", image: "src/assets/images/robot/robot_8.jpg" },
+    { title: "archives.robot.9.title", text: "archives.robot.9.text", date: "archives.robot.9.date", image: "src/assets/images/robot/robot_9.png" },
+    { title: "archives.robot.10.title", text: "archives.robot.10.text", date: "archives.robot.10.date", image: "src/assets/images/robot/robot_10.png" },
+    { title: "archives.robot.11.title", text: "archives.robot.11.text", date: "archives.robot.11.date", image: "src/assets/images/robot/robot_11.png" },
 
-    { title: "Warming Up", text: "Before the first prelims came out, we practiced a little with Leetcode, questions from previous CRC competitions and other external sources.", date: "Oct. 30 2025", image: "src/assets/images/programming/programming_1.jpg" },
-    { title: "Wow, we actually submitted something early!", text: "This is a new era where we don't submit our solutions last minute. Each question was answered by different team members working seamlessly.", date: "Nov. 14 2025", image: "src/assets/images/programming/programming_2.png" },
-    { title: "I take that back", text: "Forget what I said before, we read and completed all the problems on the submission day for prelim two. This is no longer a new era, we are still submitting solutions last minute.", date: "Dec. 5 2025", image: "src/assets/images/programming/programming_3.jpg" },
-    { title: "We are so back", text: "Once again, all questions were finished in advance, with multiple days before submission. I won't jinx our team anymore.", date: "Jan. 22 2026", image: "src/assets/images/programming/programming_4.png" },
-    { title: "This is very long", text: "We have started thinking about how to tackle the long coding problem with sliding penguins. We are thinking of using bfs, as it is a 16x16 grid, it is not too big and it can run pretty quickly too if we structure the bfs correctly.", date: "Jan. 26 2026", image: "src/assets/images/programming/programming_5.png" },
+    { title: "archives.programming.1.title", text: "archives.programming.1.text", date: "archives.programming.1.date", image: "src/assets/images/programming/programming_1.jpg" },
+    { title: "archives.programming.2.title", text: "archives.programming.2.text", date: "archives.programming.2.date", image: "src/assets/images/programming/programming_2.png" },
+    { title: "archives.programming.3.title", text: "archives.programming.3.text", date: "archives.programming.3.date", image: "src/assets/images/programming/programming_3.jpg" },
+    { title: "archives.programming.4.title", text: "archives.programming.4.text", date: "archives.programming.4.date", image: "src/assets/images/programming/programming_4.png" },
+    { title: "archives.programming.5.title", text: "archives.programming.5.text", date: "archives.programming.5.date", image: "src/assets/images/programming/programming_5.png" },
 
-    { title: "Website Design", text: "We started brainstorming how we should structure the website. We ended up choosing a 3d approach this year because it looks cool and gives us plenty of options for design choices.", date: "Oct. 30 2026", image: "src/assets/memories/website2.jpg" },
-    { title: "Dividing tasks", text: "We found each part of the website we need to incorporate this year and divided it among the website members.", date: "Nov. 6 2025", image: "src/assets/images/programming/programming_1.jpg" },
-    { title: "Humble beginnings", text: "We began with the navigation bar and the routing to the different pages. Many team members were still getting familiar with typescript and github.", date: "Nov. 13 2025", image: "src/assets/memories/website3.png" },
-    { title: "Where's the rest of the website?", text: "During the break, although some sections began seeing progress such as the game description and the team roster, it was mostly empty and that's when we realized we need to actually work on the website.", date: "Jan. 5 2026", image: "src/assets/images/programming/programming_1.jpg" },
-    { title: "How hard can it be?", text: "As we progressed, we started to get comfortable with typescript and decided to try some harder design ideas for the website. These ideas were very hard to implement and we couldn't keep up with the pace.", date: "Jan. 7 2026", image: "src/assets/images/programming/programming_1.jpg" },
-    { title: "Our brains are growing", text: "With enough practice, time and caffeine, we gradually started to pick up the pace again. The team roster page and description pages were practically finished. Translation was also finished.", date: "Jan. 12 2026", image: "src/assets/images/programming/programming_1.jpg" },
-    { title: "We need to do something to show how thankful I am to the 3d modelers", text: "The beautiful 3d model was sent in and we immediately began slaving away to finish the home page, where the model would be.", date: "Jan. 15 2026", image: "src/assets/images/website/website_7.png" },
-    { title: "Remember those inaccurate quizzes on BuzzFeed...", text: "To appeal to our memories, we decided to make a quiz that determines what emotion you synergize with, using buzzfeed formatted questions.", date: "Jan. 18 2026", image: "src/assets/memories/website4.png" },
-    { title: "This is bad", text: "A deadline has been set for the other team members to try and break the website, and it is no where near complete. We have never focused so hard on a task before.", date: "Jan. 21 2026", image: "src/assets/memories/website1.webp" },
-    { title: "Hard work pays off!", text: "After everyone tried breaking the website, the results were better than we expected. All that's left are some final adjustments and fixing bugs!", date: "Jan. 30 2026", image: "src/assets/images/programming/programming_1.jpg" },
-    
-    { title: "Birth of the Kiosk", text: "The kiosk subteam starts by painting the windows, which will give the kiosk a beautiful view into our team’s personality islands.", date: "Nov. 11 2025", image: "src/assets/images/kiosk/kiosk_1.png" },
-    { title: "Kiosk Planning", text: "The subteam finalizes the official kiosk plans for Mø-Duel 2026!", date: "Nov. 14 2025", image: "src/assets/images/kiosk/kiosk_2.jpeg" },
-    { title: "Where will we Stash our Memories?", text: "The subteam begins constructing the shelves for the memory balls. A depth effect is created with a covered top section. To make the wall more visually interesting, the bottom half of it will be a ramp that holds even more memories!", date: "Jan. 18 2025", image: "src/assets/images/kiosk/kiosk_3.png" },
-    { title: "Memory Container: Complete!", text: "The shelves are done, and the team finishes constructing the ramp.", date: "Jan. 5 2026", image: "src/assets/images/kiosk/kiosk_4.jpeg" },
-    { title: "Console Building and the First Memory Orbs", text: "While some subteam members paint the first memory balls, others work on building the console. ", date: "Jan. 7 2026", image: "src/assets/images/kiosk/kiosk_5.jpeg" },
-    { title: "Flowers are Pretty!", text: "The first flower decorations are painted.", date: "Jan. 8 2026", image: "src/assets/images/kiosk/kiosk_6.png" },
-    { title: "It's all Fun and Games", text: "The team starts accumulating many memories! Some team members are working on an interactive game that can be played using the console.", date: "Jan. 12 2026", image: "src/assets/images/kiosk/kiosk_7.jpeg" },
-    { title: "Does this mean Bing Bong's Returning...", text: "Bing Bong’s iconic cart is built. Made from material entirely reused from our TakTik 2025 arcade, it will serve as our robot table for this competition.", date: "Jan. 13 2026", image: "src/assets/images/kiosk/kiosk_8.jpeg" },
-    { title: "Why is the Console so Bland?", text: "The team installs buttons and decorations on the console. ", date: "Jan. 15 2026", image: "src/assets/images/kiosk/kiosk_9.png" },
-    { title: "Look How Far We've Come!", text: "The kiosk is almost complete! Team members make some flowers motorized to spin, while others work on painting details and finalizing the console.", date: "Jan. 16 2026", image: "src/assets/images/kiosk/kiosk_10.jpeg" },
-    { title: "Look Outside", text: "The team is almost done with the window frames. The windows now show the team’s three personality islands: teamwork, robotics and creativity!", date: "Jan. 19 2026", image: "src/assets/images/kiosk/kiosk_11.png" },
-    
-    { title: "What should the video be about?", text: "We first thought about what themes we can pull out of the premise of Inside Out and how we can connect it to CRC robotics.", date: "Oct. 30 2025", image: "src/assets/memories/video5.webp" },
-    { title: "Film expansion", text: "After deciding the moral of the video, we developed our story around that, which is similar to the second movie in a sense.", date: "Nov. 6 2025", image: "src/assets/images/video/video_2.jpg" },
-    { title: "A Masterpiece in development", text: "We brainstormed the main scenes like the setting, inciting incident, rising action, climax, falling action and resolution, then began writing the script!", date: "Nov. 18 2025", image: "src/assets/memories/video3.webp" },
-    { title: "Victims...I mean the cast", text: "When we finished writing the script, we thought of different shots we would take for each scene, determined (or coerced) team members to fill in all the roles, bought costumes and found places to film.", date: "Jan. 6 2026", image: "src/assets/images/video/video_4.jpg" },
-    { title: "Movie stars with the best filmmakers", text: "We filmed all the scenes. Some took very long to film and we had to do many retakes, but we were satisfied with all the scenes we got.", date: "Jan. 12 2026", image: "src/assets/memories/anger.jpg" },
-    { title: "Putting the pieces together", text: "After filming the main scenes, we thought of what we needed for smooth transition shots between each scene and then we started editing. The first version was extremely laggy and choppy.", date: "Jan. 14 2026", image: "src/assets/images/video/video_2.jpg" },
-    { title: "Movie stars turned voice actors?", text: "We added some voice recordings over the video to enhance the quality of the dialogue and storytelling. We had to adjust the microphone a couple of times before we got the quality we wanted and recorded everything we needed.", date: "Jan. 16 2026", image: "src/assets/memories/video4.webp" },
-    { title: "100% rotten tomatoes", text: "We got feedback from team members, friends and family. There are some final editing changes we decided to make before we submit the final product.", date: "Jan. 31 2026", image: "src/assets/memories/video2.webp" },
+    { title: "archives.website.1.title", text: "archives.website.1.text", date: "archives.website.1.date", image: "src/assets/memories/website2.jpg" },
+    { title: "archives.website.2.title", text: "archives.website.2.text", date: "archives.website.2.date", image: "src/assets/images/programming/programming_1.jpg" },
+    { title: "archives.website.3.title", text: "archives.website.3.text", date: "archives.website.3.date", image: "src/assets/memories/website3.png" },
+    { title: "archives.website.4.title", text: "archives.website.4.text", date: "archives.website.4.date", image: "src/assets/images/programming/programming_1.jpg" },
+    { title: "archives.website.5.title", text: "archives.website.5.text", date: "archives.website.5.date", image: "src/assets/images/programming/programming_1.jpg" },
+    { title: "archives.website.6.title", text: "archives.website.6.text", date: "archives.website.6.date", image: "src/assets/images/programming/programming_1.jpg" },
+    { title: "archives.website.7.title", text: "archives.website.7.text", date: "archives.website.7.date", image: "src/assets/images/website/website_7.png" },
+    { title: "archives.website.8.title", text: "archives.website.8.text", date: "archives.website.8.date", image: "src/assets/memories/website4.png" },
+    { title: "archives.website.9.title", text: "archives.website.9.text", date: "archives.website.9.date", image: "src/assets/memories/website1.webp" },
+    { title: "archives.website.10.title", text: "archives.website.10.text", date: "archives.website.10.date", image: "src/assets/images/programming/programming_1.jpg" },
+
+    { title: "archives.kiosk.1.title", text: "archives.kiosk.1.text", date: "archives.kiosk.1.date", image: "src/assets/images/kiosk/kiosk_1.png" },
+    { title: "archives.kiosk.2.title", text: "archives.kiosk.2.text", date: "archives.kiosk.2.date", image: "src/assets/images/kiosk/kiosk_2.jpeg" },
+    { title: "archives.kiosk.3.title", text: "archives.kiosk.3.text", date: "archives.kiosk.3.date", image: "src/assets/images/kiosk/kiosk_3.png" },
+    { title: "archives.kiosk.4.title", text: "archives.kiosk.4.text", date: "archives.kiosk.4.date", image: "src/assets/images/kiosk/kiosk_4.jpeg" },
+    { title: "archives.kiosk.5.title", text: "archives.kiosk.5.text", date: "archives.kiosk.5.date", image: "src/assets/images/kiosk/kiosk_5.jpeg" },
+    { title: "archives.kiosk.6.title", text: "archives.kiosk.6.text", date: "archives.kiosk.6.date", image: "src/assets/images/kiosk/kiosk_6.png" },
+    { title: "archives.kiosk.7.title", text: "archives.kiosk.7.text", date: "archives.kiosk.7.date", image: "src/assets/images/kiosk/kiosk_7.jpeg" },
+    { title: "archives.kiosk.8.title", text: "archives.kiosk.8.text", date: "archives.kiosk.8.date", image: "src/assets/images/kiosk/kiosk_8.jpeg" },
+    { title: "archives.kiosk.9.title", text: "archives.kiosk.9.text", date: "archives.kiosk.9.date", image: "src/assets/images/kiosk/kiosk_9.png" },
+    { title: "archives.kiosk.10.title", text: "archives.kiosk.10.text", date: "archives.kiosk.10.date", image: "src/assets/images/kiosk/kiosk_10.jpeg" },
+    { title: "archives.kiosk.11.title", text: "archives.kiosk.11.text", date: "archives.kiosk.11.date", image: "src/assets/images/kiosk/kiosk_11.png" },
+
+    { title: "archives.video.1.title", text: "archives.video.1.text", date: "archives.video.1.date", image: "src/assets/memories/video5.webp" },
+    { title: "archives.video.2.title", text: "archives.video.2.text", date: "archives.video.2.date", image: "src/assets/images/video/video_2.jpg" },
+    { title: "archives.video.3.title", text: "archives.video.3.text", date: "archives.video.3.date", image: "src/assets/memories/video3.webp" },
+    { title: "archives.video.4.title", text: "archives.video.4.text", date: "archives.video.4.date", image: "src/assets/images/video/video_4.jpg" },
+    { title: "archives.video.5.title", text: "archives.video.5.text", date: "archives.video.5.date", image: "src/assets/memories/anger.jpg" },
+    { title: "archives.video.6.title", text: "archives.video.6.text", date: "archives.video.6.date", image: "src/assets/images/video/video_2.jpg" },
+    { title: "archives.video.7.title", text: "archives.video.7.text", date: "archives.video.7.date", image: "src/assets/memories/video4.webp" },
+    { title: "archives.video.8.title", text: "archives.video.8.text", date: "archives.video.8.date", image: "src/assets/memories/video2.webp" },
   ];
+
 
   const sections: Section[] = useMemo(
     () => [
-      { label: "Robot", start: 0, end: 10, orb: isFr ? orbeRobot : robotOrb },
-      { label: "Programming", start: 11, end: 15, orb: isFr ? orbeProgrammation : programmingOrb },
-      { label: "Website", start: 16, end: 25, orb: isFr ? orbeSiteweb : websiteOrb },
-      { label: "Kiosk", start: 26, end: 36, orb: isFr ? orbeKiosque : kioskOrb },
-      { label: "Video", start: 37, end: 44, orb: isFr ? orbeVideo : videoOrb },
+      { label: "archives.sections.robot", start: 0, end: 10, orb: isFr ? orbeRobot : robotOrb },
+      { label: "archives.sections.programming", start: 11, end: 15, orb: isFr ? orbeProgrammation : programmingOrb },
+      { label: "archives.sections.website", start: 16, end: 25, orb: isFr ? orbeSiteweb : websiteOrb },
+      { label: "archives.sections.kiosk", start: 26, end: 36, orb: isFr ? orbeKiosque : kioskOrb },
+      { label: "archives.sections.video", start: 37, end: 44, orb: isFr ? orbeVideo : videoOrb },
     ],
     [isFr]
   );
 
   const memories: Memory[] = [
-    { title: "Memory 1", date: "Jan. 9 2026", text: "A sneak peek into our robot's guts...", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/memories/robot_thing.mp4" },
-    { title: "Memory 5", date: "Jan. 6 2026", text: "BingBong being an abolute diva as usual", orb: isFr ? orbeSouvenirNo1 : memory5Orb, videoSrc: "src/assets/memories/memory5.mov" },
-    { title: "Memory 4", date: "Jan. 6 2026", text: "BingBong spreading happiness to the students of Marianopolis", orb: isFr ? orbeSouvenirNo1 : memory4Orb, videoSrc: "src/assets/memories/memory4.mov" },
-    { title: "Memory 3", date: "Jan. 16 2026", text: "Some of the first footagte of our wonderful robot driving around!", orb: isFr ? orbeSouvenirNo1 : memory3Orb, videoSrc: "/src/assets/images/Video/video_5.mp4" },
-    { title: "Memory 2", date: "Jan. 6 2026", text: "Behind the scenes of the beautiful music production for our video", orb: isFr ? orbeSouvenirNo1 : memory2Orb, videoSrc: "src/assets/memories/memory2.mov" }
+    { title: "archives.memories.1.title", date: "archives.memories.1.date", text: "archives.memories.1.text", orb: isFr ? orbeSouvenirNo1 : memory1Orb, videoSrc: "/src/assets/memories/robot_thing.mp4" },
+    { title: "archives.memories.2.title", date: "archives.memories.2.date", text: "archives.memories.2.text", orb: isFr ? orbeSouvenirNo1 : memory5Orb, videoSrc: "src/assets/memories/memory5.mov" },
+    { title: "archives.memories.3.title", date: "archives.memories.3.date", text: "archives.memories.3.text", orb: isFr ? orbeSouvenirNo1 : memory4Orb, videoSrc: "src/assets/memories/memory4.mov" },
+    { title: "archives.memories.4.title", date: "archives.memories.4.date", text: "archives.memories.4.text", orb: isFr ? orbeSouvenirNo1 : memory3Orb, videoSrc: "/src/assets/images/Video/video_5.mp4" },
+    { title: "archives.memories.5.title", date: "archives.memories.5.date", text: "archives.memories.5.text", orb: isFr ? orbeSouvenirNo1 : memory2Orb, videoSrc: "src/assets/memories/memory2.mov" }
   ];
 
   const teamCount = sections.length;
@@ -235,9 +236,9 @@ const Archive = () => {
               ×
             </button>
             <div className="modal-content">
-              <h2 className="modal-title">{activeMemoryModal.title}</h2>
-              {activeMemoryModal.date && <p className="modal-date">{activeMemoryModal.date}</p>}
-              {activeMemoryModal.text && <p className="modal-body">{activeMemoryModal.text}</p>}
+              <h2 className="modal-title">{t(activeMemoryModal.title)}</h2>
+              {activeMemoryModal.date && <p className="modal-date">{t(activeMemoryModal.date)}</p>}
+              {activeMemoryModal.text && <p className="modal-body">{t(activeMemoryModal.text)}</p>}
               <div className="modal-video">
                 <video controls playsInline preload="metadata">
                   <source src={activeMemoryModal.videoSrc} />
@@ -262,9 +263,9 @@ const Archive = () => {
             </button>
             <div className="modal-content">
               <img src={activeArchiveItem.image} alt={activeArchiveItem.title} />
-              <h2 className="modal-title">{activeArchiveItem.title}</h2>
-              <p className="modal-date">{activeArchiveItem.date}</p>
-              <p className="modal-body">{activeArchiveItem.text}</p>
+              <h2 className="modal-title">{t(activeArchiveItem.title)}</h2>
+              <p className="modal-date">{t(activeArchiveItem.date)}</p>
+              <p className="modal-body">{t(activeArchiveItem.text)}</p>
             </div>
           </div>
         </div>
