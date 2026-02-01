@@ -1,44 +1,112 @@
 import "../css/moduel.css";
-// import React, { useState } from "react";
-
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+const slides = [
+  {
+    src: "game explanation/1.png",
+    caption: "cap1",
+  },
+  {
+    src: "game explanation/2.png",
+    caption: "cap2",
+  },
+  {
+    src: "game explanation/3.png",
+    caption: "cap3",
+  },
+  {
+    src: "game explanation/4.png",
+    caption: "cap4",
+  },
+  {
+    src: "game explanation/5.png",
+    caption: "cap5",
+  },
+  {
+    src: "game explanation/6.png",
+    caption: "cap6",
+  },
+  {
+    src: "game explanation/7.png",
+    caption: "cap7",
+  },
+  {
+    src: "game explanation/8.png",
+    caption: "cap8",
+  },
+  {
+    src: "game explanation/9.png",
+    caption: "cap9",
+  },
+  {
+    src: "game explanation/10.png",
+    caption: "cap10",
+  },
+];
 
 const MoDuel: React.FC = () => {
+  const [index, setIndex] = useState(0);
+  const {t} = useTranslation()
+  const prev = () =>
+    setIndex((i) => (i - 1 + slides.length) % slides.length);
+
+  const next = () =>
+    setIndex((i) => (i + 1) % slides.length);
+
   return (
     <div className="page">
-      
-
       <div className="glass-card">
         <h1 className="moduel-title">MoDuel 2026</h1>
+
         <h2 className="moduel-text">
-          We're very excited to see that you're interested in Moduel! The CRC robotics competition is an event organized each year by the CRC to test the student's knowledge and skills in kiosk building, programming, website development, and of course - robotics! This year, Riley is taking part in the Moduel competition and the emotions are ready to give it their all! 
-        </h2>       
-        <div className="media">
-          <img
-            src="logos/moduel-logo.png"
-            alt="MoDuel banner"
-          />
-        </div>
-        <h2 className="moduel-text">
-          CRC is a non-profit organization that began in 2001 as a way to bring students together through their love for robotics! This year, Riley is designing a robot that can work with and displace engine components. The emotions are ready to work hard so that Riley can focus on designing the robot.
+          {t("excited")}
         </h2>
+
         <div className="media">
-          <img
-            src="logos/crc-logo.png"
-            alt="CRC logo"
-          />
+          <img src="logos/moduel-logo.png" alt="MoDuel banner" />
         </div>
+
         <h2 className="moduel-text">
-          This year, from February 18th 2026, to February 21st 2026, the CRC Moduel competition will take place at Saint Pius X Career Center at 9955 Av. Papineau, Montreal. 
+          {t("non_profit")}
         </h2>
+
         <div className="media">
-          <img
-            src="logos/st-pius.png"
-            alt="st-pius logo"
-          />
+          <img src="logos/crc-logo.png" alt="CRC logo" />
         </div>
+
         <h2 className="moduel-text">
-          Are you ready to take on the challenge? We’ve prepared a <a href="/game">3D simulation</a>  to help you train for the competition.
+          {t("february")}
         </h2>
+
+        <div className="media">
+          <img src="logos/st-pius.png" alt="st-pius logo" />
+        </div>
+
+        <h2 className="moduel-text">
+          {t("every")}
+        </h2>
+
+        <div className="carousel">
+          <button onClick={prev} className="carousel-btn">‹</button>
+
+          <div className="carousel-content">
+            <img
+              src={slides[index].src}
+              alt="carousel"
+              className="carousel-image"
+            />
+            <p className="carousel-caption">{t(slides[index].caption)}</p>
+          </div>
+
+          <button onClick={next} className="carousel-btn">›</button>
+        </div>
+
+        <h2 className="moduel-text">
+          {t("now")}{" "}
+          <a href="/game">{t("sim")}</a> {t("help")}
+
+        </h2>
+
       </div>
     </div>
   );

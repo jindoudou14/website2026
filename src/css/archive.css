@@ -172,12 +172,12 @@ body {
 
 .modal2 {
   position: relative;
-  background: white;
+  background:white;
   width: clamp(22rem, 70vw, 56rem);
   height: clamp(20rem, 75vh, 85vh);
 
   border-radius: 14px;
-  padding: 0;           
+  /* padding: 20px;     */
   overflow: hidden;      
   margin-left: 0;
 }
@@ -186,6 +186,7 @@ body {
   max-height: 80vh;
   overflow-y: auto;
   padding: 16px 18px 18px;
+  padding:20px;
 }
 
 .modal-content img {

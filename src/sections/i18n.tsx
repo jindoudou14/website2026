@@ -20,7 +20,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             copyright: '© 2026 Marianopolis Robotics. All rights reserved.',
 
             //Nav
-            title: "Inside Out",
+            title: "Emotionopolis",
             ball1: "Headquarters",
             ball2: "Team",
             ball3: "Moduel",
@@ -183,7 +183,23 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             //Archives
 
             //Moduel
-
+            cap1:"In the Module games of 2026, Two robots from two teams fight over 4 engines.",
+            cap2:"Each engine requires 3 different components: the fan, the core and the turbine.",
+            cap3:"Robots work together to replace components in the engines with those of their team’s color.",
+            cap4:"Red components are broken and belong to neither team.",
+            cap5:"Robots may bring red components to one of three repair stations of their color to exchange them for the equivalent component.",
+            cap6:"Extra working components may be stored in the team’s spare parts zone for extra points.",
+            cap7:"At the end of the five minute game, the score is tallied. Teams earn increasing points for each component of their color in each engine.",
+            cap8:"Teams also earn 30 points per broken component repaired, and 40 points per component in their spare parts zone.",
+            cap9:"Finally, the team with the most components in their spare parts zone get a 40% bonus to their score, the team with the tallest stack of parts in their repair zone gets 60%, stacking up to 100%.",
+            cap10:"Come watch the epic CRC robot showdown February 18-21!",
+            excited:"We're very excited to see that you're interested in Moduel! The CRC robotics competition is an event organized each year by the CRC to test the student's knowledge and skills in kiosk building, programming, website development, and of course - robotics! This year, Riley is taking part in the Moduel competition and the emotions are ready to give it their all!",
+            non_profit:"CRC is a non-profit organization that began in 2001 as a way to bring students together through their love for robotics! This year, Riley is designing a robot that can work with and displace engine components. The emotions are ready to work hard so that Riley can focus on designing the robot.",
+            february:"This year, from February 18th 2026, to February 21st 2026, the CRC Moduel competition will take place at Saint Pius X Career Center at 9955 Av. Papineau, Montreal.",
+            every:"In every CRC robotics competition, the central focus of the competition is the robot showdown! Here are the rules to CRC's Moduel 2026 robot game:",
+            now:"Now that you know how the robot game works, are you ready to take on the challenge? We’ve prepared a",
+            sim:"3D simulation",
+            help:"to help you train for the competition.",
             //credits
             
           },
@@ -381,7 +397,23 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             //Archives
 
             //Moduel
-
+            cap1:"Lors des jeux MoDuel 2026, deux robots de deux équipes s’affrontent pour le contrôle de quatre moteurs.",
+            cap2: "Chaque moteur nécessite trois composants différents : le ventilateur, le noyau et la turbine.",
+            cap3: "Les robots travaillent ensemble pour remplacer les composants des moteurs par ceux de la couleur de leur équipe.",
+            cap4: "Les composants rouges sont brisés et n’appartiennent à aucune équipe.",
+            cap5: "Les robots peuvent apporter les composants rouges à l’une des trois stations de réparation de la couleur de leur équipe afin de les échanger contre le composant équivalent.",
+            cap6: "Les composants fonctionnels supplémentaires peuvent être entreposés dans la zone de pièces de rechange de l’équipe afin d’obtenir des points supplémentaires.",
+            cap7: "À la fin de la partie de cinq minutes, le pointage est calculé. Les équipes obtiennent un nombre croissant de points pour chaque composant de leur couleur présent dans chaque moteur.",
+            cap8: "Les équipes obtiennent également 30 points pour chaque composant brisé réparé et 40 points pour chaque composant placé dans leur zone de pièces de rechange.",
+            cap9: "Enfin, l’équipe ayant le plus de composants dans sa zone de pièces de rechange reçoit un bonus de 40 % sur son pointage, tandis que l’équipe ayant la pile de pièces la plus haute dans sa zone de réparation reçoit un bonus de 60 %, pour un maximum combiné de 100 %.",
+            cap10: "Venez assister à l’affrontement épique des robots de la CRC du 18 au 21 février !",
+            excited:"Nous sommes ravis de voir que vous vous intéressez au MoDuel ! La compétition de robotique de la CRC est un événement organisé chaque année afin de mettre à l’épreuve les connaissances et les compétences des élèves en construction de kiosques, en programmation, en développement web et, bien sûr, en robotique. Cette année, Riley participe à la compétition MoDuel, et les émotions sont prêtes à donner le meilleur d’elles-mêmes !",
+            non_profit:"La CRC est un organisme à but non lucratif fondé en 2001 dans le but de rassembler des élèves autour de leur passion pour la robotique. Cette année, Riley conçoit un robot capable de manipuler et de déplacer des composants de moteurs. Les émotions sont prêtes à travailler fort afin de permettre à Riley de se concentrer sur la conception du robot.",
+            february:"Cette année, la compétition MoDuel de la CRC aura lieu du 18 au 21 février 2026 au Centre de carrière Saint-Pius-X, situé au 9955, avenue Papineau, à Montréal.",
+            every:"Dans chaque compétition de robotique de la CRC, l’élément central est l’affrontement entre les robots. Voici les règles du jeu de robots du MoDuel 2026 de la CRC :",
+            now:"Nous avons préparé une",
+            sim:"simulation 3D",
+            help:" pour vous entraîner en vue de la compétition.",
             //credits
           },
         },

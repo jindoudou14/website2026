@@ -4,6 +4,7 @@ import Home from "./home";
 import Archive from "./Archive";
 import Credits from "./Credits";
 import Quiz from "./quiz";
+import Panel from "./panel";
 export const pages = [
 
     {
@@ -37,7 +38,7 @@ export const pages = [
     },
     {
         path: "/panel",
-        // element: <Home />,
+        element: <Panel />,
         title: "Control Panel"
     }
 ]

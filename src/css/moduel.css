@@ -1,12 +1,10 @@
 .moduel-title {
-  /* margin-top: 10px; */
   color: aliceblue;
   font-size: 100px;
   text-shadow: 10px 10px rgb(29, 3, 36);
 }
 
 .glass-card {
-  /* width: 100%;   */
   width: 90%;
   min-width: 0;
 
@@ -21,7 +19,6 @@
   -webkit-backdrop-filter: blur(8px);
 
   border-radius: 18px;
-  /* border: 3px solid rgba(0, 0, 0, 0.15); */
   border: 1px solid rgba(255, 255, 255, 0.32);
 
   box-shadow:
@@ -30,9 +27,7 @@
 
   filter: drop-shadow(0 0 12px rgba(180, 230, 255, 0.6));
 
-  /* margin: 0 auto; */
   display: block;
-  /* color: #243b4a; */
   color:aliceblue;
 }
 .moduel-text{
@@ -66,3 +61,53 @@
   display: block;
 }
 
+.carousel {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.carousel-content {
+  text-align: center;
+}
+
+.carousel-image {
+  width: clamp(13rem, 50vw, 26rem);
+  height: clamp(13rem, 42vw, 23rem);
+  border-radius: 12px;
+}
+
+.carousel-caption {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
+
+.carousel-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 768px) {
+  .carousel {
+    gap: 0.25rem;
+  }
+
+  .carousel-btn {
+    font-size: 2rem;
+  }
+
+  .carousel-caption {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-image {
+    max-width: 90vw;
+  }
+}

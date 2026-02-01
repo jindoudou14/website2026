@@ -7,19 +7,16 @@
   padding: clamp(0.75rem, 1.2vw, 1.5rem) clamp(1rem, 2vw, 2.5rem);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
-  
+  justify-content: space-between;  
 }
 
 .navbar-container {
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .navbar-links {
@@ -39,16 +36,17 @@
 .navbar-logo-text {
   color: white;
   font-weight: 700;
-  font-size: clamp(1.1rem, 1.6vw, 1.8rem);
+  font-size: clamp(0.9rem, 1.6vw, 1.8rem);
   text-shadow: 0 2px 4px rgba(0,0,0,0.75);
   font-family: "InsideOut";
+  /* margin-right: 3rem; */
 }
 
 .navbar-image-button {
-  width: clamp(55px, 7vw, 10vw);
+
+  width: clamp(3rem + 30px, 7vw, 10vw);
   aspect-ratio: 1 / 1;
   height: auto;
-  margin-left: clamp(0.25rem, 1vw, 1.5rem);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -107,12 +105,55 @@
   font-family: "InsideOut";
 }
 
-/* @media (max-width: 1024px) {
-  #navbar {
-    padding: 0.5rem 1rem;
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+@media (min-width: 1001px) {
+  .navbar-logo-text {
+    margin-right: 10vw;
+  }
+}
+@media (max-width: 904px) and (min-width: 768px) {
+  .navbar-logo-text {
+    display: none;
+  }
+
+}
+@media (max-width: 768px) and (min-width: 510px) {
+  .navbar-image-button {
+    width: 12vw;
+  }
+  .navbar-button-text {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+    right: 10px;
   }
 
   .navbar-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    padding: 1rem;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(8px);
   }
-} */
+
+  .navbar-links.open {
+    display: flex;
+  }
+  
+}
